@@ -87,3 +87,69 @@
 .loading-screen-closed img {
   display: none;
 }
+
+/* ---------- FOOTER ---------- */
+.footer-wrapper {
+  min-height: 200px;
+  background: #fff;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-wrapper .footer-logo-row {
+  text-align: right;
+  padding: 20px;
+}
+
+.footer-wrapper .footer-logo {
+  width: 136px;
+}
+
+.footer-wrapper .footer-inner-wrapper {
+  border-top: 2px solid #DDDDDD;
+  margin: 0px 15px;
+}
+
+.footer-wrapper .footer-inner-wrapper .footer-block {
+  padding: 14px 0px;
+
+}
+
+.footer-wrapper .footer-inner-wrapper .footer-block .footer-title {
+  font-family: "cooper_hewittmedium";
+  font-size: 10px;
+  letter-spacing: 0px;
+}
+
+.footer-wrapper .footer-inner-wrapper .footer-block .footer-inner-block {
+  padding: 10px 25px;
+}
+
+.footer-wrapper .footer-inner-wrapper .footer-block .footer-inner-block p {
+  color: #A3A199 !important;
+  font-family: "Cooper Hewitt";
+}
+
+.footer-wrapper .footer-inner-wrapper .footer-row {
+  padding: 10px 0px 15px 0px;
+  text-align: center;
+
+}
+
+.footer-wrapper .footer-inner-wrapper .footer-row .address {
+  margin-bottom: 5px;
+  font-family: 'butlerlight';
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 26px;
+  color: #A3A199;
+}
+
+.footer-wrapper .footer-inner-wrapper .footer-row .phone-number {
+  margin-bottom: 5px;
+  font-family: 'butlerlight';
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 10px;
+  color: #A3A199;
+}
