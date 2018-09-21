@@ -1,0 +1,64 @@
+/* 
+	MRC CSS
+ */
+
+
+/* ---------- GENERAL ELEMENTS ---------- */ 
+	
+html,body {
+	-webkit-text-size-adjust: none;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+/* ---------- CUSTOM FONTS ---------- */ 
+
+/* - - -       FONT 1(Butler)       - - - */	
+@font-face {
+    font-family: 'butlerlight';
+    src: url('../fonts/butler_light-webfont.woff2') format('woff2'),
+         url('../fonts/butler_light-webfont.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'butlerregular';
+    src: url('../fonts/butler_regular-webfont.woff2') format('woff2'),
+         url('../fonts/butler_regular-webfont.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+/* - - -       FONT 2(Unica One)       - - - */	
+
+@font-face {
+    font-family: 'unica_oneregular';
+    src: url('../fonts/unicaone-regular-webfont.woff2') format('woff2'),
+         url('../fonts/unicaone-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    text-transform: uppercase;
+}
+
+/* - - -       FONT 3(Cooper Hewitt Book)       - - - */	
+
+@font-face {
+    font-family: 'cooper_hewittbook';
+    src: url('../fonts/cooperhewitt-book-webfont.woff2') format('woff2'),
+         url('../fonts/cooperhewitt-book-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'cooper_hewittmedium';
+    src: url('../fonts/cooperhewitt-medium-webfont.woff2') format('woff2'),
+         url('../fonts/cooperhewitt-medium-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+

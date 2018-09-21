@@ -1,0 +1,37 @@
+import React from "react";
+import { BrowserRouter, Route } from "react-router-dom";
+import TransitionGroup from "react-transition-group/TransitionGroup";
+import AnimatedSwitch from "./components/Utils/AnimatedSwitch";
+// Common Pages
+import Home from "./containers/Home";
+import About from "./containers/About";
+
+class Routes extends React.Component {
+  state = {
+    newKey: new Date()
+  };
+
+  render() {
+    document.getElementById("body").onclick = function(e) {
+      this.setState({ newKey: new Date() });
+    }.bind(this);
+
+    return (
+      <BrowserRouter onUpdate={() => window.scrollTo(0, 0)}>
+        <Route
+          render={({ location }) => (
+            <TransitionGroup component="div">
+              <AnimatedSwitch key={location.key} location={location}>
+                <Route exact path="/" component={Home} />
+                <Route exact path="/about" component={About} />
+                <Route path="*" component={Home} />
+              </AnimatedSwitch>
+            </TransitionGroup>
+          )}
+        />
+      </BrowserRouter>
+    );
+  }
+}
+
+export default Routes;

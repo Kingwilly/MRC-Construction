@@ -1,0 +1,89 @@
+/* ---------- COMMON ELEMENTS ---------- */
+
+/* ---------- LOADING SCREEN ---------- */
+.loading-animation-wrapper {}
+
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes fadein {
+
+  /* Firefox */
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadein {
+
+  /* Safari and Chrome */
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@-o-keyframes fadein {
+
+  /* Opera */
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.loading-screen-open {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  z-index: 999999;
+  top: 0;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 2s ease;
+}
+
+.loading-screen-open img {
+  width: 306px;
+  animation: fadein 2s;
+  -moz-animation: fadein 2s;
+  /* Firefox */
+  -webkit-animation: fadein 2s;
+  /* Safari and Chrome */
+  -o-animation: fadein 2s;
+  /* Opera */
+}
+
+.loading-screen-closing {
+
+  opacity: 0;
+  transition: opacity 1.5s ease;
+}
+
+.loading-screen-closed {
+  display: none;
+}
+
+.loading-screen-closed img {
+  display: none;
+}
