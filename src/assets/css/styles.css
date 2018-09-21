@@ -92,7 +92,7 @@
 /* ----- HOME GALLERY ----- */
 .gallery-wrapper {
   min-height: 650px;
-  height: 80vh;
+  height: 84vh;
   background: transparent;
   position: relative;
 }
@@ -134,7 +134,7 @@
   border-radius: 100px;
   background: transparent;
   margin: 0px 0px 0px 18px;
-  opacity: .8;
+  opacity: .5;
   cursor: pointer;
 }
 
@@ -152,7 +152,7 @@
 .progress__value {
   stroke-dasharray: 339.292;
   stroke-dashoffset: 339.292;
-  animation: progress 6.5s infinite;
+  animation: progress 7s infinite;
 }
 
 @keyframes progress {
@@ -178,6 +178,7 @@
   margin: 0px;
   line-height: 58px;
   font-family: 'butlerlight';
+  text-transform: uppercase;
 }
 
 .gallery-wrapper .gallery-image-open {
@@ -198,6 +199,239 @@
   opacity: 0;
   transition: opacity 1.5s ease;
 }
+
+/* ----- HOME TEXT BLOCK ----- */
+.home-text-block-wrapper {
+  max-width: 710px;
+  margin: 70px auto;
+  height: auto;
+}
+
+.home-text-block-wrapper .title {
+  color: #333;
+  font-family: "unica_oneregular";
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 20px;
+}
+
+.home-text-block-wrapper .description {
+  color: #A3A199;
+  font-family: "cooper_hewittbook";
+  font-size: 16px;
+  line-height: 28px;
+  margin-bottom: 28px;
+}
+
+.home-text-block-wrapper .link-button-container {}
+
+.home-text-block-wrapper .link-button-container .link-button {
+  max-width: 224px;
+  border: 3px solid #DDDDDD;
+  width: 100%;
+  cursor: pointer !important;
+  margin: auto;
+  position: relative;
+
+}
+
+.home-text-block-wrapper .link-button-container .link-button .text-content {
+  padding: 10px;
+
+}
+
+.home-text-block-wrapper .link-button-container .link-button .text-content .cta {
+  margin: 0px;
+  color: #000000;
+  font-family: "unica_oneregular";
+  font-size: 10px;
+  line-height: 12px;
+  margin-bottom: 8px;
+
+}
+
+.home-text-block-wrapper .link-button-container .link-button .text-content .link-name {
+  margin: 0px;
+  color: #000000;
+  font-family: "butlerlight";
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 19px;
+  margin-left: 10px;
+}
+
+.home-text-block-wrapper .link-button-container .link-button .button-content {
+  position: absolute;
+  right: 20px;
+  top: 0;
+  width: 43px;
+  height: 10px;
+  opacity: 0.2;
+
+}
+
+/* ----- HOME LATEST PROJECTS ----- */
+.home-projects-block-wrapper {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.home-projects-block-wrapper .latest-projects-block {
+  height: 1200px;
+  width: 100%;
+  background-size: cover;
+  background-position: bottom;
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.home-projects-block-wrapper .latest-projects-block .button-container-outer {
+  max-width: 700px;
+  min-height: 90px;
+  background: white;
+  padding: 10px;
+  position: absolute;
+  bottom: -10px;
+  width: 100%;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  margin: auto;
+
+}
+
+.home-projects-block-wrapper .latest-projects-block .button-container-outer .button-container-inner {
+  border: 4px solid #DDDDDD;
+  min-height: 70px;
+
+  display: flex;
+}
+
+.home-projects-block-wrapper .latest-projects-block .button-container-outer .button-container-inner .button-left {
+  width: 50%;
+  padding: 14px 0px 7px 22px;
+  border-right: 4px solid #dddddd;
+}
+
+.home-projects-block-wrapper .latest-projects-block .button-container-outer .button-container-inner .button-left p {
+
+  color: #000000;
+  font-family: "unica_oneregular";
+  font-size: 14px;
+  letter-spacing: 7px;
+  margin: 0px;
+  line-height: 17px;
+}
+
+.home-projects-block-wrapper .latest-projects-block .button-container-outer .button-container-inner .button-right {
+  width: 50%;
+  padding: 10px 0px 0px 22px;
+}
+
+.home-projects-block-wrapper .latest-projects-block .button-container-outer .button-container-inner .button-right .cta {
+  margin: 0px;
+  color: #000000;
+  font-family: "unica_oneregular";
+  font-size: 10px;
+  line-height: 12px;
+  margin-bottom: 8px;
+}
+
+.home-projects-block-wrapper .latest-projects-block .button-container-outer .button-container-inner .button-right .link {
+  margin: 0px;
+  color: #000000;
+  font-family: "butlerlight";
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 19px;
+  margin-left: 10px;
+}
+
+.home-projects-block-wrapper .sub-project-block {
+  height: 580px;
+  width: 100%;
+  background-size: cover;
+  background-position: bottom;
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.home-projects-block-wrapper .sub-project-block .button-container-outer {
+  max-width: 304px;
+  min-height: 90px;
+  background: white;
+  padding: 10px;
+  position: absolute;
+  bottom: -10px;
+  width: 100%;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  margin: auto;
+}
+
+.home-projects-block-wrapper .sub-project-block .button-container-outer .button-container-inner {
+  border: 4px solid #DDDDDD;
+  min-height: 70px;
+}
+
+.home-projects-block-wrapper .sub-project-block .button-container-outer .button-container-inner .button-top {}
+
+.home-projects-block-wrapper .sub-project-block .button-container-outer .button-container-inner .button-top p {
+  color: #000000;
+  font-family: "unica_oneregular";
+  font-size: 14px;
+  letter-spacing: 7px;
+  margin: 0px;
+  line-height: 17px;
+  border-bottom: 4px solid #DDDDDD;
+  padding: 10px 10px 10px 13px;
+}
+
+.home-projects-block-wrapper .sub-project-block .button-container-outer .button-container-inner .button-bottom .cta {
+  margin: 0px;
+  color: #000000;
+  font-family: "unica_oneregular";
+  font-size: 10px;
+  line-height: 12px;
+  padding: 10px 0px 0px 14px;
+  margin-bottom: 0px;
+}
+
+.home-projects-block-wrapper .sub-project-block .button-container-outer .button-container-inner .button-bottom .link {
+  margin: 0px;
+  color: #000000;
+  font-family: "butlerlight";
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 19px;
+  margin-left: 10px;
+  padding: 5px 0px 10px 22px;
+}
+
+
+/* ----- HOME MOBILE ----- */
+@media only screen and (max-width: 1312px) {
+  .gallery-wrapper .headline-wrapper {
+    max-width: 1000px;
+
+  }
+
+  .gallery-wrapper .timer-wrapper {
+    max-width: 1000px;
+  }
+
+  .home-projects-block-wrapper .latest-projects-block {
+    height: 700px;
+  }
+
+  .home-text-block-wrapper {
+    padding: 0px 30px;
+  }
+}
+
 
 /* ---------- FOOTER ---------- */
 .footer-wrapper {

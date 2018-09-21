@@ -5,6 +5,7 @@ import Kitchen_Image from "../../assets/images/Home/Gallery/Kitchen.jpg";
 import Other_House_Image from "../../assets/images/Home/Gallery/Other_House.jpg";
 import Other_Kitchen_Image from "../../assets/images/Home/Gallery/Other_Kitchen.jpg";
 import Stairs_Image from "../../assets/images/Home/Gallery/Stairs.jpg";
+
 import { clearTimeout } from "timers";
 
 var infiniteLoop;
