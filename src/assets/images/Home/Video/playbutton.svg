@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>playbutton copy</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Home-/-Intro" transform="translate(-1004.000000, -3755.000000)">
+            <g id="Video" transform="translate(121.000000, 3221.000000)">
+                <g id="Box-style-2" transform="translate(249.000000, 510.000000)">
+                    <g id="playbutton-copy" transform="translate(634.000000, 24.000000)">
+                        <circle id="Oval" fill="#DDDDDD" cx="20" cy="20" r="20"></circle>
+                        <polygon id="Rectangle-4" fill="#FFFFFF" transform="translate(17.795811, 19.457973) rotate(45.000000) translate(-17.795811, -19.457973) " points="11.371471 15.1549535 24.2201509 13.0336331 22.0988306 25.8823131"></polygon>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

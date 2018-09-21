@@ -6,6 +6,7 @@ import Outdoor_Seating_Image from "../../assets/images/Home/Projects/Ourdoor_Sea
 import Planning_Image from "../../assets/images/Home/Projects/Planning.jpg";
 import Kitchen_Image from "../../assets/images/Home/Projects/Kitchen.jpg";
 
+
 class HomeProjects extends Component {
   render() {
     return (
@@ -22,7 +23,10 @@ class HomeProjects extends Component {
           displayLink={"PORTFOLIO"}
           link={"/our-portfolio"}
         />
-        <Row gutter={16}>
+        <Row
+          gutter={16}
+        
+        >
           <HomeSubProject
             image={Outdoor_Seating_Image}
             mainCTA={"For all your renovation projects"}
@@ -38,6 +42,7 @@ class HomeProjects extends Component {
             link={"/about-us"}
           />
         </Row>
+        
       </div>
     );
   }
