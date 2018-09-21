@@ -97,14 +97,82 @@
   position: relative;
 }
 
-.gallery-wrapper .headline {
+.gallery-wrapper .headline-wrapper {
+  position: absolute;
+  max-width: 1200px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  bottom: 0;
+  padding: 0px 10px;
+
+}
+
+.gallery-wrapper .timer-wrapper {
+  position: absolute;
+  max-width: 1200px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  bottom: 0;
+  padding: 0px 10px;
+}
+
+.gallery-wrapper .timer-wrapper .timer-row {
+  height: 50px;
+  background: transparent;
   position: absolute;
   bottom: 52px;
   z-index: 99;
-  left: 135px;
+  right: 10px;
+  display: flex;
 }
 
-.gallery-wrapper .headline h1 {
+.gallery-wrapper .timer-wrapper .timer-row .timer {
+  height: 42px;
+  width: 42px;
+  border-radius: 100px;
+  background: transparent;
+  margin: 0px 0px 0px 18px;
+  opacity: .8;
+  cursor: pointer;
+}
+
+
+
+.gallery-wrapper .timer-wrapper .timer-row .timer-active {
+
+  opacity: 1;
+}
+
+.progress {
+  transform: rotate(-90deg);
+}
+
+.progress__value {
+  stroke-dasharray: 339.292;
+  stroke-dashoffset: 339.292;
+  animation: progress 6.5s infinite;
+}
+
+@keyframes progress {
+  from {
+    stroke-dashoffset: 339.292;
+  }
+
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.gallery-wrapper .headline-wrapper .headline {
+  position: absolute;
+  bottom: 52px;
+  z-index: 99;
+  left: 10px;
+}
+
+.gallery-wrapper .headline-wrapper .headline h1 {
   color: white;
   font-size: 60px;
   margin: 0px;
