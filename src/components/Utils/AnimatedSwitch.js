@@ -10,7 +10,6 @@ export default class AnimatedSwitch extends Switch {
     };
   }
   componentWillAppear(cb) {
-    console.log("componentWillAppear");
     setTimeout(
       () => Animated.spring(this.state.animate, { toValue: 1 }).start(),
       180
@@ -19,7 +18,6 @@ export default class AnimatedSwitch extends Switch {
   }
   componentWillEnter(cb) {
     window.scrollTo(0, 0);
-    console.log("componentWillEnter");
     setTimeout(
       () => Animated.spring(this.state.animate, { toValue: 1 }).start(),
       180

@@ -1,0 +1,2 @@
+// Common Types
+export const TOGGLE_FULL_SCREEN_MODAL = "TOGGLE_FULL_SCREEN_MODAL";

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="81px" height="85px" viewBox="0 0 81 85" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>quote</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="About-/-MRC" transform="translate(-1238.000000, -2591.000000)" fill="#000000">
+            <g id="Section-3" transform="translate(0.000000, 1873.000000)">
+                <g id="quote_box" transform="translate(629.000000, 350.000000)">
+                    <path d="M674.069872,368 L655.030171,416.460891 L655.030171,453 L690,453 L690,414.153345 L680.675366,410.692026 L686.503262,370.307546 L674.069872,368 Z M628.038884,368 L609,416.460891 L609,453 L643.969829,453 L643.969829,414.153345 L634.644378,410.692026 L640.472274,370.307546 L628.038884,368 Z" id="quote" transform="translate(649.500000, 410.500000) scale(-1, 1) translate(-649.500000, -410.500000) "></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

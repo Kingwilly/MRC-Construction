@@ -13,7 +13,7 @@ class HomeSubProject extends Component {
           <div className="button-container-outer">
             <div className="button-container-inner">
               <div className="button-top">
-                <Link to="/">
+                <Link to={this.props.link}>
                   <p>{this.props.mainCTA}</p>
                 </Link>
               </div>
