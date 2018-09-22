@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Row, Col } from "antd";
-import { Link } from "react-router-dom";
+
 import { toggleFullScreenModal } from "../../actions/actionsCommon";
 import { connect } from "react-redux";
 // Export Photos
@@ -106,10 +106,10 @@ class OurPersonal extends Component {
             <div className="button-container-outer">
               <div className="button-container-inner">
                 <div className="button-bottom">
-                  <Link to={expert.url}>
+                  <div>
                     <p className="cta">{expert.description}</p>
                     <p className="link">{expert.name}</p>
-                  </Link>
+                  </div>
                 </div>
               </div>
             </div>

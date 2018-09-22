@@ -1187,3 +1187,36 @@
   background-repeat: no-repeat !important;
   background-size: cover !important;
 }
+
+.personal-modal-inner-wrapper {
+
+  max-width: 1200px;
+  margin: auto;
+  margin-top: 150px;
+
+}
+
+.personal-modal-inner-wrapper h1 {
+  color: #FFFFFF;
+  font-family: "butlerregular";
+  font-size: 60px;
+  font-weight: 300;
+  line-height: 58px;
+}
+
+.personal-modal-inner-wrapper h2 {
+  font-family: "unica_oneregular";
+  font-size: 30px;
+  color: white;
+  margin: 0px;
+  font-weight: 300;
+  line-height: 58px;
+}
+
+.personal-modal-inner-wrapper p {
+  color: #FFFFFF;
+  font-family: "cooper_hewittbook";
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 28px;
+}
