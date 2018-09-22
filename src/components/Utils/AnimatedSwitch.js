@@ -18,6 +18,7 @@ export default class AnimatedSwitch extends Switch {
     cb();
   }
   componentWillEnter(cb) {
+    window.scrollTo(0, 0);
     console.log("componentWillEnter");
     setTimeout(
       () => Animated.spring(this.state.animate, { toValue: 1 }).start(),
@@ -32,14 +33,15 @@ export default class AnimatedSwitch extends Switch {
   }
   render() {
     const style = {
-      opacity: Animated.template`${this.state.animate}`
-      // transform: Animated.template`
-      //  	translate3d(0,${this.state.animate.interpolate({
-      //     inputRange: [0, 1],
-      //     outputRange: ["100px", "0px"]
-      //   })},0)
-      //  `
+      opacity: Animated.template`${this.state.animate}`,
+      transform: Animated.template`
+       	translate3d(0,${this.state.animate.interpolate({
+          inputRange: [0, 1],
+          outputRange: ["10px", "0px"]
+        })},0)
+       `
     };
+
     return (
       <Animated.div style={style} className="animated-page-wrapper">
         {super.render()}
