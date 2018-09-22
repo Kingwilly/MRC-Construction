@@ -6,6 +6,9 @@ import AnimatedSwitch from "./components/Utils/AnimatedSwitch";
 import Home from "./containers/Home";
 import About from "./containers/About";
 
+// Navigation Compoent
+import Navigation from "./components/Common/Navigation";
+
 class Routes extends React.Component {
   state = {
     newKey: new Date()
@@ -20,13 +23,15 @@ class Routes extends React.Component {
       <BrowserRouter onUpdate={() => window.scrollTo(0, 0)}>
         <Route
           render={({ location }) => (
-            <TransitionGroup component="div">
-              <AnimatedSwitch key={location.key} location={location}>
-                <Route exact path="/" component={Home} />
-                <Route exact path="/about" component={About} />
-                <Route path="*" component={Home} />
-              </AnimatedSwitch>
-            </TransitionGroup>
+            <div>
+              <Navigation />
+              <TransitionGroup component="div">
+                <AnimatedSwitch key={location.key} location={location}>
+                  <Route exact path="/" component={Home} />
+                  <Route exact path="/about-mrc" component={About} />
+                </AnimatedSwitch>
+              </TransitionGroup>
+            </div>
           )}
         />
       </BrowserRouter>

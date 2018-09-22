@@ -10,13 +10,15 @@ class HomeMainProject extends Component {
       >
         <div className="button-container-outer">
           <div className="button-container-inner">
-            <Link className="button-left" to={this.props.link}>
-              {this.props.mainCTA}
-            </Link>
-            <Link className="button-right" to="/">
-              <p className="cta">{this.props.subCTA}</p>
-              <p className="link">{this.props.displayLink}</p>
-            </Link>
+            <div className="button-left">
+              <Link to={this.props.link}>{this.props.mainCTA}</Link>
+            </div>
+            <div className="button-right">
+              <Link to="/">
+                <p className="cta">{this.props.subCTA}</p>
+                <p className="link">{this.props.displayLink}</p>
+              </Link>
+            </div>
           </div>
         </div>
       </div>

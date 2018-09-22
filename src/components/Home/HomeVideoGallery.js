@@ -15,7 +15,12 @@ class HomeVideoGallery extends Component {
     return (
       <div className="home-video-gallery-wrapper">
         <Row gutter={16}>
-          <Col xs={{ span: 24 }} sm={{ span: 22 }} style={{ padding: "5px" }}>
+          <Col
+            xs={{ span: 24 }}
+            sm={{ span: 24 }}
+            md={{ span: 22 }}
+            style={{ padding: "5px" }}
+          >
             <div
               className="main-video-image"
               style={{ backgroundImage: "url(" + Main_Video_Image + ")" }}
@@ -23,7 +28,7 @@ class HomeVideoGallery extends Component {
               <div className="button-container-outer">
                 <div className="button-container-inner">
                   <Link className="button-left" to={"/video"}>
-                    <img src={nbc_logo} />
+                    <img src={nbc_logo} alt="NBC Logo"/>
                     <p>HELPING FAMILIES ONE HOME AT A TIME</p>
                   </Link>
                   <Link className="button-right" to="/">
@@ -35,13 +40,18 @@ class HomeVideoGallery extends Component {
                       <p className="cta">LATEST WORK</p>
                       <p className="link">GEORGE TO THE RESCUE</p>
                     </div>
-                    <img src={playbutton} />
+                    <img src={playbutton} alt="Play Button" />
                   </Link>
                 </div>
               </div>
             </div>
           </Col>
-          <Col xs={{ span: 24 }} sm={{ span: 2 }} style={{ padding: "5px" }}>
+          <Col
+            xs={{ span: 24 }}
+            sm={{ span: 0 }}
+            md={{ span: 2 }}
+            style={{ padding: "5px" }}
+          >
             <div className="side-video-gallery">
               <img src={thumb_1_image} alt={"Thumbnail 1"} />
               <img src={thumb_2_image} alt={"Thumbnail 2"} />
