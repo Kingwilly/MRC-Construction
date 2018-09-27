@@ -660,7 +660,6 @@
   background: white;
   z-index: 9999;
   cursor: pointer;
-  box-shadow: 1px 1px 9px #e2e2e2;
   padding: 10px;
 
 }
@@ -681,6 +680,7 @@
   font-family: "unica_oneregular";
   font-size: 15px;
   line-height: 16px;
+  text-transform: uppercase !important;
 }
 
 .navigation-wrapper .scroll-down-arrow {
@@ -716,7 +716,7 @@
 .navigation-wrapper .navigation-overlay .navigation-overlay-panel {
   position: fixed;
   height: 292px;
-  width: 0px;
+  width: 550px !important;
   background-color: #FFFFFF;
   top: 0;
   bottom: 0;
@@ -729,7 +729,7 @@
 
 .navigation-overlay-open .navigation-overlay-panel {
   transition: all .5s ease;
-  width: 550px !important;
+  
 }
 
 .navigation-wrapper .navigation-overlay .navigation-overlay-panel .navigation-overlay-inner-panel {
@@ -752,6 +752,7 @@
   text-align: center;
 
   color: #000000;
+  text-transform: uppercase !important;
   font-family: "unica_oneregular";
   font-size: 15px;
   line-height: 16px;
@@ -778,6 +779,7 @@
   color: #000000;
   font-family: "unica_oneregular";
   font-size: 10px;
+  text-transform: uppercase !important;
   line-height: 12px;
   margin-bottom: 12px;
 
@@ -850,6 +852,7 @@
 .about-wrapper .hero-image .hero-image-inner-wrapper .content-wrapper-box .content-title .title {
   margin: 0px;
   font-family: "unica_oneregular";
+  text-transform: uppercase !important;
   font-size: 18px;
   color: #fff;
 }
@@ -888,6 +891,7 @@
 .about-wrapper .experts-container .title-wrapper .sub-title {
   margin: 0px;
   font-family: "unica_oneregular";
+  text-transform: uppercase !important;
   font-size: 18px;
   color: #222
 }
@@ -944,6 +948,7 @@
 .about-wrapper .experts-container .expert-photo .button-container-outer .button-container-inner .button-top p {
   color: #000000;
   font-family: "unica_oneregular";
+  text-transform: uppercase !important;
   font-size: 14px;
   letter-spacing: 7px;
   margin: 0px;
@@ -956,6 +961,7 @@
   margin: 0px;
   color: #000000;
   font-family: "unica_oneregular";
+  text-transform: uppercase !important;
   font-size: 13px;
   line-height: 16px;
   padding: 10px 0px 0px 14px;
@@ -998,6 +1004,7 @@
 
 .about-wrapper .maintainence-section .text-content-wrapper .top-block .sub-title {
   font-family: "unica_oneregular";
+  text-transform: uppercase !important;
   font-size: 17px;
   margin-bottom: 10px;
   line-height: 16px;
@@ -1042,6 +1049,7 @@
 .about-wrapper .maintainence-section .text-content-wrapper .quote-block-inner .speaker {
   color: #000000;
   font-family: "unica_oneregular";
+  text-transform: uppercase !important;
   font-size: 16px;
   letter-spacing: 7px;
   line-height: 20px;
@@ -1086,6 +1094,7 @@
 
 .about-wrapper .our-team-section .title-section .sub-title {
   font-family: "unica_oneregular";
+  text-transform: uppercase !important;
   font-size: 17px;
   margin-bottom: 10px;
   line-height: 16px;
@@ -1102,6 +1111,7 @@
 
 .about-wrapper .our-team-section .title-section b {
   font-family: "unica_oneregular";
+  text-transform: uppercase !important;
   font-size: 17px;
   margin-bottom: 10px;
   line-height: 16px;
@@ -1206,6 +1216,7 @@
 
 .personal-modal-inner-wrapper h2 {
   font-family: "unica_oneregular";
+  text-transform: uppercase !important;
   font-size: 30px;
   color: white;
   margin: 0px;
