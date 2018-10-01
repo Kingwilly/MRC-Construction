@@ -20,7 +20,7 @@ class Home extends Component {
             link={{
               cta: "LEARN MORE ABOUT",
               linkName: "OUR PROCESS",
-              url: "/"
+              url: "/our-process"
             }}
           />
           <HomeProjects />

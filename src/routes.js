@@ -5,6 +5,8 @@ import AnimatedSwitch from "./components/Utils/AnimatedSwitch";
 // Common Pages
 import Home from "./containers/Home";
 import About from "./containers/About";
+import Contact from "./containers/Contact";
+import Process from "./containers/Process";
 import PersonalModal from "./components/About/PersonalModal";
 // Navigation Compoent
 import Navigation from "./components/Common/Navigation";
@@ -24,14 +26,16 @@ class Routes extends React.Component {
         <Route
           render={({ location }) => (
             <div>
-            <Navigation />
-            <TransitionGroup component="div">
-            <AnimatedSwitch key={location.key} location={location}>
-            <Route exact path="/" component={Home} />
-            <Route exact path="/about-mrc" component={About} />
-            </AnimatedSwitch>
-            </TransitionGroup>
-            <PersonalModal />
+              <Navigation />
+              <TransitionGroup component="div">
+                <AnimatedSwitch key={location.key} location={location}>
+                  <Route exact path="/" component={Home} />
+                  <Route exact path="/about-mrc" component={About} />
+                  <Route exact path="/our-process" component={Process} />
+                  <Route exact path="/contact" component={Contact} />
+                </AnimatedSwitch>
+              </TransitionGroup>
+              <PersonalModal />
             </div>
           )}
         />

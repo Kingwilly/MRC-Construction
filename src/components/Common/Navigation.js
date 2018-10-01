@@ -120,10 +120,7 @@ class Navigation extends Component {
                 <div className="link-row">
                   <div
                     className="link-item"
-                    style={{
-                      width: "23%",
-                      borderRight: "2px solid #dddddd"
-                    }}
+                    style={{ width: "23%", borderRight: "2px solid #dddddd" }}
                   >
                     <Link to="/about-mrc">
                       <p className="cta">ABOUT</p>
@@ -132,22 +129,14 @@ class Navigation extends Component {
                   </div>
                   <div
                     className="link-item"
-                    style={{
-                      width: "43%",
-                      borderRight: "2px solid #dddddd"
-                    }}
+                    style={{ width: "43%", borderRight: "2px solid #dddddd" }}
                   >
                     <Link to="/">
                       <p className="cta">LATEST WORK</p>
                       <p className="link">PORTFOLIO</p>
                     </Link>
                   </div>
-                  <div
-                    className="link-item"
-                    style={{
-                      width: "33%"
-                    }}
-                  >
+                  <div className="link-item" style={{ width: "33%" }}>
                     <Link to="/">
                       <p className="cta">BLOG</p>
                       <p className="link">JOURNAL</p>
@@ -157,23 +146,15 @@ class Navigation extends Component {
                 <div className="link-row">
                   <div
                     className="link-item"
-                    style={{
-                      width: "50%",
-                      borderRight: "2px solid #dddddd"
-                    }}
+                    style={{ width: "50%", borderRight: "2px solid #dddddd" }}
                   >
-                    <Link to="/">
+                    <Link to="/our-process">
                       <p className="cta">PROCESS</p>
                       <p className="link">DESIGN / BUILD</p>
                     </Link>
                   </div>
-                  <div
-                    className="link-item"
-                    style={{
-                      width: "50%"
-                    }}
-                  >
-                    <Link to="/">
+                  <div className="link-item" style={{ width: "50%" }}>
+                    <Link to="/contact">
                       <p className="cta">FIND US</p>
                       <p className="link">CONTACT</p>
                     </Link>

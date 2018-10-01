@@ -10,11 +10,11 @@ class Hero extends Component {
         className="hero-image"
         style={{ backgroundImage: "url(" + Exterior_Building_Image + ")" }}
       >
+      <div className="hero-title-wrapper">
+        <h2>ABOUT</h2>
+        <h1>MRC</h1>
+      </div>
         <div className="hero-image-inner-wrapper">
-          <div className="hero-title-wrapper">
-            <h2>ABOUT</h2>
-            <h1>MRC</h1>
-          </div>
           <div className="content-wrapper-box">
             <div className="content-title">
               <p className="title">WHO WE ARE</p>
