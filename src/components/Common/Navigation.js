@@ -131,7 +131,7 @@ class Navigation extends Component {
                     className="link-item"
                     style={{ width: "43%", borderRight: "2px solid #dddddd" }}
                   >
-                    <Link to="/">
+                    <Link to="/our-portfolio">
                       <p className="cta">LATEST WORK</p>
                       <p className="link">PORTFOLIO</p>
                     </Link>

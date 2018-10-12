@@ -4,6 +4,7 @@ import DocumentTitle from "react-document-title";
 import Hero from "../components/Process/Hero";
 import DesignBuild from "../components/Process/DesignBuild";
 import TriplePlay from "../components/Process/TriplePlay";
+import OurDifferance from "../components/Process/OurDifferance";
 
 // Images
 import OUTSIDE_OF_HOUSE from "../assets/images/Process/hero_2.png";
@@ -17,6 +18,7 @@ class Process extends Component {
           <Hero />
           <DesignBuild />
           <TriplePlay />
+          <OurDifferance />
 
           <div
             className="bottom-hero"

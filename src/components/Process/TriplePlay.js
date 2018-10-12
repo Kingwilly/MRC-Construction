@@ -39,7 +39,7 @@ class TriplePlay extends Component {
                 background: "url(" + PANEL_ONE_IMAGE + ")"
               }}
             />
-            <div className="panel-cta-outer">
+            <a href="#" className="panel-cta-outer">
               <div className="panel-cta-inner">
                 <div className="text-content">
                   <p className="label">EXPLORE</p>
@@ -49,7 +49,7 @@ class TriplePlay extends Component {
                   <img src={Arrow_Button} alt="Arrow Button" />
                 </div>
               </div>
-            </div>
+            </a>
           </Col>
           <Col
             xs={{ span: 24 }}
@@ -78,7 +78,7 @@ class TriplePlay extends Component {
                 background: "url(" + PANEL_TWO_IMAGE + ")"
               }}
             />
-            <div className="panel-cta-outer">
+            <a href="#" className="panel-cta-outer">
               <div className="panel-cta-inner">
                 <div className="text-content">
                   <p className="label">EXPLORE</p>
@@ -88,7 +88,7 @@ class TriplePlay extends Component {
                   <img src={Arrow_Button} alt="Arrow Button" />
                 </div>
               </div>
-            </div>
+            </a>
           </Col>
           <Col
             xs={{ span: 24 }}
@@ -116,7 +116,7 @@ class TriplePlay extends Component {
                 background: "url(" + PANEL_THREE_IMAGE + ")"
               }}
             />
-            <div className="panel-cta-outer">
+            <a href="#" className="panel-cta-outer">
               <div className="panel-cta-inner">
                 <div className="text-content">
                   <p className="label">EXPLORE</p>
@@ -126,7 +126,7 @@ class TriplePlay extends Component {
                   <img src={Arrow_Button} alt="Arrow Button" />
                 </div>
               </div>
-            </div>
+            </a>
           </Col>
         </Row>
       </div>

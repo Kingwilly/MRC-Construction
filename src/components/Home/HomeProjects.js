@@ -20,7 +20,7 @@ class HomeProjects extends Component {
           }
           subCTA={"LATEST WORK"}
           displayLink={"PORTFOLIO"}
-          link={"/"}
+          link={"/our-portfolio"}
         />
         <Row gutter={16}>
           <HomeSubProject

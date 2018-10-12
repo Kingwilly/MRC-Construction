@@ -4,22 +4,12 @@ import { clearTimeout } from "timers";
 import Scroll_Down_Arrow from "../../assets/images/Common/scroll_down_arrow.svg";
 
 // Gallery Images
-import Image_001 from "../../assets/images/About/Gallery/171127-EM_Workspace_001.jpg";
 import Image_002 from "../../assets/images/About/Gallery/171127-EM_Workspace_002.jpg";
-import Image_003 from "../../assets/images/About/Gallery/171127-EM_Workspace_003.jpg";
 import Image_004 from "../../assets/images/About/Gallery/171127-EM_Workspace_004.jpg";
-import Image_005 from "../../assets/images/About/Gallery/171127-EM_Workspace_005.jpg";
 import Image_007 from "../../assets/images/About/Gallery/171127-EM_Workspace_007.jpg";
-import Image_008 from "../../assets/images/About/Gallery/171127-EM_Workspace_008.jpg";
-import Image_009 from "../../assets/images/About/Gallery/171127-EM_Workspace_009.jpg";
 import Image_012 from "../../assets/images/About/Gallery/171127-EM_Workspace_012.jpg";
 import Image_013 from "../../assets/images/About/Gallery/171127-EM_Workspace_013.jpg";
 import Image_014 from "../../assets/images/About/Gallery/171127-EM_Workspace_014.jpg";
-import Image_015 from "../../assets/images/About/Gallery/171127-EM_Workspace_015.jpg";
-import Image_016 from "../../assets/images/About/Gallery/171127-EM_Workspace_016.jpg";
-import Image_017 from "../../assets/images/About/Gallery/171127-EM_Workspace_017.jpg";
-import Image_018 from "../../assets/images/About/Gallery/171127-EM_Workspace_018.jpg";
-import Image_019 from "../../assets/images/About/Gallery/171127-EM_Workspace_019.jpg";
 import Image_020 from "../../assets/images/About/Gallery/171127-EM_Workspace_020.jpg";
 
 var infiniteLoop;
@@ -31,35 +21,15 @@ class Gallery extends Component {
     this.state = {
       imageGallery: [
         {
-          image: Image_001,
-          active: true
-        },
-        {
           image: Image_002,
-          active: false
-        },
-        {
-          image: Image_003,
-          active: false
+          active: true
         },
         {
           image: Image_004,
           active: false
         },
         {
-          image: Image_005,
-          active: false
-        },
-        {
           image: Image_007,
-          active: false
-        },
-        {
-          image: Image_008,
-          active: false
-        },
-        {
-          image: Image_009,
           active: false
         },
         {
@@ -72,26 +42,6 @@ class Gallery extends Component {
         },
         {
           image: Image_014,
-          active: false
-        },
-        {
-          image: Image_015,
-          active: false
-        },
-        {
-          image: Image_016,
-          active: false
-        },
-        {
-          image: Image_017,
-          active: false
-        },
-        {
-          image: Image_018,
-          active: false
-        },
-        {
-          image: Image_019,
           active: false
         },
         {
