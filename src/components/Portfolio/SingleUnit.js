@@ -1,10 +1,17 @@
 import React, { Component } from "react";
 import { Col } from "antd";
+import { Link } from "react-router-dom";
+
+function convertToSlug(Text) {
+  return Text.toLowerCase()
+    .replace(/ /g, "-")
+    .replace(/[^\w-]+/g, "");
+}
 
 class UnitWrapper extends Component {
   render() {
     if (this.props.item.fields.details) {
-      return <a href="#">{this.props.children}</a>;
+      return <Link to={"/our-portfolio/" + this.props.item.sys.id}>{this.props.children}</Link>;
     } else {
       return <div>{this.props.children}</div>;
     }

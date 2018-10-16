@@ -1783,3 +1783,119 @@
   margin: 0px;
 
 }
+
+.portfolio-detail-wrapper {
+  max-width: 1200px;
+  margin: auto;
+  padding-top: 60px;
+}
+
+.portfolio-detail-wrapper .portfolio-header-content {
+  max-width: 980px;
+  margin: auto;
+}
+
+.portfolio-detail-wrapper .portfolio-header-content .portfolio-detail-header {
+  margin-bottom: 51px;
+}
+
+.portfolio-detail-wrapper .portfolio-header-content .portfolio-detail-header h1 {
+  color: #000000;
+  font-family: "butlerlight";
+  font-size: 60px;
+  font-weight: 300;
+  line-height: 60px;
+  margin-bottom: 17px;
+}
+
+.portfolio-detail-wrapper .portfolio-header-content .portfolio-detail-header h3 {
+  color: #A3A199;
+  font-family: "cooper_hewittbook";
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 29px;
+  margin: 0px;
+}
+
+.portfolio-detail-wrapper .portfolio-header-content .portfolio-detail-content {
+  margin-bottom: 70px;
+}
+
+.portfolio-detail-wrapper .portfolio-header-content .portfolio-detail-content h4 {
+  font-family: "unica_oneregular";
+  color: #000;
+  margin-bottom: 20px;
+  font-size: 16px
+}
+
+.portfolio-detail-wrapper .portfolio-header-content .portfolio-detail-content p {
+  color: #A3A199;
+  font-family: "cooper_hewittbook";
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 28px;
+}
+
+.portfolio-detail-wrapper .portfolio-detail-rooms-wrapper {
+  max-width: 1200px;
+  margin: auto;
+}
+
+
+.portfolio-detail-wrapper .portfolio-detail-rooms-wrapper .single-project-outer {
+  padding: 0px 5px 105px 5px;
+  cursor: pointer;
+}
+
+.portfolio-detail-wrapper .portfolio-detail-rooms-wrapper .single-project-outer .single-project-inner {
+  background-size: cover !important;
+  min-height: 412px;
+  height: 100%;
+  width: 100%;
+}
+
+
+
+.portfolio-detail-wrapper .portfolio-detail-rooms-wrapper .single-project-outer .panel-cta-outer {
+  position: absolute;
+  width: 346px;
+  background: white;
+  margin: auto;
+  height: 90px;
+  padding: 10px;
+  left: 0;
+  right: 0;
+  cursor: pointer;
+  bottom: 7px;
+  margin-bottom: 30px;
+
+}
+
+.portfolio-detail-wrapper .portfolio-detail-rooms-wrapper .single-project-outer .panel-cta-outer .panel-cta-inner {
+  border: 4px solid #DDDDDD;
+  display: flex;
+
+}
+
+.portfolio-detail-wrapper .portfolio-detail-rooms-wrapper .single-project-outer .panel-cta-outer .panel-cta-inner .text-content .label {
+  margin: 0px;
+  color: #000000;
+  font-family: "unica_oneregular";
+  font-size: 13px;
+  line-height: 16px;
+  padding: 12px 2px 3px 18px;
+  margin-bottom: 0px;
+}
+
+.portfolio-detail-wrapper .portfolio-detail-rooms-wrapper .single-project-outer .panel-cta-outer .panel-cta-inner .text-content .value {
+  margin: 0px;
+  color: #000000;
+  font-family: "butlerlight";
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 19px;
+  padding: 2px 0px 10px 35px;
+  margin: 0px;
+  text-transform: uppercase;
+
+}

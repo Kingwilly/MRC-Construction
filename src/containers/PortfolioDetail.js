@@ -3,14 +3,18 @@ import { Row, Col } from "antd";
 import DocumentTitle from "react-document-title";
 var contentful = require("contentful");
 
-// Base Comps
-import SingleUnit from "../components/Portfolio/SingleUnit";
+function getSecondPart(str) {
+  if (str) {
+    var location = window.location.pathname.toString().substring(15);
+    return location;
+  }
+}
 
 class PortfolioDetail extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      entries: []
+      project: null
     };
   }
   client = contentful.createClient({
@@ -21,40 +25,83 @@ class PortfolioDetail extends Component {
   componentWillMount() {
     var that = this;
     this.client
-      .getEntries({
-        content_type: "portfolioItem",
-        "fields.map": this.props.title
-      })
-      .then(function(entries) {
-        that.setState({ entries: entries.fields.items });
+      .getEntries({ "sys.id": getSecondPart(this.props.location) })
+      .then(function(project) {
+        that.setState({ project: project.items[0] });
+        console.log(project.items[0]);
       });
-    console.log(entries);
   }
+  renderRooms() {
+    var that = this;
+    return this.state.project.fields.rooms.map(function(room) {
+      return (
+        <Col
+          xs={{ span: 24 }}
+          sm={{ span: 12 }}
+          style={{ padding: "9px" }}
+          key={room.sys.id}
+        >
+          <div className="single-project-outer">
+            <div
+              className="single-project-inner"
+              style={{
+                background:
+                  "url(" +
+                  room.fields.image.fields.file.url +
+                  "?w=590&h=412&fm=jpg&q=90&fit=fill&fl=progressive)"
+              }}
+            >
+              <div className="panel-cta-outer">
+                <div className="panel-cta-inner">
+                  <div className="text-content">
+                    <p className="label">
+                      {that.state.project.fields.detailTitle}{" "}
+                    </p>
+                    <p className="value">{room.fields.roomName}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </Col>
+      );
+    });
+  }
+
   render() {
-    return (
-      <DocumentTitle title={"Our Portfolio | MRC"}>
-        <div className="about-wrapper portfolio-home-wrapper">
-          <div className="hero-title-wrapper">
-            <h2>LATEST WORK</h2>
-            <h1>PORTFOLIO</h1>
+    if (this.state.project) {
+      return (
+        <DocumentTitle title={this.state.project.fields.title + " | MRC"}>
+          <div
+            className="about-wrapper portfolio-detail-wrapper"
+            style={{ minHeight: "100vh" }}
+          >
+            <div className="portfolio-header-content">
+              <div className="portfolio-detail-header">
+                <h1>{this.state.project.fields.detailTitle}</h1>
+                <h3>{this.state.project.fields.location}</h3>
+              </div>
+              <div className="portfolio-detail-content">
+                <h4>{this.state.project.fields.subheader}</h4>
+                <p>{this.state.project.fields.details}</p>
+              </div>
+            </div>
+            <div className="portfolio-detail-rooms-wrapper">
+              <Row>{this.renderRooms()}</Row>
+            </div>
           </div>
-          <div className="project-wrapper">
-            <Row gutter={16}>
-              <SingleUnit />
-              <SingleUnit />
-              <SingleUnit />
-              <SingleUnit />
-              <SingleUnit />
-              <SingleUnit />
-              <SingleUnit />
-              <SingleUnit />
-              <SingleUnit />
-              <SingleUnit />
-            </Row>
-          </div>
-        </div>
-      </DocumentTitle>
-    );
+        </DocumentTitle>
+      );
+    } else {
+      return (
+        <DocumentTitle title={"Portfolio Detail | MRC"}>
+          <div
+            className="about-wrapper portfolio-detail-wrapper"
+            style={{ minHeight: "100vh" }}
+          />
+        </DocumentTitle>
+      );
+    }
   }
 }
 

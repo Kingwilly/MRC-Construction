@@ -8,6 +8,7 @@ import About from "./containers/About";
 import Contact from "./containers/Contact";
 import Process from "./containers/Process";
 import PortfolioHome from "./containers/PortfolioHome";
+import PortfolioDetail from "./containers/PortfolioDetail";
 import PersonalModal from "./components/About/PersonalModal";
 // Navigation Compoent
 import Navigation from "./components/Common/Navigation";
@@ -35,6 +36,7 @@ class Routes extends React.Component {
                   <Route exact path="/our-process" component={Process} />
                   <Route exact path="/contact" component={Contact} />
                   <Route exact path="/our-portfolio" component={PortfolioHome} />
+                  <Route path="/our-portfolio/:job" component={PortfolioDetail} />
                 </AnimatedSwitch>
               </TransitionGroup>
               <PersonalModal />
