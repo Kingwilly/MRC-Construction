@@ -179,8 +179,8 @@ class HeroGallery extends Component {
         </div>
         <div className="headline-wrapper">
           <div className="headline">
-            <h1>A Whole House</h1>
-            <h1>Approach</h1>
+            <h1>A Whole House Approach</h1>
+           
           </div>
         </div>
         {this.renderGalleryImages()}

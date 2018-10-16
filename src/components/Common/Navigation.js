@@ -88,12 +88,7 @@ class Navigation extends Component {
             className="scroll-down-arrow"
           />
         ) : (
-          <img
-            src={Scroll_Down_Arrow}
-            alt="Scroll Down Arrow"
-            onClick={() => this.scrollDown()}
-            className="scroll-down-arrow"
-          />
+         null
         )}
         <div
           onClick={() => this.toggleModalStatus()}

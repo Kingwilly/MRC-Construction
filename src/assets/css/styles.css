@@ -87,6 +87,13 @@
 }
 
 /* ---------- HOMEPAGE ---------- */
+.no-scroll {
+  overflow: hidden;
+  width: 100%;
+
+
+}
+
 /* ----- HOME GALLERY ----- */
 .gallery-wrapper {
   min-height: 650px;
@@ -204,7 +211,7 @@
 .home-text-block-wrapper .title {
   color: #333;
   font-family: "unica_oneregular";
-  font-size: 16px;
+  font-size: 18px;
   line-height: 24px;
   margin-bottom: 20px;
 }
@@ -245,7 +252,7 @@
   margin: 0px;
   color: #000000;
   font-family: "butlerregular";
-  font-size: 15px;
+  font-size: 17px;
   font-weight: 300;
   line-height: 19px;
   margin-left: 10px;
@@ -267,7 +274,7 @@
 }
 
 .home-projects-block-wrapper .latest-projects-block {
-  height: 1200px;
+  height: 800px;
   width: 100%;
   background-size: cover;
   background-position: bottom;
@@ -394,7 +401,7 @@
   margin: 0px;
   color: #000000;
   font-family: "butlerregular";
-  font-size: 15px;
+  font-size: 17px;
   font-weight: 300;
   line-height: 19px;
   margin-left: 10px;
@@ -492,7 +499,7 @@
   margin: 0px;
   color: #000000;
   font-family: "butlerlight";
-  font-size: 15px;
+  font-size: 17px;
   font-weight: 300;
   line-height: 19px;
   margin-left: 10px;
@@ -740,6 +747,7 @@
 
 .navigation-wrapper .navigation-overlay .navigation-overlay-panel .navigation-overlay-inner-panel .sub-title-container p {
   margin: 0px;
+  letter-spacing: 5px;
 }
 
 .navigation-wrapper .navigation-overlay .navigation-overlay-panel .navigation-overlay-inner-panel .link-container {}
@@ -1145,6 +1153,7 @@
   z-index: 999;
   transform: rotate(90deg);
   bottom: 0;
+  background: rgba(94, 90, 90, 0.31);
   margin: auto;
   cursor: pointer;
 }
@@ -1155,6 +1164,7 @@
   right: 17px;
   top: 0;
   z-index: 999;
+  background: rgba(94, 90, 90, 0.31);
   transform: rotate(-90deg);
   bottom: 0;
   margin: auto;
@@ -1180,6 +1190,12 @@
   background: -ms-linear-gradient(left, rgba(51, 51, 51, 0) 0%, rgba(51, 51, 51, 0.85) 100%);
   background: linear-gradient(to right, rgba(51, 51, 51, 0) 0%, rgba(51, 51, 51, 0.85) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00333333', endColorstr='#d9333333', GradientType=1);
+  position: fixed;
+  overflow-y: scroll;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }
 
 .personal-modal-inner-wrapper {
@@ -1332,10 +1348,17 @@
   border: 0px solid white;
   background: black;
   color: white;
-  font-family: "butlerlight";
+  font-family: "butlerregular";
   text-transform: uppercase;
   font-size: 18px;
   cursor: pointer;
+  opacity: 1;
+  transition: opacity 1s ease;
+}
+
+.contact-wrapper .contact-form-wrapper .contact-form-inner-wrapper .submit-button:hover {
+  opacity: .8;
+  transition: opacity 1s ease;
 }
 
 /* ----- OUR PROCESS PAGE ----- */
@@ -1486,7 +1509,7 @@
 .process-wrapper .triple-play-section {
   max-width: 1200px;
   margin: auto;
-  margin-bottom: 130px;
+  margin-bottom: 50px;
 
 }
 
@@ -1716,7 +1739,7 @@
 
 
 
-.portfolio-home-wrapper .project-wrapper .single-project-outer  .panel-cta-outer {
+.portfolio-home-wrapper .project-wrapper .single-project-outer .panel-cta-outer {
   position: absolute;
   width: 346px;
   background: white;
@@ -1730,35 +1753,33 @@
 
 }
 
-.portfolio-home-wrapper .project-wrapper .single-project-outer  .panel-cta-outer .panel-cta-inner {
+.portfolio-home-wrapper .project-wrapper .single-project-outer .panel-cta-outer .panel-cta-inner {
   border: 4px solid #DDDDDD;
   display: flex;
 
 }
 
-.portfolio-home-wrapper .project-wrapper .single-project-outer  .panel-cta-outer .panel-cta-inner .text-content {}
+.portfolio-home-wrapper .project-wrapper .single-project-outer .panel-cta-outer .panel-cta-inner .text-content {}
 
-.portfolio-home-wrapper .project-wrapper .single-project-outer  .panel-cta-outer .panel-cta-inner .text-content .label {
+.portfolio-home-wrapper .project-wrapper .single-project-outer .panel-cta-outer .panel-cta-inner .text-content .label {
   margin: 0px;
   color: #000000;
   font-family: "unica_oneregular";
   font-size: 10px;
   line-height: 12px;
-  position: absolute;
-  top: 22px;
-  left: 26px;
+  padding: 0px 0px 13px 18px;
   margin-bottom: 0px;
 
 }
 
-.portfolio-home-wrapper .project-wrapper .single-project-outer  .panel-cta-outer .panel-cta-inner .text-content .value {
+.portfolio-home-wrapper .project-wrapper .single-project-outer .panel-cta-outer .panel-cta-inner .text-content .value {
   margin: 0px;
   color: #000000;
   font-family: "butlerlight";
-  font-size: 15px;
+  font-size: 17px;
   font-weight: 300;
   line-height: 19px;
-  padding: 25px 2px 13px 32px;
+  padding: 16px 2px 3px 18px;
   margin: 0px;
 
 }

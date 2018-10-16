@@ -11,8 +11,7 @@ import Lisa_Spirn from "../../assets/images/About/Individuals/Lisa-Spirn-intro.j
 import Micheal_Mroz from "../../assets/images/About/Individuals/Michael-R-Mroz-intro.png";
 import Steve_Krammer from "../../assets/images/About/Individuals/Steve-Kammerer-intro.jpg";
 
-
-
+var contentful = require("contentful");
 
 class OurPersonal extends Component {
   // PersonalGallery
@@ -81,42 +80,65 @@ class OurPersonal extends Component {
     this.openPersonalModal = this.openPersonalModal.bind(this);
   }
   openPersonalModal(expert) {
-    if (expert.modal) {
-      console.log("open");
+    if (expert.fields.description) {
       this.props.toggleFullScreenModal();
     }
   }
+  client = contentful.createClient({
+    space: "490ezzr1f96l",
+    accessToken:
+      "8e9529f53ad5d25dfe6af8cf4541e10358877acb64a2945cc9898851b36696bb"
+  });
+  componentWillMount() {
+    var that = this;
+    this.client
+      .getEntries({
+        content_type: "teamMember",
+        order: "sys.createdAt"
+      })
+      .then(function(entries) {
+        console.log(entries);
+        that.setState({ entries: entries.items });
+      });
+  }
   renderExperts() {
     var that = this;
-    return this.state.imageGallery.map(function(expert, index) {
-      return (
-        <Col
-          xs={{ span: 24 }}
-          sm={{ span: 12 }}
-          md={{ span: 8 }}
-          lg={{ span: 6 }}
-          key={index}
-          style={{ padding: "9px" }}
-        >
-          <div
-            className="expert-photo"
-            onClick={() => that.openPersonalModal(expert)}
-            style={{ backgroundImage: "url(" + expert.image + ")" }}
+    if (this.state.entries) {
+      return this.state.entries.map(function(expert) {
+        return (
+          <Col
+            xs={{ span: 24 }}
+            sm={{ span: 12 }}
+            md={{ span: 8 }}
+            lg={{ span: 6 }}
+            key={expert.fields.name}
+            style={{ padding: "9px" }}
           >
-            <div className="button-container-outer">
-              <div className="button-container-inner">
-                <div className="button-bottom">
-                  <div>
-                    <p className="cta">{expert.description}</p>
-                    <p className="link">{expert.name}</p>
+            <div
+              className="expert-photo"
+              onClick={() => that.openPersonalModal(expert)}
+              style={{
+                backgroundImage:
+                  "url(" +
+                  expert.fields.headShot.fields.file.url +
+                  "?w=286&h=286&fm=jpg&q=90&fit=fill&fl=progressive)"
+              }}
+            >
+              <div className="button-container-outer">
+                <div className="button-container-inner">
+                  <div className="button-bottom">
+                    <div>
+                      <p className="cta">{expert.fields.title}</p>
+                      <p className="link">{expert.fields.name}</p>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-        </Col>
-      );
-    });
+          </Col>
+        );
+      });
+    }
   }
   render() {
     return (

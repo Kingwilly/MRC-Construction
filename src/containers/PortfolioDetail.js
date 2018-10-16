@@ -1,16 +1,16 @@
 import React, { Component } from "react";
 import { Row, Col } from "antd";
 import DocumentTitle from "react-document-title";
-import SingleUnit from "../components/Portfolio/SingleUnit";
 var contentful = require("contentful");
 
 // Base Comps
+import SingleUnit from "../components/Portfolio/SingleUnit";
 
 class PortfolioDetail extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      entries: null
+      entries: []
     };
   }
   client = contentful.createClient({
@@ -26,15 +26,9 @@ class PortfolioDetail extends Component {
         "fields.map": this.props.title
       })
       .then(function(entries) {
-        that.setState({ entries: entries.items });
+        that.setState({ entries: entries.fields.items });
       });
-  }
-  renderPortfolioItems() {
-    if (this.state.entries) {
-      return this.state.entries.map(function(item) {
-        return <SingleUnit key={item.fields.title} item={item} />;
-      });
-    }
+    console.log(entries);
   }
   render() {
     return (
@@ -45,7 +39,18 @@ class PortfolioDetail extends Component {
             <h1>PORTFOLIO</h1>
           </div>
           <div className="project-wrapper">
-            <Row gutter={16}>{this.renderPortfolioItems()}</Row>
+            <Row gutter={16}>
+              <SingleUnit />
+              <SingleUnit />
+              <SingleUnit />
+              <SingleUnit />
+              <SingleUnit />
+              <SingleUnit />
+              <SingleUnit />
+              <SingleUnit />
+              <SingleUnit />
+              <SingleUnit />
+            </Row>
           </div>
         </div>
       </DocumentTitle>
