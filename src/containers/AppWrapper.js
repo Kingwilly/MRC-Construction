@@ -12,7 +12,7 @@ class AppWrapper extends Component {
   }
 
   renderClasses() {
-    if (this.props.modalOpen) {
+    if (this.props.modalOpen || this.props.portfolioOpen) {
       return "global-app-wrapper no-scroll";
     } else {
       return "global-app-wrapper ";
@@ -20,7 +20,7 @@ class AppWrapper extends Component {
   }
   componentWillReceiveProps(nextProps) {
     var that = this;
-    if (nextProps.modalOpen) {
+    if (nextProps.modalOpen || nextProps.portfolioOpen) {
       console.log("change");
       setTimeout(function() {
         that.setState({ style: { position: "fixed" } });
@@ -44,7 +44,8 @@ class AppWrapper extends Component {
 
 function mapStateToProps(state) {
   return {
-    modalOpen: state.common.full_screen_modal_open
+    modalOpen: state.common.full_screen_modal_open,
+    portfolioOpen: state.common.porfolio_modal_open
   };
 }
 

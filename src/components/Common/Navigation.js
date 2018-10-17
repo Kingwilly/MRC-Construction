@@ -4,7 +4,10 @@ import Logo_Square_Logo from "../../assets/images/Common/logo_square.png";
 import Scroll_Down_Arrow from "../../assets/images/Common/scroll_down_arrow.svg";
 import Close_Logo from "../../assets/images/Common/exit_x.svg";
 import Logo from "../../assets/images/Common/logo_small.svg";
-import { toggleFullScreenModal } from "../../actions/actionsCommon";
+import {
+  toggleFullScreenModal,
+  togglePortfolioModal
+} from "../../actions/actionsCommon";
 import { Link } from "react-router-dom";
 
 class Navigation extends Component {
@@ -64,6 +67,14 @@ class Navigation extends Component {
     });
     return classString;
   }
+  toggleModals() {
+    if (this.props.modalOpen) {
+      this.props.toggleFullScreenModal();
+    }
+    if (this.props.portfolioOpen) {
+      this.props.togglePortfolioModal();
+    }
+  }
   render() {
     return (
       <div className="navigation-wrapper ">
@@ -80,16 +91,14 @@ class Navigation extends Component {
             </div>
           </div>
         </div>
-        {this.props.modalOpen ? (
+        {this.props.modalOpen || this.props.portfolioOpen ? (
           <img
             src={Close_Logo}
             alt="Close Modal"
-            onClick={() => this.props.toggleFullScreenModal()}
+            onClick={() => this.toggleModals()}
             className="scroll-down-arrow"
           />
-        ) : (
-         null
-        )}
+        ) : null}
         <div
           onClick={() => this.toggleModalStatus()}
           className={"navigation-overlay " + this.renderModalOverLayClasses()}
@@ -166,13 +175,15 @@ class Navigation extends Component {
 
 function mapStateToProps(state) {
   return {
-    modalOpen: state.common.full_screen_modal_open
+    modalOpen: state.common.full_screen_modal_open,
+    portfolioOpen: state.common.porfolio_modal_open
   };
 }
 
 export default connect(
   mapStateToProps,
   {
-    toggleFullScreenModal
+    toggleFullScreenModal,
+    togglePortfolioModal
   }
 )(Navigation);

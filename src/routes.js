@@ -10,6 +10,7 @@ import Process from "./containers/Process";
 import PortfolioHome from "./containers/PortfolioHome";
 import PortfolioDetail from "./containers/PortfolioDetail";
 import PersonalModal from "./components/About/PersonalModal";
+import PhotoGallery from "./components/Portfolio/PhotoGallery";
 import BlogHome from "./containers/BlogHome";
 import BlogDetail from "./containers/BlogDetail";
 // Navigation Compoent
@@ -51,6 +52,7 @@ class Routes extends React.Component {
                 </AnimatedSwitch>
               </TransitionGroup>
               <PersonalModal />
+              <PhotoGallery />
             </div>
           )}
         />

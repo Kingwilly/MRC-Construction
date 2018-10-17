@@ -1,6 +1,9 @@
 import React, { Component } from "react";
 import { Row, Col } from "antd";
 import DocumentTitle from "react-document-title";
+import { togglePortfolioModal } from "../actions/actionsCommon";
+import { connect } from "react-redux";
+
 var contentful = require("contentful");
 
 function getSecondPart(props, str) {
@@ -42,7 +45,12 @@ class PortfolioDetail extends Component {
           style={{ padding: "9px" }}
           key={room.sys.id}
         >
-          <div className="single-project-outer">
+          <div
+            className="single-project-outer"
+            onClick={() =>
+              that.props.togglePortfolioModal(that.state.project, room.sys.id)
+            }
+          >
             <div
               className="single-project-inner"
               style={{
@@ -106,4 +114,9 @@ class PortfolioDetail extends Component {
   }
 }
 
-export default PortfolioDetail;
+export default connect(
+  null,
+  {
+    togglePortfolioModal
+  }
+)(PortfolioDetail);
