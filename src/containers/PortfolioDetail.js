@@ -3,7 +3,8 @@ import { Row, Col } from "antd";
 import DocumentTitle from "react-document-title";
 var contentful = require("contentful");
 
-function getSecondPart(str) {
+function getSecondPart(props, str) {
+  console.log(props.match.params);
   if (str) {
     var location = window.location.pathname.toString().substring(15);
     return location;
@@ -25,7 +26,7 @@ class PortfolioDetail extends Component {
   componentWillMount() {
     var that = this;
     this.client
-      .getEntries({ "sys.id": getSecondPart(this.props.location) })
+      .getEntries({ "sys.id": this.props.match.params.id })
       .then(function(project) {
         that.setState({ project: project.items[0] });
         console.log(project.items[0]);

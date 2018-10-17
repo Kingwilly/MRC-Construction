@@ -11,7 +11,18 @@ function convertToSlug(Text) {
 class UnitWrapper extends Component {
   render() {
     if (this.props.item.fields.details) {
-      return <Link to={"/our-portfolio/" + this.props.item.sys.id}>{this.props.children}</Link>;
+      return (
+        <Link
+          to={
+            "/our-portfolio/" +
+            this.props.item.sys.id +
+            "/" +
+            this.props.item.fields.title
+          }
+        >
+          {this.props.children}
+        </Link>
+      );
     } else {
       return <div>{this.props.children}</div>;
     }

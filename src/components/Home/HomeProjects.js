@@ -28,7 +28,7 @@ class HomeProjects extends Component {
             mainCTA={"For all your renovation projects"}
             subCTA={"BLOG"}
             displayLink={"OUR JOURNAL"}
-            link={"/"}
+            link={"/our-journal"}
           />
           <HomeSubProject
             image={Planning_Image}

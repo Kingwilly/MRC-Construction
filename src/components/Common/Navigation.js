@@ -132,7 +132,7 @@ class Navigation extends Component {
                     </Link>
                   </div>
                   <div className="link-item" style={{ width: "33%" }}>
-                    <Link to="/">
+                    <Link to="/our-journal">
                       <p className="cta">BLOG</p>
                       <p className="link">JOURNAL</p>
                     </Link>
