@@ -9,7 +9,6 @@ class OurTeam extends Component {
         <div className="title-section">
           <p className="sub-title">OUR TEAM</p>
           <p className="title">THEN & NOW</p>
-          <b>ORIGIN YEAR: 2005 </b>
         </div>
         <Row gutter={16} className="text-section">
           <Col xs={{ span: 24 }} md={{ span: 12 }} style={{ padding: "9px" }}>

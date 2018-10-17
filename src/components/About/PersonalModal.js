@@ -31,13 +31,9 @@ class PersonalModal extends Component {
     return (
       <div
         className={"personal-modal-container " + this.state.modalClasses}
-        style={{
-          background:
-            " linear-gradient(to left, rgba(51,51,51,0.8),    rgba(51,51,51,0.2)), url(" +
-            Mike_With_Axe +
-            ")"
-        }}
+        style={{ background: "url(" + Mike_With_Axe + ")" }}
       >
+        <div className="overlay-modal" />
         <div className="personal-modal-inner-wrapper">
           <Row gutter={16}>
             <Col

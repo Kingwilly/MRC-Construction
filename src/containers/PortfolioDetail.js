@@ -59,18 +59,7 @@ class PortfolioDetail extends Component {
                   room.fields.image.fields.file.url +
                   "?w=590&h=412&fm=jpg&q=90&fit=fill&fl=progressive)"
               }}
-            >
-              <div className="panel-cta-outer">
-                <div className="panel-cta-inner">
-                  <div className="text-content">
-                    <p className="label">
-                      {that.state.project.fields.detailTitle}{" "}
-                    </p>
-                    <p className="value">{room.fields.roomName}</p>
-                  </div>
-                </div>
-              </div>
-            </div>
+            />
           </div>
         </Col>
       );
@@ -91,7 +80,6 @@ class PortfolioDetail extends Component {
                 <h3>{this.state.project.fields.location}</h3>
               </div>
               <div className="portfolio-detail-content">
-                <h4>{this.state.project.fields.subheader}</h4>
                 <p>{this.state.project.fields.details}</p>
               </div>
             </div>

@@ -30,14 +30,14 @@ class PersonalModal extends Component {
         imageGallery.push({
           image:
             room.fields.image.fields.file.url +
-            "?w=1920&fm=jpg&q=100&fit=fill&fl=progressive",
+            "?w=2420&fm=jpg&q=100&fit=fill&fl=progressive",
           active: true
         });
       } else {
         imageGallery.push({
           image:
             room.fields.image.fields.file.url +
-            "?w=1920&fm=jpg&q=100&fit=fill&fl=progressive",
+            "?w=2420&fm=jpg&q=100&fit=fill&fl=progressive",
           active: false
         });
       }
