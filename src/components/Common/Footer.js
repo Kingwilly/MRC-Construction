@@ -2,6 +2,9 @@ import React, { Component } from "react";
 import { Row, Col } from "antd";
 import Logo from "../../assets/images/Common/logo_small.svg";
 import NBC from "../../assets/images/Social/nbc.svg";
+import FACEBOOK from "../../assets/images/Social/facebook.svg";
+import INSTAGRAM from "../../assets/images/Social/instagram.svg";
+import HOUZZZ from "../../assets/images/Social/houzz.svg";
 
 class Footer extends Component {
   // Global Bottom Footer
@@ -61,39 +64,39 @@ class Footer extends Component {
                     </Col>
                     <Col xs={{ span: 6 }} sm={{ span: 12 }} lg={{ span: 6 }}>
                       <a
-                        href="https://www.nbc.com/"
+                        href=" https://www.facebook.com/michaelrobertconstruction/"
                         target="_blank"
                         rel="noopener noreferrer"
                       >
                         <img
-                          src={NBC}
-                          alt="NBC"
+                          src={FACEBOOK}
+                          alt="FACEBOOK"
                           className="social-media-icon"
                         />
                       </a>
                     </Col>
                     <Col xs={{ span: 6 }} sm={{ span: 12 }} lg={{ span: 6 }}>
                       <a
-                        href="https://www.nbc.com/"
+                        href="https://www.instagram.com/michaelrobertconstruction/"
                         target="_blank"
                         rel="noopener noreferrer"
                       >
                         <img
-                          src={NBC}
-                          alt="NBC"
+                          src={INSTAGRAM}
+                          alt="INSTAGRAM"
                           className="social-media-icon"
                         />
                       </a>
                     </Col>
                     <Col xs={{ span: 6 }} sm={{ span: 12 }} lg={{ span: 6 }}>
                       <a
-                        href="https://www.nbc.com/"
+                        href="https://www.houzz.com/pro/michaelrobertconstruction/michael-robert-construction"
                         target="_blank"
                         rel="noopener noreferrer"
                       >
                         <img
-                          src={NBC}
-                          alt="NBC"
+                          src={HOUZZZ}
+                          alt="HOUZZZ"
                           className="social-media-icon"
                         />
                       </a>

@@ -45,7 +45,7 @@ class InfoBar extends Component {
           >
             <p className="label">EMAIL</p>
             <a className="value" href="mailto:info@gmail.com">
-              INFO@GMAIL.COM
+              INFO<span style={{ verticalAlign: "text-bottom" }}>@</span>GMAIL.COM
             </a>
           </div>
         </div>

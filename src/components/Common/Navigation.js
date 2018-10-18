@@ -118,7 +118,7 @@ class Navigation extends Component {
                 </Link>
               </div>
               <div className="sub-title-container">
-                <p>THE WHOLE HOUSE APPROACH TO REMODELING</p>
+                <p>A WHOLE HOUSE APPROACH TO REMODELING</p>
               </div>
               <div className="link-container">
                 <div className="link-row">

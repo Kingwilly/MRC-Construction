@@ -50,7 +50,7 @@ class Maintanence extends Component {
                     continue to live in the house throughout the project.
                   </p>
                   <p className="speaker">
-                    MOLLY & PAUL CABRAL <br /> WESTFIELD, NJ
+                    MOLLY & PAUL CABRAL<br /> WESTFIELD, NJ
                   </p>
                 </div>
               </div>

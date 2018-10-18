@@ -8,12 +8,6 @@ import PANEL_THREE_IMAGE from "../../assets/images/Process/triple/three.jpg";
 import Arrow_Button from "../../assets/images/Common/button_arrow.svg";
 
 class TriplePlay extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      modalClasses: "modal-gone"
-    };
-  }
   // Maintance Copy Section
   render() {
     return (
@@ -39,6 +33,23 @@ class TriplePlay extends Component {
                 </p>
               </div>
             </div>
+            <div
+              className="image-panel"
+              style={{
+                background: "url(" + PANEL_ONE_IMAGE + ")"
+              }}
+            />
+            <a href="#" className="panel-cta-outer">
+              <div className="panel-cta-inner">
+                <div className="text-content">
+                  <p className="label">EXPLORE</p>
+                  <p className="value">CASESTUDY</p>
+                </div>
+                <div className="button-content">
+                  <img src={Arrow_Button} alt="Arrow Button" />
+                </div>
+              </div>
+            </a>
           </Col>
           <Col
             xs={{ span: 24 }}
@@ -54,13 +65,30 @@ class TriplePlay extends Component {
               <div className="content-panel">
                 <p>
                   Our design team transforms the project concept into a
-                  buildable product.  The renovations begin to take shape
-                  through line drawings and architectural renderings.  In this
+                  buildable product.  The renovations begin to take shape
+                  through line drawings and architectural renderings.  In this
                   collaborative process, we ensure that renovations complement
                   the existing attributes of your home.
                 </p>
               </div>
             </div>
+            <div
+              className="image-panel"
+              style={{
+                background: "url(" + PANEL_TWO_IMAGE + ")"
+              }}
+            />
+            <a href="#" className="panel-cta-outer">
+              <div className="panel-cta-inner">
+                <div className="text-content">
+                  <p className="label">EXPLORE</p>
+                  <p className="value">CASESTUDY</p>
+                </div>
+                <div className="button-content">
+                  <img src={Arrow_Button} alt="Arrow Button" />
+                </div>
+              </div>
+            </a>
           </Col>
           <Col
             xs={{ span: 24 }}
@@ -76,12 +104,29 @@ class TriplePlay extends Component {
               <div className="content-panel">
                 <p>
                   The renovations take shape as the design-build project become
-                  a physical part of your home.  Our production crew strives to
+                  a physical part of your home.  Our production crew strives to
                   expertly marry the new construction with old, so the project
                   looks and feels a part of your home’s heritage.
                 </p>
               </div>
             </div>
+            <div
+              className="image-panel"
+              style={{
+                background: "url(" + PANEL_THREE_IMAGE + ")"
+              }}
+            />
+            <a href="#" className="panel-cta-outer">
+              <div className="panel-cta-inner">
+                <div className="text-content">
+                  <p className="label">EXPLORE</p>
+                  <p className="value">CASESTUDY</p>
+                </div>
+                <div className="button-content">
+                  <img src={Arrow_Button} alt="Arrow Button" />
+                </div>
+              </div>
+            </a>
           </Col>
         </Row>
       </div>

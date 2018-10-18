@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Interior_Kitchen from "../../assets/images/Process/hero.jpg";
+import Interior_Kitchen from "../../assets/images/Process/hero_3.jpg";
 
 class Hero extends Component {
   // Hero Panel
