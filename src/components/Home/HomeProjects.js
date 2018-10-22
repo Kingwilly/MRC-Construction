@@ -32,9 +32,9 @@ class HomeProjects extends Component {
           />
           <HomeSubProject
             image={Planning_Image}
-            mainCTA={"A FAMILY BUISNESS SINCE 2005"}
+            mainCTA={"A FAMILY BUSINESS SINCE 2005"}
             subCTA={"WHO WE ARE"}
-            displayLink={"BUISNESS PROFILE"}
+            displayLink={"BUSINESS PROFILE"}
             link={"/about-mrc"}
           />
         </Row>

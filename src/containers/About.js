@@ -6,7 +6,7 @@ import OurPersonal from "../components/About/PersonalGallery";
 import Maintanence from "../components/About/Maintanence";
 import OurTeam from "../components/About/OurTeam";
 import Gallery from "../components/About/Gallery";
-
+import OurDifferance from "../components/Process/OurDifferance";
 
 
 class About extends Component {
@@ -20,6 +20,7 @@ class About extends Component {
           <OurPersonal />
           <Maintanence />
           <OurTeam />
+          <OurDifferance />
           <Gallery />
         </div>
       </DocumentTitle>

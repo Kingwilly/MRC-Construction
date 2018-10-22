@@ -13,27 +13,22 @@ class DesignBuild extends Component {
         <Row gutter={16} className="text-section">
           <Col xs={{ span: 24 }} md={{ span: 12 }} style={{ padding: "9px" }}>
             <p>
-              A design-build approach allows for our clients to have full
-              control over their project as a unified process. We work with our
-              clients from the start with architectural renderings and then
-              seamlessly transition the design from concept to finished product.
-              Our team is involved with every step of the process, so no details
-              are lost through the development of the project, and our shared
-              goal for the completed renovation is realized in an efficient,
-              timely and organized manner. This process of syncing design and
-              construction optimizes cost, scheduling, communication and
-              constructability.
+            Above all else, we value honesty and integrity. At the start of
+            each project, we review a customized Homeowner’s Manual. We take
+            the time to outline expectations, responsibilities and the
+            inevitable “emotional rollercoaster” that come with remodeling.   Our Project Mangers become an extension of our client’s family
+            during renovations.
             </p>
           </Col>
           <Col xs={{ span: 24 }} md={{ span: 12 }} style={{ padding: "9px" }}>
             <p>
-              We work closely with incredibly talented local architects, and our
-              approach unifies the client / architect / builder team leading to
-              extraordinary results. Established trade partnerships built on
-              years of collaboration ensure that every project has a
-              picture-perfect completion. Our background in building science,
-              our understanding of design, and our processes for construction
-              management separate us from every other contractor.
+           Aside from being on site every day, they
+            hold weekly meetings to review project status and schedule. It
+            is their job to anticipate and prepare for unexpected building
+            conditions, and ensure that changes are clearly communicated.
+            For the MRC team, managing the building process is not just
+            about a superior end result, but about maximizing client
+            satisfaction.
             </p>
           </Col>
         </Row>

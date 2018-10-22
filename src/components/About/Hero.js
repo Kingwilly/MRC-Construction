@@ -24,7 +24,7 @@ class Hero extends Component {
               <p>
                 Michael Robert Construction is an award-winning, Westfield-based
                 general contracting business specializing in high-end
-                residential remodeling. As a design/build firm, our team focuses
+                residential remodeling and custom new construction homes. As a design/build firm, our team focuses
                 on working with our clients to develop a cohesive project
                 through proper planning and architectural detailing.  We believe
                 that remodeling should be seen as a whole house approach, where

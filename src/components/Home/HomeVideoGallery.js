@@ -18,7 +18,7 @@ class HomeVideoGallery extends Component {
           <Col
             xs={{ span: 24 }}
             sm={{ span: 24 }}
-            md={{ span: 22 }}
+            md={{ span: 21 }}
             style={{ padding: "5px" }}
           >
             <div
@@ -49,8 +49,8 @@ class HomeVideoGallery extends Component {
           <Col
             xs={{ span: 24 }}
             sm={{ span: 0 }}
-            md={{ span: 2 }}
-            style={{ padding: "5px" }}
+            md={{ span: 3 }}
+            style={{ padding: "5px 0px"}}
           >
             <div className="side-video-gallery">
               <img src={thumb_1_image} alt={"Thumbnail 1"} />

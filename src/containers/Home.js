@@ -13,7 +13,7 @@ class Home extends Component {
         <div className="home-wrapper">
           <HeroGallery />
           <HomeTextBlock
-            title="MICHAEL ROBERT CONSTRUCTION IS AN AWARD - WINNING, WESTFIELD - BASED GENERAL CONTRACTING BUSINESS SPECIALIZING IN HIGH - END RESIDENTIAL REMODELING."
+            title="MICHAEL ROBERT CONSTRUCTION IS AN AWARD-WINNING, WESTFIELD-BASED GENERAL CONTRACTING BUSINESS SPECIALIZING IN HIGH-END RESIDENTIAL REMODELING AND CUSTOM NEW CONSTRUCTION HOMES."
             description={
               "As a design / build firm, our team focuses on working with our clients to develop a cohesive project through proper planning and architectural detailing. We believe that remodeling should be seen as a whole house approach, where new design and construction is seamlessly integrated with the existing structure.Our work ranges from whole house renovations and design / build custom homes to additions and floor plan changes.We pride ourselves on a commitment to design and attention to detail, and have been rewarded with both local and national recognition."
             }

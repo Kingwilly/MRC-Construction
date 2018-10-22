@@ -275,10 +275,10 @@ h6 {
 .home-text-block-wrapper .link-button-container .link-button .button-content {
   position: absolute;
   right: 20px;
-  top: 0;
-  width: 43px;
+  top: -1px;
+  width: 45px;
   height: 10px;
-  opacity: 0.2;
+  opacity: 0.15;
 }
 
 /* ----- HOME LATEST PROJECTS ----- */
@@ -494,7 +494,8 @@ h6 {
 .home-video-gallery-wrapper .side-video-gallery img {
   width: 100%;
   cursor: pointer;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
+  max-width: 105px;
 }
 
 .home-video-gallery-wrapper .button-container-outer {
@@ -714,6 +715,11 @@ h6 {
   }
 }
 
+@media only screen and (min-width: 768px) {
+  .home-video-gallery-wrapper .ant-col-md-3 {
+    width: 10.5% !important;
+  }
+}
 @media only screen and (max-width: 768px) {
   .footer-wrapper .footer-logo-row {
     text-align: center;
@@ -730,6 +736,7 @@ h6 {
   .footer-wrapper .footer-inner-wrapper .footer-row {
     padding: 10px;
   }
+ 
 }
 
 /* ----- NAVIGATION ----- */
@@ -976,7 +983,7 @@ h6 {
   min-height: 532px;
   margin: auto;
   max-width: 793px;
-  margin-top: 73px;
+  margin-top:60px;
   border: 4px solid #dddddd;
 }
 
@@ -1030,7 +1037,7 @@ h6 {
   p {
   margin: 0px;
   font-family: "cooper_hewittbook";
-  font-size: 16px;
+  font-size: 17px;
   font-weight: 300;
   line-height: 28px;
   color: #fff;
@@ -1674,7 +1681,7 @@ h6 {
   width: 100%;
   height: 100%;
   margin: auto;
-  margin-top: 154px;
+  margin-top: 99px;
   display: flex;
 
   justify-content: center;
@@ -1704,7 +1711,7 @@ h6 {
 }
 
 .process-wrapper .hero-image .hero-image-inner-wrapper .content-wrapper-box {
-  width: 488px;
+  width: 793px;
   margin: 15px;
   border: 4px solid #dddddd;
 }
@@ -1828,7 +1835,7 @@ h6 {
 .process-wrapper .triple-play-section {
   max-width: 1200px;
   margin: auto;
-  margin-bottom: 120px;
+  margin-bottom: 70px;
 }
 
 .process-wrapper .triple-play-section .triple-play-inner-wrapper {
@@ -2024,6 +2031,9 @@ h6 {
   letter-spacing: 6px;
 }
 
+.our-differance .text-section  {
+  padding:0px 105px;
+}
 .our-differance .text-section p {
   color: #a3a199;
   font-family: "cooper_hewittbook";
@@ -2688,7 +2698,7 @@ h6 {
 }
 
 .blog-detail-wrapper .next-prev-article .next-article {
-  border: 1px solid #979797;
+  border: 0;
   background-color: #d8d8d8;
   min-height: 290px;
 }

@@ -39,17 +39,7 @@ class TriplePlay extends Component {
                 background: "url(" + PANEL_ONE_IMAGE + ")"
               }}
             />
-            <a href="#" className="panel-cta-outer">
-              <div className="panel-cta-inner">
-                <div className="text-content">
-                  <p className="label">EXPLORE</p>
-                  <p className="value">CASESTUDY</p>
-                </div>
-                <div className="button-content">
-                  <img src={Arrow_Button} alt="Arrow Button" />
-                </div>
-              </div>
-            </a>
+           
           </Col>
           <Col
             xs={{ span: 24 }}
@@ -78,17 +68,7 @@ class TriplePlay extends Component {
                 background: "url(" + PANEL_TWO_IMAGE + ")"
               }}
             />
-            <a href="#" className="panel-cta-outer">
-              <div className="panel-cta-inner">
-                <div className="text-content">
-                  <p className="label">EXPLORE</p>
-                  <p className="value">CASESTUDY</p>
-                </div>
-                <div className="button-content">
-                  <img src={Arrow_Button} alt="Arrow Button" />
-                </div>
-              </div>
-            </a>
+          
           </Col>
           <Col
             xs={{ span: 24 }}
@@ -116,17 +96,7 @@ class TriplePlay extends Component {
                 background: "url(" + PANEL_THREE_IMAGE + ")"
               }}
             />
-            <a href="#" className="panel-cta-outer">
-              <div className="panel-cta-inner">
-                <div className="text-content">
-                  <p className="label">EXPLORE</p>
-                  <p className="value">CASESTUDY</p>
-                </div>
-                <div className="button-content">
-                  <img src={Arrow_Button} alt="Arrow Button" />
-                </div>
-              </div>
-            </a>
+            
           </Col>
         </Row>
       </div>

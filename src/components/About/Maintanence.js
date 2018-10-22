@@ -44,7 +44,7 @@ class Maintanence extends Component {
                 </div>
                 <div className="quote-block-inner">
                   <p className="quote">
-                    In short, they went above and beyond. Michael Roberts
+                    In short, they went above and beyond. Michael Robert
                     Construction was the general contractor for my whole house
                     renovation. The project was done in two phases so we could
                     continue to live in the house throughout the project.
