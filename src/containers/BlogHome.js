@@ -4,31 +4,48 @@ import { Row, Col } from "antd";
 import Arrow_Button from "../assets/images/Common/scroll_down_arrow.svg";
 import { Link } from "react-router-dom";
 var contentful = require("contentful");
+var showdown = require("showdown");
 
 class BlogPostPreview extends Component {
+  converter = new showdown.Converter();
   render() {
     return (
-      <Col xs={{ span: 24 }} md={{ span: 8 }}>
-        <a
+      <Col xs={{ span: 24 }} md={{ span: 8 }} key={this.props.post.sys.id}>
+        <Link
           href="#"
-          style={{
-            textDecoration: "none"
-          }}
+          style={{ textDecoration: "none" }}
+          to={
+            "/our-journal/" +
+            this.props.post.sys.id +
+            "/" +
+            this.props.post.fields.slug
+          }
         >
           <div className="blog-post-preview-wrapper">
-            <div className="header-image" />
+            <div
+              className="header-image"
+              style={{
+                backgroundImage:
+                  "linear-gradient(to bottom, rgba(51,51,51,0.9),    rgba(51,51,51,0.1)), url(" +
+                  this.props.post.fields.coverPhoto.fields.file.url +
+                  "?w=1920&fm=jpg&q=90&fit=fill&fl=progressive)"
+              }}
+            />
             <div className="content">
-              <p className="category">TIPS & TRICKS</p>
-              <p className="title">LOREM IPSUM DOLOR SIT AMET</p>
+              <p className="category">{this.props.post.fields.category}</p>
+              <p className="title">{this.props.post.fields.title}</p>
               <p className="description">
-                Maecenas faucibus mollis interdum. Sed posuere consectetur est
-                at lobortis. Donec id elit non mi porta gravida at eget metus.
-                Cras mattis consectetur purus sit amet fermentum. Vestibulum id
-                ligula porta felis euismod semper.
+                <div
+                  dangerouslySetInnerHTML={{
+                    __html: this.converter.makeHtml(
+                      this.props.post.fields.content.substring(0, 120) + "..."
+                    )
+                  }}
+                />
               </p>
             </div>
           </div>
-        </a>
+        </Link>
       </Col>
     );
   }
@@ -58,6 +75,16 @@ class BlogHome extends Component {
         console.log(entries.items);
         console.log(entries.items[0].sys.id);
       });
+  }
+  renderEntries() {
+    var posts = this.state.entries;
+    posts.shift();
+    return posts;
+  }
+  renderPosts() {
+    return this.renderEntries().map(function(post) {
+      return <BlogPostPreview post={post} key={post.sys.id} />;
+    });
   }
   render() {
     if (this.state.entries) {
@@ -100,32 +127,46 @@ class BlogHome extends Component {
                   </Col>
                   <Col xs={{ span: 24 }} md={{ span: 6 }}>
                     <div className="other-articles">
-                      <a className="article-title" href="#">
-                        <p>DONEC ULLAMCORPER NULLA NON METUS AUCTOR FRIN</p>
-                      </a>
-                      <a className="article-title" href="#">
-                        <p>DONEC ULLAMCORPER NULLA NON METUS AUCTOR FRIN</p>
-                      </a>
-                      <a className="article-title" href="#">
-                        <p>DONEC ULLAMCORPER NULLA NON METUS AUCTOR FRIN</p>
-                      </a>
+                      <Link
+                        className="article-title"
+                        to={
+                          "/our-journal/" +
+                          this.state.entries[1].sys.id +
+                          "/" +
+                          this.state.entries[1].fields.slug
+                        }
+                      >
+                        <p>{this.state.entries[1].fields.title}</p>
+                      </Link>
+                      <Link
+                        className="article-title"
+                        to={
+                          "/our-journal/" +
+                          this.state.entries[2].sys.id +
+                          "/" +
+                          this.state.entries[2].fields.slug
+                        }
+                      >
+                        <p>{this.state.entries[2].fields.title}</p>
+                      </Link>
+                      <Link
+                        className="article-title"
+                        to={
+                          "/our-journal/" +
+                          this.state.entries[3].sys.id +
+                          "/" +
+                          this.state.entries[3].fields.slug
+                        }
+                      >
+                        <p>{this.state.entries[3].fields.title}</p>
+                      </Link>
                     </div>
                   </Col>
                 </Row>
               </div>
             </div>
             <div className="blog-entries-wrapper">
-              <Row gutter={16}>
-                <BlogPostPreview />
-                <BlogPostPreview />
-                <BlogPostPreview />
-                <BlogPostPreview />
-                <BlogPostPreview />
-                <BlogPostPreview />
-                <BlogPostPreview />
-                <BlogPostPreview />
-                <BlogPostPreview />
-              </Row>
+              <Row gutter={16}>{this.renderPosts()}</Row>
             </div>
           </div>
         </DocumentTitle>
