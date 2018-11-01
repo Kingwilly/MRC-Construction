@@ -18,7 +18,6 @@ class Process extends Component {
           <Hero />
           <DesignBuild />
 
-          <TriplePlay />
           <CharThing />
 
           <div
