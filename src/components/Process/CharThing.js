@@ -6,7 +6,7 @@ class ChartItem extends Component {
   render() {
     return (
       <Col
-        xs={{ span: 24 }}
+        xs={{ span: 12 }}
         md={{ span: this.props.span }}
         style={{
           padding: "9px",
