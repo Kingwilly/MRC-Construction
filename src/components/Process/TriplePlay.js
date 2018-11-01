@@ -33,13 +33,6 @@ class TriplePlay extends Component {
                 </p>
               </div>
             </div>
-            <div
-              className="image-panel"
-              style={{
-                background: "url(" + PANEL_ONE_IMAGE + ")"
-              }}
-            />
-           
           </Col>
           <Col
             xs={{ span: 24 }}
@@ -55,20 +48,13 @@ class TriplePlay extends Component {
               <div className="content-panel">
                 <p>
                   Our design team transforms the project concept into a
-                  buildable product.  The renovations begin to take shape
-                  through line drawings and architectural renderings.  In this
+                  buildable product. The renovations begin to take shape through
+                  line drawings and architectural renderings. In this
                   collaborative process, we ensure that renovations complement
                   the existing attributes of your home.
                 </p>
               </div>
             </div>
-            <div
-              className="image-panel"
-              style={{
-                background: "url(" + PANEL_TWO_IMAGE + ")"
-              }}
-            />
-          
           </Col>
           <Col
             xs={{ span: 24 }}
@@ -84,19 +70,12 @@ class TriplePlay extends Component {
               <div className="content-panel">
                 <p>
                   The renovations take shape as the design-build project become
-                  a physical part of your home.  Our production crew strives to
+                  a physical part of your home. Our production crew strives to
                   expertly marry the new construction with old, so the project
                   looks and feels a part of your home’s heritage.
                 </p>
               </div>
             </div>
-            <div
-              className="image-panel"
-              style={{
-                background: "url(" + PANEL_THREE_IMAGE + ")"
-              }}
-            />
-            
           </Col>
         </Row>
       </div>

@@ -1666,6 +1666,49 @@ h6 {
   opacity: 0.2;
 }
 
+/* New Chart Thign */
+.chart-thing {
+  max-width: 1400px;
+  margin: auto;
+  min-height: 300px;
+  margin-bottom: 40px;
+
+}
+
+.chart-thing .chart-thing-inner-wrapper {
+  padding: 10px;
+}
+
+.chart-thing .chart-thing-inner-wrapper .panel {
+  padding: 9px;
+  min-height: 106px;
+  background: white;
+  display: flex;
+  align-items: center;
+  opacity: .7;
+  margin: 9px;
+
+}
+
+.chart-thing .chart-thing-inner-wrapper .panel p {
+  font-family: "cooper_hewittbook";
+  color: black;
+  font-size: 17px;
+  text-align: center;
+
+  margin-bottom: 0px;
+
+}
+
+.cost-wrapper {
+  position: absolute;
+  bottom: -33px;
+  width: 133px;
+  left: -9px;
+
+}
+
+
 .our-differance {
   max-width: 1200px;
   margin: auto;
