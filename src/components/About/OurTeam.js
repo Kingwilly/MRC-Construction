@@ -30,12 +30,12 @@ class OurTeam extends Component {
               Construction in 1995, with the start-up first doing work for
               friends and family. As MRC's reputation for customer commitment,
               high-end design and full service spread, the company expanded.
-              Currently, MRC has 3??? dedicated project managers with over 4
+              Currently, MRC has a team dedicated project managers with over 4
               decades of combined experience, a design and planning manager with
               over a decade of industry experience, and style and design
               guidance of MRC's sister interior design company (owned by Mike's
-              wife, Ellie), Ellie Mroz Design. We are both locally and
-              nationally recognized for both customer service and design.
+              wife, Ellie), Ellie Mroz Design. Both are locally and nationally
+              recognized for both customer service and design.
             </p>
           </Col>
         </Row>
