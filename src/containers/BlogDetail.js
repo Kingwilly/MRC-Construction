@@ -77,30 +77,6 @@ class BlogDetail extends Component {
                   </div>
                 </Col>
                 <Col xs={{ span: 24 }} md={{ span: 8 }}>
-                  <div className="author-content">
-                    <img
-                      src={
-                        this.state.post.fields.author.fields.photo.fields.file
-                          .url
-                      }
-                      alt=""
-                    />
-                    <p className="name">
-                      {this.state.post.fields.author.fields.name}
-                    </p>
-                    <p className="title">
-                      {this.state.post.fields.author.fields.title}
-                    </p>
-                    <div className="description">
-                      <div
-                        dangerouslySetInnerHTML={{
-                          __html: this.converter.makeHtml(
-                            this.state.post.fields.author.fields.description
-                          )
-                        }}
-                      />
-                    </div>
-                  </div>
                   <div className="related-articles-content">
                     <p className="title">RECENTLY POSTED</p>
                     <a href="#" className="related-article">

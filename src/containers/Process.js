@@ -16,9 +16,8 @@ class Process extends Component {
       <DocumentTitle title={"Our Process | MRC"}>
         <div className="process-wrapper">
           <Hero />
-          <DesignBuild />
-
           <CharThing />
+          <DesignBuild />
 
           <div
             className="bottom-hero"

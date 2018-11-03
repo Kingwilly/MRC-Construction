@@ -145,7 +145,7 @@ class OurPersonal extends Component {
       <div className="experts-container">
         <div className="title-wrapper">
           <p className="sub-title">OUR TEAM</p>
-          <p className="title">PASSIONATE EXPERTS</p>
+          <p className="title">DEDICATED PROFESSIONALS</p>
           <p className="description">
             At MRC, we are more than a business; we are a committed team,
             working together to craft homes and client relationships that will

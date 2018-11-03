@@ -49,9 +49,7 @@ class Maintanence extends Component {
                     renovation. The project was done in two phases so we could
                     continue to live in the house throughout the project.
                   </p>
-                  <p className="speaker">
-                    MOLLY & PAUL CABRAL<br /> WESTFIELD, NJ
-                  </p>
+                  <p className="speaker">MOLLY & PAUL</p>
                 </div>
               </div>
             </div>

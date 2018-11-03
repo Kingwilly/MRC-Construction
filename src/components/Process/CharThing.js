@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Row, Col } from "antd";
+import { Row, Col, Icon } from "antd";
 
 class ChartItem extends Component {
   // Maintance Copy Section
@@ -13,13 +13,12 @@ class ChartItem extends Component {
           backgroundColor: this.props.color,
           color: this.props.textColor
         }}
-        className="panel"
+        className={"panel " + this.props.panelClass}
       >
         <div style={{ width: "100%" }}>
           <p
-            style={{
-              color: this.props.textColor
-            }}
+            style={{ color: this.props.textColor }}
+            className={this.props.textClass}
           >
             {this.props.name}
           </p>
@@ -29,6 +28,7 @@ class ChartItem extends Component {
             <p>Cost Established</p>
           </div>
         ) : null}
+        {this.props.arrow ? <Icon type="right" theme="outlined" /> : null}
       </Col>
     );
   }
@@ -39,53 +39,63 @@ class ChartThing extends Component {
   render() {
     return (
       <div className="chart-thing">
+        <div className="title-wrapper">
+          <h2>DESIGN / BUILD PATH & TRADITIONAL PATH</h2>
+        </div>
         <Row gutter={16} className="chart-thing-inner-wrapper">
           <ChartItem
             name="Traditional"
             color="#fff"
             span={2}
             textColor="#000"
+            textClass={"title"}
           />
           <ChartItem
             name="Client Planning"
-            color="#30657a"
+            color="rgb(0, 0, 0, .9)"
             span={2}
+            arrow={true}
             textColor="#fff"
           />
           <ChartItem
             name="Select Architect"
-            color="#75853d"
+            color="rgb(0, 0, 0, .8)"
             span={2}
+            arrow={true}
             textColor="#fff"
           />
           <ChartItem
             name="Conceptual Drawings"
-            color="#3e405c"
+            color="rgb(0, 0, 0, .6)"
             span={2}
+            arrow={true}
             textColor="#fff"
           />
           <ChartItem
             name="Find Drawings"
-            color="#35696d"
+            color="rgb(0, 0, 0, .5)"
             span={2}
+            arrow={true}
             textColor="#fff"
           />
           <ChartItem
             name="Select Contractor"
-            color="#af6530"
+            color="rgb(0, 0, 0, .4)"
             span={2}
+            arrow={true}
             textColor="#fff"
           />
           <ChartItem
             name="Permits"
-            color="#6b8894"
+            color="rgb(0, 0, 0, .3)"
             costEstablished={true}
             span={2}
+            arrow={true}
             textColor="#fff"
           />
           <ChartItem
             name="Construction"
-            color="#9a665f"
+            color="rgb(0, 0, 0, .2)"
             span={4}
             textColor="#fff"
           />
@@ -97,38 +107,56 @@ class ChartThing extends Component {
             color="#fff"
             span={2}
             textColor="#000"
+            textClass={"title"}
           />
           <ChartItem
             name="Client Planning"
-            color="#30657a"
+            color="rgb(0, 0, 0, .9)"
             span={2}
+            arrow={true}
             textColor="#fff"
           />
           <ChartItem
             name="Select Design Build Firm"
-            color="#7f2d2a"
+            color="rgb(0, 0, 0, .8)"
             span={2}
+            arrow={true}
             textColor="#fff"
           />
           <ChartItem
             name="Conceptual Drawings"
-            color="#3e405c"
+            color="rgb(0, 0, 0, .6)"
             span={2}
+            arrow={true}
             textColor="#fff"
           />
           <ChartItem
             name="Find Drawings"
-            color="#35696d"
+            color="rgb(0, 0, 0, .5)"
             span={2}
+            arrow={true}
             costEstablished={true}
             textColor="#fff"
           />
-          <ChartItem name="Permits" color="#6b8894" span={2} textColor="#fff" />
+          <ChartItem
+            name="Permits"
+            color="rgb(0, 0, 0, .3)"
+            span={2}
+            arrow={true}
+            textColor="#fff"
+          />
           <ChartItem
             name="Construction"
-            color="#9a665f"
+            color="rgb(0, 0, 0, .2)"
             span={4}
             textColor="#fff"
+          />
+          <ChartItem
+            name="Time Saved"
+            color="rgb(0, 0, 0, .2)"
+            span={2}
+            textColor="#fff"
+            panelClass={" stripe"}
           />
         </Row>
       </div>
