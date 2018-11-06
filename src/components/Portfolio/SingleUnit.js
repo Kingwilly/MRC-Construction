@@ -10,7 +10,7 @@ function convertToSlug(Text) {
 
 class UnitWrapper extends Component {
   render() {
-    if (this.props.item.fields.details) {
+    if (this.props.item.fields.rooms) {
       return (
         <Link
           to={
