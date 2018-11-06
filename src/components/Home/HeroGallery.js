@@ -5,6 +5,7 @@ import Kitchen_Image from "../../assets/images/Home/Gallery/Kitchen.jpg";
 import Other_House_Image from "../../assets/images/Home/Gallery/Other_House.jpg";
 import Other_Kitchen_Image from "../../assets/images/Home/Gallery/Other_Kitchen.jpg";
 import Stairs_Image from "../../assets/images/Home/Gallery/Stairs.jpg";
+import Patio from "../../assets/images/Home/Gallery/Patio.jpg";
 
 import { clearTimeout } from "timers";
 var contentful = require("contentful");
@@ -15,28 +16,34 @@ class HeroGallery extends Component {
     super(props);
     this.state = {
       imageGallery: [
+        { src: Patio, id: "Patio_Image", active: true },
         {
-          src: "https://images.ctfassets.net/490ezzr1f96l/4TsBUNCmu4WCiq2OOc4sgY/3ee86d6401aca6c2ffc77bf710682765/House.jpg?w=1920&fm=jpg&q=90&fit=fill&fl=progressive",
+          src:
+            "https://images.ctfassets.net/490ezzr1f96l/4TsBUNCmu4WCiq2OOc4sgY/3ee86d6401aca6c2ffc77bf710682765/House.jpg?w=1920&fm=jpg&q=90&fit=fill&fl=progressive",
           id: "House_Image",
-          active: true
+          active: false
         },
         {
-          src: "https://images.ctfassets.net/490ezzr1f96l/3BnpteykAUywAyuuq4uOKc/a8ce1b8584921a8d7c92986c9f4e231b/Kitchen.jpg?w=1920&fm=jpg&q=90&fit=fill&fl=progressive",
+          src:
+            "https://images.ctfassets.net/490ezzr1f96l/3BnpteykAUywAyuuq4uOKc/a8ce1b8584921a8d7c92986c9f4e231b/Kitchen.jpg?w=1920&fm=jpg&q=90&fit=fill&fl=progressive",
           id: "Kitchen_Image",
           active: false
         },
         {
-          src: "https://images.ctfassets.net/490ezzr1f96l/B97PPc7QJwMQKmIki8mWS/3a24e1a521af27422347ee8f165dec93/Other_House.jpg?w=1920&fm=jpg&q=90&fit=fill&fl=progressive",
+          src:
+            "https://images.ctfassets.net/490ezzr1f96l/B97PPc7QJwMQKmIki8mWS/3a24e1a521af27422347ee8f165dec93/Other_House.jpg?w=1920&fm=jpg&q=90&fit=fill&fl=progressive",
           id: "Other_House_Image",
           active: false
         },
         {
-          src: "https://images.ctfassets.net/490ezzr1f96l/4mxf6zQDdCKk4gMweoAisG/ae178a045e61374e7684f39eea0ba404/Other_Kitchen.jpg?w=1920&fm=jpg&q=90&fit=fill&fl=progressive",
+          src:
+            "https://images.ctfassets.net/490ezzr1f96l/4mxf6zQDdCKk4gMweoAisG/ae178a045e61374e7684f39eea0ba404/Other_Kitchen.jpg?w=1920&fm=jpg&q=90&fit=fill&fl=progressive",
           id: "Other_Kitchen_Image",
           active: false
         },
         {
-          src: "https://images.ctfassets.net/490ezzr1f96l/5cANpm9oD6wCsoa4wyOgkg/0d0c43667bd7b4b51faa7515568576de/Stairs.jpg?w=1920&fm=jpg&q=90&fit=fill&fl=progressive",
+          src:
+            "https://images.ctfassets.net/490ezzr1f96l/5cANpm9oD6wCsoa4wyOgkg/0d0c43667bd7b4b51faa7515568576de/Stairs.jpg?w=1920&fm=jpg&q=90&fit=fill&fl=progressive",
           id: "Stairs_Image",
           active: false
         }
@@ -52,16 +59,21 @@ class HeroGallery extends Component {
       "8e9529f53ad5d25dfe6af8cf4541e10358877acb64a2945cc9898851b36696bb"
   });
   componentWillMount() {
-    this.client.getAsset('4mxf6zQDdCKk4gMweoAisG')
-      .then((asset) => console.log(asset.fields.file.url))
-    this.client.getAsset('B97PPc7QJwMQKmIki8mWS')
-      .then((asset) => console.log(asset.fields.file.url))
-    this.client.getAsset('3BnpteykAUywAyuuq4uOKc')
-      .then((asset) => console.log(asset.fields.file.url))
-    this.client.getAsset('4TsBUNCmu4WCiq2OOc4sgY')
-      .then((asset) => console.log(asset.fields.file.url))
-    this.client.getAsset('5cANpm9oD6wCsoa4wyOgkg')
-      .then((asset) => console.log(asset.fields.file.url))
+    this.client
+      .getAsset("4mxf6zQDdCKk4gMweoAisG")
+      .then(asset => console.log(asset.fields.file.url));
+    this.client
+      .getAsset("B97PPc7QJwMQKmIki8mWS")
+      .then(asset => console.log(asset.fields.file.url));
+    this.client
+      .getAsset("3BnpteykAUywAyuuq4uOKc")
+      .then(asset => console.log(asset.fields.file.url));
+    this.client
+      .getAsset("4TsBUNCmu4WCiq2OOc4sgY")
+      .then(asset => console.log(asset.fields.file.url));
+    this.client
+      .getAsset("5cANpm9oD6wCsoa4wyOgkg")
+      .then(asset => console.log(asset.fields.file.url));
   }
   setActiveImage(nextActive, manual) {
     // Manually set the next active image in the gallery
@@ -197,7 +209,6 @@ class HeroGallery extends Component {
         <div className="headline-wrapper">
           <div className="headline">
             <h1>A Whole House Approach</h1>
-           
           </div>
         </div>
         {this.renderGalleryImages()}
