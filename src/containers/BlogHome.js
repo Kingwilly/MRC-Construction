@@ -26,7 +26,7 @@ class BlogPostPreview extends Component {
               className="header-image"
               style={{
                 backgroundImage:
-                  "linear-gradient(to bottom, rgba(51,51,51,0.9),    rgba(51,51,51,0.1)), url(" +
+                  "url(" +
                   this.props.post.fields.coverPhoto.fields.file.url +
                   "?w=1920&fm=jpg&q=90&fit=fill&fl=progressive)"
               }}
