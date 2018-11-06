@@ -2473,3 +2473,7 @@ h6 {
 .process-wrapper .hero-image .hero-image-inner-wrapper .content-wrapper-box .content-title {
   border-bottom: 2px solid #dddd;
 }
+
+.portfolio-home-wrapper .project-wrapper .single-project-outer .panel-cta-outer .panel-cta-inner .text-content .label {
+  text-transform: uppercase !important;
+}
