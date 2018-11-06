@@ -1884,6 +1884,7 @@ h6 {
   font-family: "butlerregular";
   font-weight: 300;
   line-height: 19px;
+  text-transform: uppercase !important;
   font-size: 17px;
   padding: 13px 2px 3px 18px;
   margin: 0px;
@@ -1909,6 +1910,7 @@ h6 {
   font-family: "butlerlight";
   font-size: 60px;
   font-weight: 300;
+  text-transform: uppercase !important;
   line-height: 60px;
   margin-bottom: 17px;
 }
@@ -2174,6 +2176,7 @@ h6 {
   font-family: "butlerlight";
   color: white;
   font-size: 60px;
+  text-transform: uppercase !important;
   margin-bottom: 50px;
   line-height: 52px;
   max-width: 700px;
