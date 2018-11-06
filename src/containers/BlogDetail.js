@@ -20,6 +20,7 @@ class BlogDetail extends Component {
   });
   componentWillMount() {
     var that = this;
+    console.log(this.props.match.params.id);
     this.client
       .getEntries({
         content_type: "blogPost",

@@ -55,7 +55,8 @@ class BlogHome extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      entries: null
+      entries: null,
+      edited: false
     };
   }
   client = contentful.createClient({
@@ -72,17 +73,17 @@ class BlogHome extends Component {
       })
       .then(function(entries) {
         that.setState({ entries: entries.items });
-        console.log(entries.items);
-        console.log(entries.items[0].sys.id);
       });
   }
   renderEntries() {
     var posts = this.state.entries;
     posts.shift();
+    this.setState({ edited: true });
     return posts;
   }
   renderPosts() {
-    return this.renderEntries().map(function(post) {
+    return this.state.entries.map(function(post) {
+      console.log(post.sys.id);
       return <BlogPostPreview post={post} key={post.sys.id} />;
     });
   }

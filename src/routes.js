@@ -44,7 +44,10 @@ class Routes extends React.Component {
                     component={PortfolioHome}
                   />
                   <Route exact path="/our-journal" component={BlogHome} />
-                  <Route path="/our-journal/:post" component={BlogDetail} />
+                  <Route
+                    path="/our-journal/:id/:title"
+                    component={BlogDetail}
+                  />
                   <Route
                     path="/our-portfolio/:id/:title"
                     component={PortfolioDetail}
