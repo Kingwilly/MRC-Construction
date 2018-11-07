@@ -6,8 +6,8 @@ class ChartItem extends Component {
   render() {
     return (
       <Col
-        xs={{ span: 12 }}
-        md={{ span: this.props.span }}
+        xs={{ span: 12, offset: 0 }}
+        md={{ span: this.props.span, offset: this.props.offset }}
         style={{
           padding: "9px",
           backgroundColor: this.props.color,
@@ -46,58 +46,60 @@ class ChartThing extends Component {
           <ChartItem
             name="Traditional"
             color="#fff"
-            span={2}
+            span={24}
             textColor="#000"
             textClass={"title"}
           />
           <ChartItem
             name="Client Planning"
-            color="rgb(0, 0, 0, .9)"
+            color="#fff"
             span={2}
+            offset={3}
             arrow={true}
-            textColor="#fff"
+            panelClass={"first-panel"}
+            textColor="#000"
           />
           <ChartItem
             name="Select Architect"
-            color="rgb(0, 0, 0, .8)"
+            color="#fff"
             span={2}
             arrow={true}
-            textColor="#fff"
+            textColor="#000"
           />
           <ChartItem
             name="Conceptual Drawings"
-            color="rgb(0, 0, 0, .6)"
+            color="#fff"
             span={2}
             arrow={true}
-            textColor="#fff"
+            textColor="#000"
           />
           <ChartItem
             name="Find Drawings"
-            color="rgb(0, 0, 0, .5)"
+            color="#fff"
             span={2}
             arrow={true}
-            textColor="#fff"
+            textColor="#000"
           />
           <ChartItem
             name="Select Contractor"
-            color="rgb(0, 0, 0, .4)"
+            color="#fff"
             span={2}
             arrow={true}
-            textColor="#fff"
+            textColor="#000"
           />
           <ChartItem
             name="Permits"
-            color="rgb(0, 0, 0, .3)"
+            color="#fff"
             costEstablished={true}
             span={2}
             arrow={true}
-            textColor="#fff"
+            textColor="#000"
           />
           <ChartItem
             name="Construction"
-            color="rgb(0, 0, 0, .2)"
+            color="#fff"
             span={4}
-            textColor="#fff"
+            textColor="#000"
           />
         </Row>
 
@@ -105,59 +107,56 @@ class ChartThing extends Component {
           <ChartItem
             name="Design/Build"
             color="#fff"
-            span={2}
+            span={24}
             textColor="#000"
             textClass={"title"}
           />
           <ChartItem
             name="Client Planning"
-            color="rgb(0, 0, 0, .9)"
+            color="#fff"
             span={2}
+            panelClass={"first-panel"}
+            offset={3}
             arrow={true}
-            textColor="#fff"
+            textColor="#000"
           />
           <ChartItem
             name="Select Design Build Firm"
-            color="rgb(0, 0, 0, .8)"
+            color="#fff"
             span={2}
             arrow={true}
-            textColor="#fff"
+            textColor="#000"
           />
           <ChartItem
             name="Conceptual Drawings"
-            color="rgb(0, 0, 0, .6)"
+            color="#fff"
             span={2}
             arrow={true}
-            textColor="#fff"
+            textColor="#000"
           />
           <ChartItem
             name="Find Drawings"
-            color="rgb(0, 0, 0, .5)"
+            color="#fff"
             span={2}
             arrow={true}
             costEstablished={true}
-            textColor="#fff"
+            textColor="#000"
           />
           <ChartItem
             name="Permits"
-            color="rgb(0, 0, 0, .3)"
+            color="#fff"
             span={2}
             arrow={true}
-            textColor="#fff"
+            textColor="#000"
           />
           <ChartItem
             name="Construction"
-            color="rgb(0, 0, 0, .2)"
+            color="#fff"
+            arrow={true}
             span={4}
-            textColor="#fff"
+            textColor="#000"
           />
-          <ChartItem
-            name="Time Saved"
-            color="rgb(0, 0, 0, .2)"
-            span={2}
-            textColor="#fff"
-            panelClass={" stripe"}
-          />
+          <ChartItem name="Time Saved" color="#fff" span={2} textColor="#000" />
         </Row>
       </div>
     );
