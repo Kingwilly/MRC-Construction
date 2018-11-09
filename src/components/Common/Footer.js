@@ -24,7 +24,7 @@ class Footer extends Component {
           <Row gutter={16}>
             <Col xs={{ span: 24 }} sm={{ span: 8 }}>
               <div className="footer-block">
-                <b className="footer-title">CALL TO START THE PROCESS</b>
+                <p className="footer-title">CALL TO START THE PROCESS</p>
                 <div className="footer-inner-block">
                   <p>
                     Our office manager, Lisa, will be happy to talk to you about
@@ -35,7 +35,7 @@ class Footer extends Component {
             </Col>
             <Col xs={{ span: 24 }} sm={{ span: 8 }}>
               <div className="footer-block">
-                <b className="footer-title">AREAS SERVED</b>
+                <p className="footer-title">AREAS SERVED</p>
                 <div className="footer-inner-block">
                   <p>
                     Westfield, Scotch Plains, Fanwood Cranford, Millburn, Short
@@ -46,7 +46,7 @@ class Footer extends Component {
             </Col>
             <Col xs={{ span: 24 }} sm={{ span: 8 }}>
               <div className="footer-block">
-                <b className="footer-title">FOLLOW US ON SOCIAL MEDIA & NBC</b>
+                <p className="footer-title">FOLLOW US ON SOCIAL MEDIA & NBC</p>
                 <div className="footer-inner-block inner-block-tight">
                   <Row>
                     <Col xs={{ span: 6 }} sm={{ span: 12 }} lg={{ span: 6 }}>
