@@ -1,12 +1,9 @@
 import React, { Component } from "react";
-import Fade from "react-fade-opacity";
 import { connect } from "react-redux";
 
 import { clearTimeout } from "timers";
 import Scroll_Down_Arrow from "../../assets/images/Common/scroll_down_arrow.svg";
 import { Row, Col } from "antd";
-// Peronsl Modals Images
-import Mike_With_Axe from "../../assets/images/About/Individuals/Mike-with-ax-pic-bio.jpg";
 
 var infiniteLoop;
 
@@ -30,14 +27,14 @@ class PersonalModal extends Component {
         imageGallery.push({
           image:
             room.fields.image.fields.file.url +
-            "?w=2420&fm=jpg&q=100&fit=fill&fl=progressive",
+            "?w=1920&fm=jpg&q=85&fit=fill&fl=progressive",
           active: true
         });
       } else {
         imageGallery.push({
           image:
             room.fields.image.fields.file.url +
-            "?w=2420&fm=jpg&q=100&fit=fill&fl=progressive",
+            "?w=1920&fm=jpg&q=85&fit=fill&fl=progressive",
           active: false
         });
       }

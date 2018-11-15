@@ -36,8 +36,9 @@ class SingleUnit extends Component {
     return (
       <Col
         xs={{ span: 24 }}
-        sm={{ span: 12 }}
-        md={{ span: 8 }}
+        sm={{ span: 24 }}
+        md={{ span: 12 }}
+        lg={{ span: 8 }}
         key={this.props.item.fields.title}
       >
         <div className="single-project-outer">
