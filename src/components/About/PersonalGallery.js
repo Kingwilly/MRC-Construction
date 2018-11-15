@@ -3,13 +3,6 @@ import { Row, Col } from "antd";
 
 import { toggleFullScreenModal } from "../../actions/actionsCommon";
 import { connect } from "react-redux";
-// Export Photos
-import Alex_Soria from "../../assets/images/About/Individuals/Alex-Soria-intro.jpg";
-import Ellie_Mroz from "../../assets/images/About/Individuals/Ellie-Mroz-intro.jpg";
-import Jack_And_Liam from "../../assets/images/About/Individuals/Jack-Liam-into.jpg";
-import Lisa_Spirn from "../../assets/images/About/Individuals/Lisa-Spirn-intro.jpg";
-import Micheal_Mroz from "../../assets/images/About/Individuals/Michael-R-Mroz-intro.png";
-import Steve_Krammer from "../../assets/images/About/Individuals/Steve-Kammerer-intro.jpg";
 
 var contentful = require("contentful");
 
@@ -17,71 +10,13 @@ class OurPersonal extends Component {
   // PersonalGallery
   constructor(props) {
     super(props);
-    this.state = {
-      imageGallery: [
-        {
-          image: Micheal_Mroz,
-          name: "MICHAEL R. MROZ",
-          description: "PRESIDENT & CEO",
-          url: "/",
-          modal: true,
-          modalDescription: [
-            "Building and remodeling has always been my dream and it is something that I love to do.  I love creating spaces and  making people happy.  Seeing a client’s reaction to their finished space is one of my greatest satisfactions.",
-            "My remodeling career began at a very young age, when I renovated my parents’ basement at the age 15.  It started as a hobby and has flourished over time into Michael Robert Construction.  Before starting my own company, I worked with several well-known companies in the construction industry, including Kara Homes, Anthony James Construction, and Gandalf Restorations.",
-            "I strongly believe in the power of higher and continuing education.  I attended Valparaiso University for my undergraduate degree in Management, and have continued my education through several post-graduate programs.  I belong to a number of organizations that offer me both the experience and the knowledge that I believe sets me apart from other contractors in the industry.  Below are several national organizations where I have gained enough recognition to hold several certifications. In the case of the Building Performance Institute, MRC is one of only 50 contracting companies certified in NJ."
-          ],
-          modalBackground: null
-        },
-        {
-          image: Ellie_Mroz,
-          name: "ELLIE MROZ",
-          description: "INTERIOR DESIGN",
-          url: "/"
-        },
-        {
-          image: Steve_Krammer,
-          name: "STEVE KAMMERER",
-          description: "GENERAL MANAGER",
-          url: "/"
-        },
-        {
-          image: null,
-          name: "KERRY CLIFFORD",
-          description: "DESIGN & PLANNING",
-          url: "/"
-        },
-        {
-          image: null,
-          name: "PAT EARLEY",
-          description: "PROJECT MANAGER",
-          url: "/"
-        },
-        {
-          image: Lisa_Spirn,
-          name: "LISA SPIRN",
-          description: "OFFICE MANAGER",
-          url: "/"
-        },
-        {
-          image: Alex_Soria,
-          name: "ALEX SORIA",
-          description: "LEAD CARPENTER",
-          url: "/"
-        },
-        {
-          image: Jack_And_Liam,
-          name: "JACK & LIAM",
-          description: "FUTURE CO-CEOS",
-          url: "/"
-        }
-      ]
-    };
+    this.state = {};
     this.renderExperts = this.renderExperts.bind(this);
     this.openPersonalModal = this.openPersonalModal.bind(this);
   }
   openPersonalModal(expert) {
     if (expert.fields.description) {
-      this.props.toggleFullScreenModal();
+      this.props.toggleFullScreenModal(expert);
     }
   }
   client = contentful.createClient({

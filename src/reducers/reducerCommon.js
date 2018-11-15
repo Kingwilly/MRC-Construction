@@ -4,7 +4,8 @@ const INITIAL_STATE = {
   full_screen_modal_open: false,
   porfolio_modal_open: false,
   portfolio_object: null,
-  portfolio_photo_id: null
+  portfolio_photo_id: null,
+  expert: null
 };
 
 export default function(state = INITIAL_STATE, action) {
@@ -12,7 +13,8 @@ export default function(state = INITIAL_STATE, action) {
     case types.TOGGLE_FULL_SCREEN_MODAL:
       return {
         ...state,
-        full_screen_modal_open: !state.full_screen_modal_open
+        full_screen_modal_open: !state.full_screen_modal_open,
+        expert: action.payload
       };
     case types.TOGGLE_PORTFOLIO_MODAL:
       if (state.porfolio_modal_open) {

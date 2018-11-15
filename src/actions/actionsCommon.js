@@ -1,15 +1,12 @@
 import * as types from "./types";
 
 // Toggles the full screen modal
-export function toggleFullScreenModalDispatch() {
-  return {
-    type: types.TOGGLE_FULL_SCREEN_MODAL,
-    payload: null
-  };
+export function toggleFullScreenModalDispatch(expert) {
+  return { type: types.TOGGLE_FULL_SCREEN_MODAL, payload: expert };
 }
-export function toggleFullScreenModal() {
+export function toggleFullScreenModal(expert) {
   return function(dispatch) {
-    dispatch(toggleFullScreenModalDispatch());
+    dispatch(toggleFullScreenModalDispatch(expert));
   };
 }
 // Toggles the full screen modal

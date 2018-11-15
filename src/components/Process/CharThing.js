@@ -8,9 +8,6 @@ class ChartThing extends Component {
   render() {
     return (
       <div className="chart-thing">
-        <div className="title-wrapper">
-          <h2>DESIGN / BUILD PATH & TRADITIONAL PATH</h2>
-        </div>
         <Row gutter={16} className="chart-thing-inner-wrapper">
           <img src={Desktop} alt="Time Saved" className="desktop-chart" />
           <img src={Mobile} alt="Time Saved" className="mobile-chart" />

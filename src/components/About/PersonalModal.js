@@ -1,9 +1,7 @@
 import React, { Component } from "react";
-import Fade from "react-fade-opacity";
 import { connect } from "react-redux";
 import { Row, Col } from "antd";
-// Peronsl Modals Images
-import Mike_With_Axe from "../../assets/images/About/Individuals/Mike-with-ax-pic-bio.jpg";
+var showdown = require("showdown");
 
 class PersonalModal extends Component {
   constructor(props) {
@@ -26,55 +24,44 @@ class PersonalModal extends Component {
       that.setState({ modalClasses: "" });
     }
   }
-
+  converter = new showdown.Converter();
   render() {
     return (
-      <div
-        className={"personal-modal-container " + this.state.modalClasses}
-        style={{ background: "url(" + Mike_With_Axe + ")" }}
-      >
-        <div className="overlay-modal" />
-        <div className="personal-modal-inner-wrapper">
-          <Row gutter={16}>
-            <Col
-              xs={{ span: 24, offset: 0 }}
-              md={{ span: 12, offset: 12 }}
-              style={{ padding: "9px" }}
-            >
-              <div>
-                <h2>PRESIDENT & CEO </h2>
-                <h1>MICHAEL R. MROZ</h1>
-                <p>
-                  Building and remodeling has always been my dream and it is
-                  something that I love to do. I love creating spaces and making
-                  people happy. Seeing a client’s reaction to their finished
-                  space is one of my greatest satisfactions.
-                  <br />
-                  <br />
-                  My remodeling career began at a very young age, when I
-                  renovated my parents’ basement at the age 15. It started as a
-                  hobby and has flourished over time into Michael Robert
-                  Construction. Before starting my own company, I worked with
-                  several well-known companies in the construction industry,
-                  including Kara Homes, Anthony James Construction, and Gandalf
-                  Restorations.
-                  <br />
-                  <br />I strongly believe in the power of higher and continuing
-                  education. I attended Valparaiso University for my
-                  undergraduate degree in Management, and have continued my
-                  education through several post-graduate programs. I belong to
-                  a number of organizations that offer me both the experience
-                  and the knowledge that I believe sets me apart from other
-                  contractors in the industry. Below are several national
-                  organizations where I have gained enough recognition to hold
-                  several certifications. In the case of the Building
-                  Performance Institute, MRC is one of only 50 contracting
-                  companies certified in NJ.
-                </p>
-              </div>
-            </Col>
-          </Row>
-        </div>
+      <div>
+        {this.props.expert ? (
+          <div
+            className={"personal-modal-container " + this.state.modalClasses}
+            style={{
+              background:
+                "url(" +
+                this.props.expert.fields.descriptionBackground.fields.file.url +
+                "?w=1920&fm=jpg&q=90&fit=fill&fl=progressive)"
+            }}
+          >
+            <div className="overlay-modal" />
+            <div className="personal-modal-inner-wrapper">
+              <Row gutter={16}>
+                <Col
+                  xs={{ span: 24, offset: 0 }}
+                  md={{ span: 12, offset: 12 }}
+                  style={{ padding: "9px" }}
+                >
+                  <div>
+                    <h2>{this.props.expert.fields.title}</h2>
+                    <h1>{this.props.expert.fields.name}</h1>
+                    <div
+                      dangerouslySetInnerHTML={{
+                        __html: this.converter.makeHtml(
+                          this.props.expert.fields.description
+                        )
+                      }}
+                    />
+                  </div>
+                </Col>
+              </Row>
+            </div>
+          </div>
+        ) : null}
       </div>
     );
   }
@@ -82,7 +69,8 @@ class PersonalModal extends Component {
 
 function mapStateToProps(state) {
   return {
-    modalOpen: state.common.full_screen_modal_open
+    modalOpen: state.common.full_screen_modal_open,
+    expert: state.common.expert
   };
 }
 

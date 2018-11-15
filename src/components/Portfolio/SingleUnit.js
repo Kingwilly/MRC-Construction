@@ -32,6 +32,7 @@ class UnitWrapper extends Component {
 class SingleUnit extends Component {
   // Maintance Copy Section
   render() {
+    console.log(this.props.item);
     return (
       <Col
         xs={{ span: 24 }}
@@ -54,7 +55,12 @@ class SingleUnit extends Component {
                 <div className="panel-cta-inner">
                   <div className="text-content">
                     <p className="value">{this.props.item.fields.title}</p>
-                    <p className="label">{this.props.item.fields.location}</p>
+                    <p className="label">
+                      {this.props.item.fields.location}{" "}
+                      <span className="work-type">
+                        | {this.props.item.fields.workType}
+                      </span>
+                    </p>
                   </div>
                 </div>
               </div>

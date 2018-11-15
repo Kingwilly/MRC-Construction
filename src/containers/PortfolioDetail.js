@@ -77,7 +77,10 @@ class PortfolioDetail extends Component {
             <div className="portfolio-header-content">
               <div className="portfolio-detail-header">
                 <h1>{this.state.project.fields.detailTitle}</h1>
-                <h3>{this.state.project.fields.location}</h3>
+                <h3>
+                  {this.state.project.fields.location} |{" "}
+                  {this.state.project.fields.workType}{" "}
+                </h3>
               </div>
               <div className="portfolio-detail-content">
                 <p>{this.state.project.fields.details}</p>
