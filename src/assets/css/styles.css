@@ -8,6 +8,10 @@ h6 {
   color: #000;
 }
 
+.global-app-wrapper {
+  overflow-x: hidden !important;
+}
+
 /* ---------- LOADING SCREEN ---------- */
 .loading-animation-wrapper {}
 
@@ -174,16 +178,16 @@ h6 {
 
 .gallery-wrapper .headline-wrapper .headline {
   position: absolute;
-  bottom: 52px;
+  bottom: 20px;
   z-index: 99;
-  left: 10px;
+  left: 0px;
 }
 
 .gallery-wrapper .headline-wrapper .headline h1 {
   color: white;
-  font-size: 60px;
+  font-size: 40px;
   margin: 0px;
-  line-height: 58px;
+  line-height: 40px;
   font-family: "butlerlight";
   text-transform: uppercase;
 }
@@ -701,9 +705,10 @@ h6 {
   cursor: pointer;
   top: 170px;
   position: fixed;
-  z-index: 9999;
+  z-index: 999999;
   width: 60px;
   color: white;
+  background: rgba(51, 51, 51, 0.5);
   left: 34px;
 }
 
@@ -2814,7 +2819,7 @@ h6 {
   .gallery-wrapper .headline-wrapper .headline h1 {
     text-align: center;
     max-width: 1000px;
-    margin-bottom: 00px;
+    margin-bottom: 0px;
   }
 
   .home-video-gallery-wrapper .side-video-gallery img {
@@ -2842,11 +2847,11 @@ h6 {
   }
 
   .about-wrapper .gallery-secion .scroll-arrow-right {
-    margin-top: 228px;
+    margin-top: 218px;
   }
 
   .about-wrapper .maintainence-section .text-content-wrapper .top-block {
-    padding: 10px;
+    padding: 20px;
   }
 
   .about-wrapper .experts-container {
@@ -2855,7 +2860,7 @@ h6 {
   }
 
   .about-wrapper .maintainence-section .text-content-wrapper .quote-block {
-    margin: 0px 5px;
+    margin: 0px 10px;
   }
 
   .about-wrapper .maintainence-section {
@@ -2989,4 +2994,39 @@ h6 {
     border-right: 0px solid black !important;
     border-bottom: 2px solid rgb(221, 221, 221);
   }
+
+  .navigation-icon-wrapper {
+    top: 0px;
+    left: 0px;
+    width: 40px;
+    padding: 0px;
+    height: auto;
+  }
+
+  .about-wrapper .experts-container .expert-photo {
+    background-size: cover;
+    background-position: top;
+  }
+
+  .personal-modal-inner-wrapper {
+    padding: 0px 20px;
+  }
+
+  .navigation-wrapper .scroll-down-arrow {
+    left: auto;
+    right: 20px;
+    top: 20px;
+  }
+
+  .overlay-modal {
+    height: 100%;
+    top: 0;
+    background: linear-gradient(to right,
+      rgba(51, 51, 51, 0.65) 0%,
+      rgba(51, 51, 51, 0.65) 100%);
+    position: fixed;
+    width: 100%;
+  }
+
+
 }

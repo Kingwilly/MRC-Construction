@@ -74,6 +74,9 @@ class Navigation extends Component {
     if (this.props.portfolioOpen) {
       this.props.togglePortfolioModal();
     }
+    if (this.state.modelOpen) {
+      this.toggleModalStatus();
+    }
   }
   render() {
     return (
@@ -91,7 +94,9 @@ class Navigation extends Component {
             </div>
           </div>
         </div>
-        {this.props.modalOpen || this.props.portfolioOpen ? (
+        {this.props.modalOpen ||
+        this.props.portfolioOpen ||
+        this.state.modelOpen ? (
           <img
             src={Close_Logo}
             alt="Close Modal"

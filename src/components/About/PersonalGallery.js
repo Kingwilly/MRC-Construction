@@ -56,7 +56,7 @@ class OurPersonal extends Component {
                 backgroundImage:
                   "url(" +
                   expert.fields.headShot.fields.file.url +
-                  "?w=286&h=286&fm=jpg&q=90&fit=fill&fl=progressive)"
+                  "?w=600&h=600&fm=jpg&q=90&fit=fill&fl=progressive)"
               }}
             >
               <div className="button-container-outer">

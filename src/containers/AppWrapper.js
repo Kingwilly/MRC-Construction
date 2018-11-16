@@ -20,14 +20,14 @@ class AppWrapper extends Component {
   }
   componentWillReceiveProps(nextProps) {
     var that = this;
-    if (nextProps.modalOpen || nextProps.portfolioOpen) {
-      console.log("change");
-      setTimeout(function() {
-        that.setState({ style: { position: "fixed" } });
-      }, 500);
-    } else {
-      that.setState({ style: { position: "relative" } });
-    }
+    // if (nextProps.modalOpen || nextProps.portfolioOpen) {
+    //   console.log("change");
+    //   setTimeout(function() {
+    //     that.setState({ style: { position: "fixed" } });
+    //   }, 500);
+    // } else {
+    //   that.setState({ style: { position: "relative" } });
+    // }
   }
   render() {
     return (
