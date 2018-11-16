@@ -185,8 +185,8 @@ h6 {
 
 .gallery-wrapper .headline-wrapper .headline h1 {
   color: white;
-  font-size: 40px;
-  margin: 0px;
+  font-size: 60px;
+  margin-bottom: 45px;
   line-height: 40px;
   font-family: "butlerlight";
   text-transform: uppercase;
@@ -1390,7 +1390,7 @@ h6 {
   outline: transparent;
   border: 1px solid #dddddd;
   box-shadow: none;
-  width: 50%;
+  width: 100%;
 }
 
 .contact-wrapper .contact-form-wrapper .contact-form-inner-wrapper .form-row .form-item input {
@@ -2410,6 +2410,15 @@ h6 {
   background-position: center;
 }
 
+.men-at-work {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.men-at-work img {
+  width: 100%;
+}
+
 .blog-detail-wrapper .next-prev-article .next-article img {
   height: 60px;
   transform: rotate(-90deg);
@@ -2698,6 +2707,7 @@ h6 {
 @media only screen and (max-width: 1315px) {
   .gallery-wrapper .headline-wrapper .headline h1 {
     max-width: 500px;
+    line-height: 64px;
   }
 
   .home-text-block-wrapper {
@@ -2828,7 +2838,15 @@ h6 {
     text-align: center;
     max-width: 1000px;
     margin-bottom: 0px;
+    color: white;
+    font-size: 40px;
+    margin: 0px;
+    line-height: 40px;
+    font-family: "butlerlight";
+    text-transform: uppercase;
   }
+
+
 
   .home-video-gallery-wrapper .side-video-gallery img {
     padding: 5px;
@@ -3009,8 +3027,19 @@ h6 {
 
   .contact-wrapper .gallery-wrapper .company-info-wrapper .info-row .info-item {
     width: 100% !important;
-    border-right: 0px solid black !important;
-    border-bottom: 2px solid rgb(221, 221, 221);
+
+    border-top: 1px solid rgb(221, 221, 221);
+    border-left: 4px solid rgb(221, 221, 221) !important;
+    border-right: 4px solid rgb(221, 221, 221) !important;
+    border-bottom: 1px solid rgb(221, 221, 221);
+  }
+
+  .border-top {
+    border-top: 4px solid rgb(221, 221, 221) !important;
+  }
+
+  .border-bottom {
+    border-bottom: 4px solid rgb(221, 221, 221) !important;
   }
 
   .navigation-icon-wrapper {
@@ -3115,7 +3144,40 @@ h6 {
     display: none;
   }
 
+  .blog-detail-wrapper .blog-content-wrapper .description {
+
+    line-height: 25px;
+    text-align: left;
+  }
+
+  p {
+    line-height: 25px;
+    text-align: left;
+  }
+
+  .contact-wrapper .hero-title-wrapper h2 {
+    line-height: 18px;
+    margin-top: 16px;
+  }
+
   .blog-detail-wrapper .next-prev-article .next-article img {
+    display: none;
+  }
+
+  .contact-wrapper .gallery-wrapper .company-info-wrapper .info-row {
+    border: 0px solid white;
+  }
+
+  .gallery-secion {
+    min-height: 310px !important;
+  }
+
+
+  .contact-wrapper .gallery-secion .scroll-arrow-right {
+    display: none;
+  }
+
+  .contact-wrapper .gallery-secion .scroll-arrow-left {
     display: none;
   }
 

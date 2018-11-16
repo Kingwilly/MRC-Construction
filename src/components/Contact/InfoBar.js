@@ -7,7 +7,7 @@ class InfoBar extends Component {
       <div className="company-info-wrapper">
         <div className="info-row">
           <div
-            className="info-item"
+            className="info-item border-top"
             style={{ width: "30%", borderRight: "2px solid #dddddd" }}
           >
             <p className="label">STREET</p>
@@ -29,7 +29,7 @@ class InfoBar extends Component {
               (908) 232 0134
             </a>
           </div>
-          <div className="info-item" style={{ width: "23%" }}>
+          <div className="info-item border-bottom" style={{ width: "23%" }}>
             <p className="label">EMAIL</p>
             <a className="value" href="mailto:info@gmail.com">
               <img

@@ -11,6 +11,7 @@ import Image_012 from "../../assets/images/About/Gallery/171127-EM_Workspace_012
 import Image_013 from "../../assets/images/About/Gallery/171127-EM_Workspace_013.jpg";
 import Image_014 from "../../assets/images/About/Gallery/171127-EM_Workspace_014.jpg";
 import Image_020 from "../../assets/images/About/Gallery/171127-EM_Workspace_020.jpg";
+import KeyHandler, { KEYDOWN } from "react-key-handler";
 
 var infiniteLoop;
 
@@ -73,6 +74,7 @@ class Gallery extends Component {
 
     this.setState({ imageGallery: newImageArray });
   }
+
   goToNextActiveImage(manual) {
     //   Looks through the gallery and detemines which image should be active next
     // Get the total length of the image Gallery Array
@@ -175,6 +177,16 @@ class Gallery extends Component {
           src={Scroll_Down_Arrow}
           alt="Scroll Arrow"
           className="scroll-arrow-left"
+        />
+        <KeyHandler
+          keyEventName={KEYDOWN}
+          code={"ArrowLeft"}
+          onKeyHandle={() => this.goToNextPreviousImage(true)}
+        />
+        <KeyHandler
+          keyEventName={KEYDOWN}
+          code={"ArrowRight"}
+          onKeyHandle={() => this.goToNextActiveImage(true)}
         />
         {this.renderGalleryImages()}
         <img

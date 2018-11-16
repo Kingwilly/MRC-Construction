@@ -4,6 +4,7 @@ import { connect } from "react-redux";
 import { clearTimeout } from "timers";
 import Scroll_Down_Arrow from "../../assets/images/Common/scroll_down_arrow.svg";
 import { Row, Col } from "antd";
+import KeyHandler, { KEYDOWN } from "react-key-handler";
 
 var infiniteLoop;
 
@@ -191,6 +192,16 @@ class PersonalModal extends Component {
                 src={Scroll_Down_Arrow}
                 alt="Scroll Arrow"
                 className="scroll-arrow-left"
+              />
+              <KeyHandler
+                keyEventName={KEYDOWN}
+                code={"ArrowLeft"}
+                onKeyHandle={() => this.goToNextPreviousImage(true)}
+              />
+              <KeyHandler
+                keyEventName={KEYDOWN}
+                code={"ArrowRight"}
+                onKeyHandle={() => this.goToNextActiveImage(true)}
               />
               {this.renderGalleryImages()}
               <img

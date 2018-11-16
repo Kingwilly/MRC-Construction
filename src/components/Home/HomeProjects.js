@@ -3,7 +3,6 @@ import { Row } from "antd";
 import HomeMainProject from "./HomeMainProject";
 import HomeSubProject from "./HomeSubProject";
 import Outdoor_Seating_Image from "../../assets/images/Home/Projects/Ourdoor_Seatings.jpg";
-import Planning_Image from "../../assets/images/Home/Projects/Planning.jpg";
 import Kitchen_Image from "../../assets/images/Home/Projects/Kitchen.jpg";
 
 class HomeProjects extends Component {

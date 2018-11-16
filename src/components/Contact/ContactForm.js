@@ -9,8 +9,8 @@ class ContactForm extends Component {
         last_name: "",
         email: "",
         phone_number: "",
-        subject: "",
-        how_should_i_contact: "",
+        town: "",
+
         message: ""
       }
     };
@@ -64,16 +64,8 @@ class ContactForm extends Component {
               <div className="form-item">
                 <input
                   type="text"
-                  name="subject"
-                  placeholder="SUBJECT *"
-                  required={true}
-                />
-              </div>
-              <div className="form-item">
-                <input
-                  type="text"
-                  name="how_should_we_contact_you"
-                  placeholder="HOW SHOULD WE CONTACT YOU *"
+                  name="town"
+                  placeholder="town *"
                   required={true}
                 />
               </div>
