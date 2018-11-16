@@ -559,7 +559,7 @@ h6 {
 }
 
 .footer-wrapper .footer-inner-wrapper .footer-block {
-  padding: 14px 10px;
+  padding: 14px 20px;
 }
 
 .footer-wrapper .footer-inner-wrapper .footer-block .footer-title {
@@ -645,7 +645,7 @@ h6 {
   }
 
   .footer-wrapper .footer-inner-wrapper .footer-block {
-    padding: 10px 5px 5px 10px;
+    padding: 17px 10px 0px 10px;
   }
 
   .footer-wrapper .footer-inner-wrapper .footer-block .footer-inner-block {
@@ -1508,7 +1508,7 @@ h6 {
 }
 
 .process-wrapper .hero-image .hero-image-inner-wrapper .content-wrapper-box .content-description {
-  padding: 20px;
+  padding: 20px !important;
 }
 
 .process-wrapper .hero-image .hero-image-inner-wrapper .content-wrapper-box .content-description p {
@@ -2105,7 +2105,7 @@ h6 {
 .blog-wrapper .header .main-post .button-container-outer .button-container-inner .button-content {}
 
 .blog-wrapper .header .main-post .button-container-outer .button-container-inner .button-content p {
-  font-family: "butlerlight";
+  font-family: "butlerregular";
   color: white;
   font-size: 15px;
   font-weight: 300;
@@ -2753,7 +2753,7 @@ h6 {
   }
 
   .about-wrapper .hero-image .hero-image-inner-wrapper .content-wrapper-box .content-description {
-    padding: 10px;
+    padding: 20px;
   }
 
   .about-wrapper .hero-image .hero-image-inner-wrapper .content-wrapper-box .content-title {
@@ -2794,14 +2794,18 @@ h6 {
   }
 
   .blog-detail-wrapper .blog-header .title-content h1 {
-    margin: 35px 30px;
-    max-width: 1200px;
+    text-align: center;
+    font-size: 30px;
+    line-height: 35px;
+    margin: 0px 20px 20px 20px;
+
+
 
   }
 
   .blog-detail-wrapper .blog-content-wrapper .related-articles-content {
     margin: auto;
-    width: 95%;
+    width: 89%;
   }
 
   .contact-wrapper .hero-title-wrapper {
@@ -2814,6 +2818,10 @@ h6 {
 @media only screen and (max-width: 768px) {
   .home-projects-block-wrapper .sub-project-block {
     height: 300px;
+  }
+
+  .blog-detail-wrapper .blog-header .arrow-button img {
+    display: none;
   }
 
   .gallery-wrapper .headline-wrapper .headline h1 {
@@ -2835,7 +2843,7 @@ h6 {
   }
 
   .about-wrapper .experts-container {
-    padding: 12px;
+    padding: 20px;
   }
 
   .about-wrapper .experts-container .title-wrapper {
@@ -2857,6 +2865,10 @@ h6 {
   .about-wrapper .experts-container {
     margin-bottom: 0px;
     padding-bottom: 0px;
+  }
+
+  .process-wrapper .hero-image .hero-image-inner-wrapper .content-wrapper-box .content-description p {
+    line-height: 23px;
   }
 
   .about-wrapper .maintainence-section .text-content-wrapper .quote-block {
@@ -2901,7 +2913,7 @@ h6 {
   }
 
   .portfolio-detail-wrapper .portfolio-header-content {
-    padding: 10px;
+    padding: 20px;
   }
 
   .portfolio-detail-wrapper {
@@ -2910,6 +2922,8 @@ h6 {
 
   .blog-wrapper .header .main-post .title-content h1 {
     font-size: 30px;
+    line-height: 35px;
+    margin-bottom: 28px;
   }
 
   .blog-wrapper .blog-entries-wrapper .blog-post-preview-wrapper {
@@ -2930,6 +2944,10 @@ h6 {
     height: auto !important;
   }
 
+  .blog-wrapper .header .main-post .title-content {
+    text-align: center;
+  }
+
   .process-wrapper .hero-image .hero-title-wrapper {
     margin: 0px;
     text-align: center;
@@ -2948,7 +2966,7 @@ h6 {
   }
 
   .chart-thing .chart-thing-inner-wrapper .mobile-chart {
-    padding: 0px 30px !important;
+    padding: 0px 50px !important;
     width: 100%;
   }
 
@@ -2957,8 +2975,8 @@ h6 {
   }
 
   .process-wrapper .our-team-section .title-section {
-    padding: 0px 10px;
-    text-align: center;
+    padding: 0px 20px;
+    text-align: left;
   }
 
   .process-wrapper .bottom-hero {
@@ -3016,6 +3034,89 @@ h6 {
     left: auto;
     right: 20px;
     top: 20px;
+  }
+
+  .portfolio-home-wrapper .project-wrapper .single-project-outer .panel-cta-outer {
+    margin-bottom: 1px;
+  }
+
+  .portfolio-home-wrapper .project-wrapper .single-project-outer {
+    padding: 0px 0px 100px 0px;
+  }
+
+  .home-projects-block-wrapper .latest-projects-block {
+    margin-bottom: 10px;
+  }
+
+  .portfolio-detail-wrapper .portfolio-header-content .portfolio-detail-header h1 {
+    line-height: 28px;
+    text-align: center;
+    font-size: 28px;
+  }
+
+  .home-projects-block-wrapper .sub-project-block {
+    margin-bottom: 10px;
+  }
+
+  .portfolio-detail-rooms-wrapper .ant-row .ant-col-sm-12 {
+    padding: 9px 0px !important;
+  }
+
+  .portfolio-detail-wrapper .portfolio-header-content .portfolio-detail-header h3 {
+    text-align: center;
+  }
+
+  .home-projects-block-wrapper .latest-projects-block .button-container-outer {
+    margin: 0px 20px;
+    width: auto;
+  }
+
+  .process-wrapper .hero-image .hero-image-inner-wrapper .content-wrapper-box .content-title {
+    padding: 20px !important;
+  }
+
+  .home-projects-block-wrapper .sub-project-block .button-container-outer .button-container-inner .button-top {
+    display: none;
+  }
+
+  .process-wrapper .hero-image .hero-image-inner-wrapper .content-wrapper-box {
+    margin: 20px;
+  }
+
+  .home-video-gallery-wrapper .button-container-outer .button-container-inner .button-left {
+    display: none;
+  }
+
+  .home-projects-block-wrapper .latest-projects-block .button-container-outer .button-container-inner .button-left {
+    display: none;
+  }
+
+  .process-wrapper .hero-image .hero-image-inner-wrapper .content-wrapper-box .content-title .sub-title {
+    line-height: 24px;
+  }
+
+  .about-wrapper .hero-image .hero-image-inner-wrapper .content-wrapper-box .content-description p {
+    line-height: 23px;
+  }
+
+  .blog-wrapper .header .main-post .button-container-outer .button-container-inner .button-content p {
+    line-height: 19px;
+  }
+
+  .blog-detail-wrapper .next-prev-article .next-article .next-content {
+    padding: 100px 60px
+  }
+
+  .blog-detail-wrapper .next-prev-article .previous-article .previous-content {
+    padding: 100px 60px
+  }
+
+  .blog-detail-wrapper .next-prev-article .previous-article img {
+    display: none;
+  }
+
+  .blog-detail-wrapper .next-prev-article .next-article img {
+    display: none;
   }
 
   .overlay-modal {

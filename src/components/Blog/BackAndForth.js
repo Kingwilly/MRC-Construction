@@ -34,7 +34,7 @@ class BackAndForth extends Component {
           className="previous-article"
           style={{
             backgroundImage:
-              "linear-gradient(to top, rgba(51,51,51,0.9),    rgba(51,51,51,0.1)), url(" +
+              "linear-gradient(to top, rgba(51,51,51,0.55),    rgba(51,51,51,0.55)), url(" +
               previousPost.fields.coverPhoto.fields.file.url +
               "?w=592&fm=jpg&q=90&fit=fill&fl=progressive)"
           }}
@@ -80,7 +80,7 @@ class BackAndForth extends Component {
           className="next-article"
           style={{
             backgroundImage:
-              "linear-gradient(to top, rgba(51,51,51,0.9),    rgba(51,51,51,0.1)), url(" +
+              "linear-gradient(to top, rgba(51,51,51,0.55),    rgba(51,51,51,0.55)), url(" +
               previousPost.fields.coverPhoto.fields.file.url +
               "?w=592&fm=jpg&q=90&fit=fill&fl=progressive)"
           }}

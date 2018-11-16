@@ -31,7 +31,9 @@ class HomeProjects extends Component {
             link={"/our-journal"}
           />
           <HomeSubProject
-            image={Planning_Image}
+            image={
+              "//images.ctfassets.net/490ezzr1f96l/6Ns0AezGx2u4OmeA8c4M2K/00aea9dd4d01ca34d15218c465e912ec/DSC_3458.jpg?w=1920&fm=jpg&q=90&fit=fill&fl=progressive"
+            }
             mainCTA={"A FAMILY BUSINESS SINCE 2005"}
             subCTA={"WHO WE ARE"}
             displayLink={"BUSINESS PROFILE"}
