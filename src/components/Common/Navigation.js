@@ -94,9 +94,23 @@ class Navigation extends Component {
             </div>
           </div>
         </div>
-        {this.props.modalOpen ||
-        this.props.portfolioOpen ||
-        this.state.modelOpen ? (
+        {this.state.modelOpen ? (
+          <div
+            alt="Close Modal"
+            onClick={() => this.toggleModals()}
+            className="scroll-down-arrow mobile-close"
+          >
+            <p>×</p>
+          </div>
+        ) : null}
+        {this.state.modelOpen ? (
+          <div className="mobile-icon">
+            <Link to="/">
+              <img src={Logo_Square_Logo} alt="MRC Logo" />
+            </Link>
+          </div>
+        ) : null}
+        {this.props.modalOpen || this.props.portfolioOpen ? (
           <img
             src={Close_Logo}
             alt="Close Modal"
@@ -104,6 +118,7 @@ class Navigation extends Component {
             className="scroll-down-arrow"
           />
         ) : null}
+
         <div
           onClick={() => this.toggleModalStatus()}
           className={"navigation-overlay " + this.renderModalOverLayClasses()}
