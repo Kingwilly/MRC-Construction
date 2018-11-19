@@ -3077,6 +3077,7 @@ h6 {
     left: auto;
     right: 20px;
     top: 20px;
+    position: fixed !important;
   }
 
   .portfolio-home-wrapper .project-wrapper .single-project-outer .panel-cta-outer {
@@ -3244,7 +3245,7 @@ h6 {
     width: 100% !important;
     border-right: 0px solid white !important;
     border-bottom: 2px solid #dddddd;
-    padding: 26px 11px;
+    padding: 18px 11px;
   }
 
   .navigation-wrapper .navigation-overlay .navigation-overlay-panel .navigation-overlay-inner-panel {
@@ -3284,10 +3285,33 @@ h6 {
 
   }
 
+  .home-video-gallery-wrapper .button-container-outer .button-container-inner .button-right {
+    width: 100%;
+  }
+
+  .home-projects-block-wrapper .sub-project-block .button-container-outer {
+    max-width: 337px;
+  }
+
+  .home-video-gallery-wrapper .main-video-image .youtube {
+    height: 382px;
+  }
+
+  .home-video-gallery-wrapper .main-video-image {
+    height: 382px;
+    min-height: 382px;
+  }
+
+  .home-video-gallery-wrapper .button-container-outer {
+    max-width: 337px;
+    margin: auto;
+  }
+
   .mobile-icon {
     z-index: 999999;
-    position: absolute;
+    position: fixed;
     width: 40px;
+
     height: 40px;
   }
 
