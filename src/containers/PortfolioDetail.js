@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Row, Col } from "antd";
 import DocumentTitle from "react-document-title";
+import BackAndForth from "../components/Portfolio/BackAndForth";
 import { togglePortfolioModal } from "../actions/actionsCommon";
 import { connect } from "react-redux";
 
@@ -17,9 +18,7 @@ function getSecondPart(props, str) {
 class PortfolioDetail extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      project: null
-    };
+    this.state = { project: null, allProjects: null };
   }
   client = contentful.createClient({
     space: "490ezzr1f96l",
@@ -34,40 +33,51 @@ class PortfolioDetail extends Component {
         that.setState({ project: project.items[0] });
         console.log(project.items[0]);
       });
+    this.client
+      .getEntries({
+        content_type: "portfolioItem",
+        "fields.map": this.props.title
+      })
+      .then(function(project) {
+        that.setState({ allProjects: project.items });
+        console.log(project.items[0]);
+      });
   }
   renderRooms() {
     var that = this;
-    return this.state.project.fields.rooms.map(function(room) {
-      return (
-        <Col
-          xs={{ span: 24 }}
-          sm={{ span: 12 }}
-          style={{ padding: "9px" }}
-          key={room.sys.id}
-        >
-          <div
-            className="single-project-outer"
-            onClick={() =>
-              that.props.togglePortfolioModal(that.state.project, room.sys.id)
-            }
+    if (this.state.project.fields.rooms) {
+      return this.state.project.fields.rooms.map(function(room) {
+        return (
+          <Col
+            xs={{ span: 24 }}
+            sm={{ span: 12 }}
+            style={{ padding: "9px" }}
+            key={room.sys.id}
           >
             <div
-              className="single-project-inner"
-              style={{
-                background:
-                  "url(" +
-                  room.fields.image.fields.file.url +
-                  "?w=590&h=412&fm=jpg&q=90&fit=fill&fl=progressive)"
-              }}
-            />
-          </div>
-        </Col>
-      );
-    });
+              className="single-project-outer"
+              onClick={() =>
+                that.props.togglePortfolioModal(that.state.project, room.sys.id)
+              }
+            >
+              <div
+                className="single-project-inner"
+                style={{
+                  background:
+                    "url(" +
+                    room.fields.image.fields.file.url +
+                    "?w=590&h=412&fm=jpg&q=90&fit=fill&fl=progressive)"
+                }}
+              />
+            </div>
+          </Col>
+        );
+      });
+    }
   }
 
   render() {
-    if (this.state.project) {
+    if (this.state.project && this.state.allProjects) {
       return (
         <DocumentTitle title={this.state.project.fields.title + " | MRC"}>
           <div
@@ -89,6 +99,10 @@ class PortfolioDetail extends Component {
             <div className="portfolio-detail-rooms-wrapper">
               <Row>{this.renderRooms()}</Row>
             </div>
+            <BackAndForth
+              project={this.state.project}
+              allProjects={this.state.allProjects}
+            />
           </div>
         </DocumentTitle>
       );
