@@ -2,6 +2,7 @@ import React, { Component } from "react";
 
 import { clearTimeout } from "timers";
 import Scroll_Down_Arrow from "../../assets/images/Common/scroll_down_arrow.svg";
+import Swipe from "react-easy-swipe";
 
 // Gallery Images
 import Image_002 from "../../assets/images/About/Gallery/171127-EM_Workspace_002.jpg";
@@ -53,6 +54,20 @@ class Gallery extends Component {
     };
     this.goToNextActiveImage = this.goToNextActiveImage.bind(this);
     this.setActiveImage = this.setActiveImage.bind(this);
+  }
+
+  onSwipeStart(event) {
+    console.log("Start swiping...", event);
+  }
+
+  onSwipeMove(position, event) {
+    console.log(`Moved ${position.x} pixels horizontally`, event);
+    console.log(`Moved ${position.y} pixels vertically`, event);
+  }
+
+  onSwipeEnd(position, event) {
+    console.log(position);
+    console.log("End swiping...", event);
   }
 
   setActiveImage(nextActive, manual) {
@@ -171,31 +186,36 @@ class Gallery extends Component {
 
   render() {
     return (
-      <div className="gallery-secion">
-        <img
-          onClick={() => this.goToNextPreviousImage()}
-          src={Scroll_Down_Arrow}
-          alt="Scroll Arrow"
-          className="scroll-arrow-left"
-        />
-        <KeyHandler
-          keyEventName={KEYDOWN}
-          code={"ArrowLeft"}
-          onKeyHandle={() => this.goToNextPreviousImage(true)}
-        />
-        <KeyHandler
-          keyEventName={KEYDOWN}
-          code={"ArrowRight"}
-          onKeyHandle={() => this.goToNextActiveImage(true)}
-        />
-        {this.renderGalleryImages()}
-        <img
-          src={Scroll_Down_Arrow}
-          alt="Scroll Arrow"
-          onClick={() => this.goToNextActiveImage(true)}
-          className="scroll-arrow-right"
-        />
-      </div>
+      <Swipe
+        onSwipeLeft={() => this.goToNextActiveImage(true)}
+        onSwipeRight={() => this.goToNextPreviousImage(true)}
+      >
+        <div className="gallery-secion">
+          <img
+            onClick={() => this.goToNextPreviousImage()}
+            src={Scroll_Down_Arrow}
+            alt="Scroll Arrow"
+            className="scroll-arrow-left"
+          />
+          <KeyHandler
+            keyEventName={KEYDOWN}
+            code={"ArrowLeft"}
+            onKeyHandle={() => this.goToNextPreviousImage(true)}
+          />
+          <KeyHandler
+            keyEventName={KEYDOWN}
+            code={"ArrowRight"}
+            onKeyHandle={() => this.goToNextActiveImage(true)}
+          />
+          {this.renderGalleryImages()}
+          <img
+            src={Scroll_Down_Arrow}
+            alt="Scroll Arrow"
+            onClick={() => this.goToNextActiveImage(true)}
+            className="scroll-arrow-right"
+          />
+        </div>
+      </Swipe>
     );
   }
 }

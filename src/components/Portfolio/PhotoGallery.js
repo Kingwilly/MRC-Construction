@@ -5,6 +5,7 @@ import { clearTimeout } from "timers";
 import Scroll_Down_Arrow from "../../assets/images/Common/scroll_down_arrow.svg";
 import { Row, Col } from "antd";
 import KeyHandler, { KEYDOWN } from "react-key-handler";
+import Swipe from "react-easy-swipe";
 
 var infiniteLoop;
 
@@ -178,42 +179,47 @@ class PersonalModal extends Component {
 
   render() {
     return (
-      <div
-        className={"porfolio-modal-container " + this.state.modalClasses}
-        style={{
-          background: "white"
-        }}
+      <Swipe
+        onSwipeLeft={() => this.goToNextActiveImage(true)}
+        onSwipeRight={() => this.goToNextPreviousImage(true)}
       >
-        <Row gutter={16}>
-          <Col xs={{ span: 24 }} md={{ span: 24 }}>
-            <div className="portfolio-main-image">
-              <img
-                onClick={() => this.goToNextPreviousImage()}
-                src={Scroll_Down_Arrow}
-                alt="Scroll Arrow"
-                className="scroll-arrow-left"
-              />
-              <KeyHandler
-                keyEventName={KEYDOWN}
-                code={"ArrowLeft"}
-                onKeyHandle={() => this.goToNextPreviousImage(true)}
-              />
-              <KeyHandler
-                keyEventName={KEYDOWN}
-                code={"ArrowRight"}
-                onKeyHandle={() => this.goToNextActiveImage(true)}
-              />
-              {this.renderGalleryImages()}
-              <img
-                src={Scroll_Down_Arrow}
-                alt="Scroll Arrow"
-                onClick={() => this.goToNextActiveImage(true)}
-                className="scroll-arrow-right"
-              />
-            </div>
-          </Col>
-        </Row>
-      </div>
+        <div
+          className={"porfolio-modal-container " + this.state.modalClasses}
+          style={{
+            background: "white"
+          }}
+        >
+          <Row gutter={16}>
+            <Col xs={{ span: 24 }} md={{ span: 24 }}>
+              <div className="portfolio-main-image">
+                <img
+                  onClick={() => this.goToNextPreviousImage()}
+                  src={Scroll_Down_Arrow}
+                  alt="Scroll Arrow"
+                  className="scroll-arrow-left"
+                />
+                <KeyHandler
+                  keyEventName={KEYDOWN}
+                  code={"ArrowLeft"}
+                  onKeyHandle={() => this.goToNextPreviousImage(true)}
+                />
+                <KeyHandler
+                  keyEventName={KEYDOWN}
+                  code={"ArrowRight"}
+                  onKeyHandle={() => this.goToNextActiveImage(true)}
+                />
+                {this.renderGalleryImages()}
+                <img
+                  src={Scroll_Down_Arrow}
+                  alt="Scroll Arrow"
+                  onClick={() => this.goToNextActiveImage(true)}
+                  className="scroll-arrow-right"
+                />
+              </div>
+            </Col>
+          </Row>
+        </div>
+      </Swipe>
     );
   }
 }
