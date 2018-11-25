@@ -117,6 +117,29 @@ class HeroGallery extends Component {
     // Set the active image
     this.setActiveImage(nextActiveImageIndex);
   }
+  goToNextPreviousImage() {
+    //   Looks through the gallery and detemines which image should be active next
+    // Get the total length of the image Gallery Array
+    var imageCount = this.state.imageGallery.length;
+    //
+    var currentActiveImage = null;
+    // For each image in the gallery check which one is active
+    this.state.imageGallery.forEach(function(galleryObject, index) {
+      if (galleryObject.active) {
+        // Add one to it
+        currentActiveImage = index + 1;
+      }
+    });
+    // Get the next active inext ie thatone plus one
+    var nextActiveImageIndex = currentActiveImage - 1;
+
+    // If it is bigger than the array itself, go back to 0
+    if (nextActiveImageIndex <= 0) {
+      nextActiveImageIndex = imageCount;
+    }
+    // Set the active image
+    this.setActiveImage(nextActiveImageIndex);
+  }
   setInfiniteLoop() {
     var that = this;
     setTimeout(function() {
