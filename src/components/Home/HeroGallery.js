@@ -6,7 +6,7 @@ import Other_House_Image from "../../assets/images/Home/Gallery/Other_House.jpg"
 import Other_Kitchen_Image from "../../assets/images/Home/Gallery/Other_Kitchen.jpg";
 import Stairs_Image from "../../assets/images/Home/Gallery/Stairs.jpg";
 import Patio from "../../assets/images/Home/Gallery/Patio.jpg";
-
+import Swipe from "react-easy-swipe";
 import { clearTimeout } from "timers";
 var contentful = require("contentful");
 var infiniteLoop;
@@ -202,17 +202,22 @@ class HeroGallery extends Component {
   }
   render() {
     return (
-      <div className="gallery-wrapper">
-        <div className="timer-wrapper">
-          <div className="timer-row">{this.renderTimers()}</div>
-        </div>
-        <div className="headline-wrapper">
-          <div className="headline">
-            <h1>A Whole House Approach</h1>
+      <Swipe
+        onSwipeLeft={() => this.goToNextActiveImage(true)}
+        onSwipeRight={() => this.goToNextPreviousImage(true)}
+      >
+        <div className="gallery-wrapper">
+          <div className="timer-wrapper">
+            <div className="timer-row">{this.renderTimers()}</div>
           </div>
+          <div className="headline-wrapper">
+            <div className="headline">
+              <h1>A Whole House Approach</h1>
+            </div>
+          </div>
+          {this.renderGalleryImages()}
         </div>
-        {this.renderGalleryImages()}
-      </div>
+      </Swipe>
     );
   }
 }
