@@ -14,26 +14,42 @@ class HomeVideoGallery extends Component {
         {
           thumbImage:
             "//images.ctfassets.net/490ezzr1f96l/3lGZq0e1hYqqGMMeQIS4oG/f9c204e9a4bee8e292e5fcd20f0d712f/thumb-5.jpg?h=105&w=105&fm=jpg&q=90&fit=fill&fl=progressive",
-          mainImage:
-            "//images.ctfassets.net/490ezzr1f96l/3lGZq0e1hYqqGMMeQIS4oG/f9c204e9a4bee8e292e5fcd20f0d712f/thumb-5.jpg?h=601&w=1054&fm=jpg&q=90&fit=fill&fl=progressive",
           active: true,
-          url: "https://www.youtube-nocookie.com/embed/wh5GVdE5SAQ?controls=0"
+          url: "https://www.youtube-nocookie.com/embed/lCcjrOgZc4I?controls=0"
         },
         {
           thumbImage:
             "//images.ctfassets.net/490ezzr1f96l/Cu4Af1rxg4GQaa8SgguCc/e6cc3dfd104152dd45f20ac23f603d71/thumb-4.jpg?h=105&w=105&fm=jpg&q=90&fit=fill&fl=progressive",
-          mainImage:
-            "//images.ctfassets.net/490ezzr1f96l/Cu4Af1rxg4GQaa8SgguCc/e6cc3dfd104152dd45f20ac23f603d71/thumb-4.jpg?h=601&w=1054&fm=jpg&q=90&fit=fill&fl=progressive",
           active: false,
-          url: "https://www.youtube-nocookie.com/embed/djEtq-Im4ew?controls=0"
+          url: "https://www.youtube-nocookie.com/embed/LkyuGCtd1IM?controls=0"
         },
         {
           thumbImage:
-            "//images.ctfassets.net/490ezzr1f96l/6CjVJAF1w4YGyKIACi4QwG/67691c9187897d179bd5c3aa9b3f981c/thumb-3.jpg?h=105&w=105&fm=jpg&q=90&fit=fill&fl=progressive",
-          mainImage:
-            "//images.ctfassets.net/490ezzr1f96l/6CjVJAF1w4YGyKIACi4QwG/67691c9187897d179bd5c3aa9b3f981c/thumb-3.jpg?h=601&w=1054&fm=jpg&q=90&fit=fill&fl=progressive",
+            "//images.ctfassets.net/490ezzr1f96l/Cu4Af1rxg4GQaa8SgguCc/e6cc3dfd104152dd45f20ac23f603d71/thumb-4.jpg?h=105&w=105&fm=jpg&q=90&fit=fill&fl=progressive",
           active: false,
-          url: "https://www.youtube.com/embed/lCcjrOgZc4I?controls=0"
+          url: "https://www.youtube-nocookie.com/embed/djEtq-Im4ew?controls=0"
+        },
+        // {
+        //   thumbImage:
+        //     "//images.ctfassets.net/490ezzr1f96l/Cu4Af1rxg4GQaa8SgguCc/e6cc3dfd104152dd45f20ac23f603d71/thumb-4.jpg?h=105&w=105&fm=jpg&q=90&fit=fill&fl=progressive",
+        //   active: false,
+        //   url: "https://player.vimeo.com/video/213932165"
+        // },
+        {
+          thumbImage:
+            "//images.ctfassets.net/490ezzr1f96l/Cu4Af1rxg4GQaa8SgguCc/e6cc3dfd104152dd45f20ac23f603d71/thumb-4.jpg?h=105&w=105&fm=jpg&q=90&fit=fill&fl=progressive",
+          active: false,
+          externalLink: true,
+          url:
+            "https://www.nbcnewyork.com/blogs/open-house/george-to-the-rescue-davis-kitchen-331249082.html"
+        },
+        {
+          thumbImage:
+            "//images.ctfassets.net/490ezzr1f96l/Cu4Af1rxg4GQaa8SgguCc/e6cc3dfd104152dd45f20ac23f603d71/thumb-4.jpg?h=105&w=105&fm=jpg&q=90&fit=fill&fl=progressive",
+          active: false,
+          externalLink: true,
+          url:
+            "https://www.nbcnewyork.com/blogs/open-house/Lederman-Full-Episode-416844343.html"
         }
       ]
     };
@@ -51,6 +67,13 @@ class HomeVideoGallery extends Component {
   renderThumbNails() {
     var that = this;
     return this.state.imageGallery.map(function(thumb) {
+      if (thumb.externalLink) {
+        return (
+          <a href={thumb.url} target="_blank">
+            <img src={thumb.thumbImage} alt={thumb.url} key={thumb.url} />
+          </a>
+        );
+      }
       if (thumb.active) {
         return (
           <img
@@ -102,10 +125,10 @@ class HomeVideoGallery extends Component {
               />
               <div className="button-container-outer">
                 <div className="button-container-inner">
-                  <Link className="button-left" to={"/video"}>
+                  <a className="button-left" href="#">
                     <img src={nbc_logo} alt="NBC Logo" />
                     <p>HELPING FAMILIES ONE HOME AT A TIME</p>
-                  </Link>
+                  </a>
                   <div className="button-right" style={{ cursor: "pointer" }}>
                     <div style={{ float: "left" }}>
                       <p className="cta">LATEST WORK</p>

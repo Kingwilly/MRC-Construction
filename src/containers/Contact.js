@@ -3,6 +3,7 @@ import DocumentTitle from "react-document-title";
 // Base Comps
 import Gallery from "../components/About/Gallery";
 import InfoBar from "../components/Contact/InfoBar";
+import Quote from "../components/About/Quote";
 import ContactForm from "../components/Contact/ContactForm";
 
 class Contact extends Component {
@@ -20,6 +21,14 @@ class Contact extends Component {
             <InfoBar />
           </div>
           <ContactForm />
+          <div className="quote-container">
+            <Quote
+              quote={
+                "Mike and the top-notch team at MRC completely renovated our home and we couldn't be happier with the results. If you have a significant renovation or new construction project planned I wouldn't hesitate to partner with this firm. You will ... have the confidence to know that things are being built to last. "
+              }
+              speaker={"MOLLY & PAUL"}
+            />
+          </div>
         </div>
       </DocumentTitle>
     );

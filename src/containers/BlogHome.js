@@ -3,6 +3,7 @@ import DocumentTitle from "react-document-title";
 import { Row, Col } from "antd";
 import Arrow_Button from "../assets/images/Common/scroll_down_arrow.svg";
 import { Link } from "react-router-dom";
+import Quote from "../components/About/Quote";
 var contentful = require("contentful");
 var showdown = require("showdown");
 
@@ -168,6 +169,14 @@ class BlogHome extends Component {
             </div>
             <div className="blog-entries-wrapper">
               <Row gutter={16}>{this.renderPosts()}</Row>
+            </div>
+            <div className="quote-container">
+              <Quote
+                quote={
+                  "We hired Mike and his team to do a major renovation on our house. They were absolutely professional from beginning to end....The final product was outstanding, and the workmanship was excellent. I would highly recommend Michael Robert to anyone who was looking for a high-end contractor. "
+                }
+                speaker={"MOLLY & PAUL"}
+              />
             </div>
           </div>
         </DocumentTitle>
