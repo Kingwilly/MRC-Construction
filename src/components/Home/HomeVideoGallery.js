@@ -1,10 +1,13 @@
 import React, { Component } from "react";
 
 import nbc_logo from "../../assets/images/Home/Video/nbc.svg";
-import playbutton from "../../assets/images/Home/Video/playbutton.svg";
 import { Row, Col } from "antd";
-import { Link } from "react-router-dom";
-import { getImage } from "../../helpers";
+
+import New_Kitchen from "../../assets/images/Video/A-New-Kitchen-For-The-Davis-Family.jpg";
+import Montage from "../../assets/images/Video/George-to-the-Rescue-montage.jpg";
+import Lederman from "../../assets/images/Video/Lederman-Family-Gets-A-Fresh-Start.jpg";
+import Open_House from "../../assets/images/Video/Open-House-NYC-Ellie-Mroz-George-Oliphant.jpg";
+import Shah_family from "../../assets/images/Video/Shah-Family.jpg";
 
 class HomeVideoGallery extends Component {
   constructor(props) {
@@ -12,20 +15,19 @@ class HomeVideoGallery extends Component {
     this.state = {
       imageGallery: [
         {
-          thumbImage:
-            "//images.ctfassets.net/490ezzr1f96l/3lGZq0e1hYqqGMMeQIS4oG/f9c204e9a4bee8e292e5fcd20f0d712f/thumb-5.jpg?h=105&w=105&fm=jpg&q=90&fit=fill&fl=progressive",
+          thumbImage: Shah_family,
+
           active: true,
           url: "https://www.youtube-nocookie.com/embed/lCcjrOgZc4I?controls=0"
         },
         {
-          thumbImage:
-            "//images.ctfassets.net/490ezzr1f96l/Cu4Af1rxg4GQaa8SgguCc/e6cc3dfd104152dd45f20ac23f603d71/thumb-4.jpg?h=105&w=105&fm=jpg&q=90&fit=fill&fl=progressive",
+          thumbImage: Montage,
           active: false,
           url: "https://www.youtube-nocookie.com/embed/LkyuGCtd1IM?controls=0"
         },
         {
-          thumbImage:
-            "//images.ctfassets.net/490ezzr1f96l/Cu4Af1rxg4GQaa8SgguCc/e6cc3dfd104152dd45f20ac23f603d71/thumb-4.jpg?h=105&w=105&fm=jpg&q=90&fit=fill&fl=progressive",
+          thumbImage: Open_House,
+
           active: false,
           url: "https://www.youtube-nocookie.com/embed/djEtq-Im4ew?controls=0"
         },
@@ -36,16 +38,14 @@ class HomeVideoGallery extends Component {
         //   url: "https://player.vimeo.com/video/213932165"
         // },
         {
-          thumbImage:
-            "//images.ctfassets.net/490ezzr1f96l/Cu4Af1rxg4GQaa8SgguCc/e6cc3dfd104152dd45f20ac23f603d71/thumb-4.jpg?h=105&w=105&fm=jpg&q=90&fit=fill&fl=progressive",
+          thumbImage: New_Kitchen,
           active: false,
           externalLink: true,
           url:
             "https://www.nbcnewyork.com/blogs/open-house/george-to-the-rescue-davis-kitchen-331249082.html"
         },
         {
-          thumbImage:
-            "//images.ctfassets.net/490ezzr1f96l/Cu4Af1rxg4GQaa8SgguCc/e6cc3dfd104152dd45f20ac23f603d71/thumb-4.jpg?h=105&w=105&fm=jpg&q=90&fit=fill&fl=progressive",
+          thumbImage: Lederman,
           active: false,
           externalLink: true,
           url:
