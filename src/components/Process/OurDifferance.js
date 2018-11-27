@@ -29,7 +29,10 @@ class OurDifferance extends Component {
                 industry classes on all aspects of building, ranging from latest
                 energy-efficiency techniques to updated safety standards.
               </p>
-              <br />
+
+              <div className="title-section">
+                <p className="subtitle">COMMITMENT TO GREEN ENERGY</p>
+              </div>
               <p>
                 With almost a decade committed to mastering the green energy
                 approach, we are committed to building homes differently. We

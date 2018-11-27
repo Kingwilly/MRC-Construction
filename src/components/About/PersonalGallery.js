@@ -29,7 +29,7 @@ class OurPersonal extends Component {
     this.client
       .getEntries({
         content_type: "teamMember",
-        order: "sys.createdAt"
+        order: "fields.order"
       })
       .then(function(entries) {
         console.log(entries);

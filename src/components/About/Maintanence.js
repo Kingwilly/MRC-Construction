@@ -4,6 +4,7 @@ import { Row, Col } from "antd";
 // Normal Photos
 import Interior_Shot from "../../assets/images/About/interior-section-3.jpg";
 import QuoteMark from "../../assets/images/Common/quote_start.svg";
+import Quote from "./Quote";
 
 class Maintanence extends Component {
   // Maintance Copy Section
@@ -35,23 +36,12 @@ class Maintanence extends Component {
                   outlive our warranty.
                 </p>
               </div>
-              <div className="quote-block">
-                <div className="quote-icon start">
-                  <img src={QuoteMark} alt="Quote Start" />
-                </div>
-                <div className="quote-icon end">
-                  <img src={QuoteMark} alt="Quote End" />
-                </div>
-                <div className="quote-block-inner">
-                  <p className="quote">
-                    In short, they went above and beyond. Michael Robert
-                    Construction was the general contractor for my whole house
-                    renovation. The project was done in two phases so we could
-                    continue to live in the house throughout the project.
-                  </p>
-                  <p className="speaker">MOLLY & PAUL</p>
-                </div>
-              </div>
+              <Quote
+                quote={
+                  "As a local Realtor in the area for 30 years, I have seen a lot of construction. If you are looking for top quality workmanship and service...look no further. Mike has an amazing eye for detail and truly builds custom! You won’t be disappointed!  "
+                }
+                speaker={"MOLLY & PAUL"}
+              />
             </div>
           </Col>
         </Row>

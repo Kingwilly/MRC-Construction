@@ -23,7 +23,7 @@ class PortfolioDetail extends Component {
     this.client
       .getEntries({
         content_type: "portfolioItem",
-        "fields.map": this.props.title
+        order: "-sys.createdAt"
       })
       .then(function(entries) {
         that.setState({ entries: entries.items });
