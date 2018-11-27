@@ -654,6 +654,8 @@ h6 {
     width: 10.5% !important;
   }
 
+
+
   .first-panel {
     margin-left: 0px;
   }
@@ -662,6 +664,11 @@ h6 {
 @media only screen and (max-width: 768px) {
   .footer-wrapper .footer-logo-row {
     text-align: center;
+  }
+
+  .quote-block {
+    padding: 20px !important;
+    margin: 0px 29px !important;
   }
 
   .footer-wrapper .footer-inner-wrapper .footer-block {
@@ -2945,7 +2952,7 @@ h6 {
     padding: 0px 20px;
   }
 
-  .about-wrapper .maintainence-section .text-content-wrapper .quote-block .quote-icon {
+  .quote-block .quote-icon {
     height: 30px;
     width: 30px;
     display: none;
