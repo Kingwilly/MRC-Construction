@@ -3356,3 +3356,13 @@ h6 {
 .personal-modal-inner-wrapper h1 {
   text-transform: uppercase;
 }
+
+.our-differance p.subtitle {
+  font-family: unica_oneregular;
+  text-transform: uppercase !important;
+  font-size: 16px;
+  color: #000;
+  margin-bottom: 10px;
+  line-height: 16px;
+  margin-top: 30px;
+}
