@@ -70,7 +70,7 @@ class BlogHome extends Component {
     this.client
       .getEntries({
         content_type: "blogPost",
-        order: "fields.publishDate"
+        order: "-fields.publishDate"
       })
       .then(function(entries) {
         that.setState({ entries: entries.items });
