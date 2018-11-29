@@ -4053,6 +4053,6 @@ h6 {
 }
 
 .mobile-close p {
-  font-size: 40px;
-  padding-left: 1px;
+  font-size: 40px !important;
+  padding-left: 4px !important;
 }
