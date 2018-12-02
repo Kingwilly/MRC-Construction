@@ -28,9 +28,9 @@ class Home extends Component {
           <div className="quote-container">
             <Quote
               quote={
-                " In short, they went above and beyond. Michael Robert Construction was the general contractor for my whole house renovation. The project was done in two phases so we could continue to live in the house throughout the project."
+                " Not only is there team very organized and collaborative, but they are responsive, timely, clean and professional- not to mention they do an incredible job."
               }
-              speaker={"MOLLY & PAUL"}
+              speaker={"Erica, Westfield"}
             />
           </div>
           <HomeVideoGallery />

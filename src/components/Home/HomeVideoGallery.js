@@ -15,22 +15,20 @@ class HomeVideoGallery extends Component {
     this.state = {
       imageGallery: [
         {
-          thumbImage: Shah_family,
-
+          thumbImage: Montage,
           active: true,
           url: "https://www.youtube-nocookie.com/embed/lCcjrOgZc4I?controls=0"
-        },
-        {
-          thumbImage: Montage,
-          active: false,
-          url: "https://www.youtube-nocookie.com/embed/LkyuGCtd1IM?controls=0"
-        },
-        {
-          thumbImage: Open_House,
+        }, // {
+        //   thumbImage: Montage,
+        //   active: false,
+        //   url: "https://www.youtube-nocookie.com/embed/LkyuGCtd1IM?controls=0"
+        // },
+        // {
+        //   thumbImage: Open_House,
 
-          active: false,
-          url: "https://www.youtube-nocookie.com/embed/djEtq-Im4ew?controls=0"
-        },
+        //   active: false,
+        //   url: "https://www.youtube-nocookie.com/embed/djEtq-Im4ew?controls=0"
+        // },
         // {
         //   thumbImage:
         //     "//images.ctfassets.net/490ezzr1f96l/Cu4Af1rxg4GQaa8SgguCc/e6cc3dfd104152dd45f20ac23f603d71/thumb-4.jpg?h=105&w=105&fm=jpg&q=90&fit=fill&fl=progressive",

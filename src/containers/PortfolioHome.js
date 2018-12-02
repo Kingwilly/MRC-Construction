@@ -50,9 +50,9 @@ class PortfolioDetail extends Component {
           <div className="quote-container">
             <Quote
               quote={
-                "We are beyond thrilled with our new master bedroom extension by Michael Robert Construction. Michael and his team took our vision and made it into a stunning reality. Not only did we receive excellent craftsmanship, but also a team who was responsive, knowledgeable and experts in their fields."
+                "As a local Realtor in the area for 30 years, I have seen a lot of construction. If you are looking for top quality workmanship and service look no further."
               }
-              speaker={"MOLLY & PAUL"}
+              speaker={"Frank, Westfield"}
             />
           </div>
         </div>

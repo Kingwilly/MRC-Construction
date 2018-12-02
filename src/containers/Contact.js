@@ -24,9 +24,9 @@ class Contact extends Component {
           <div className="quote-container">
             <Quote
               quote={
-                "Mike and the top-notch team at MRC completely renovated our home and we couldn't be happier with the results. If you have a significant renovation or new construction project planned I wouldn't hesitate to partner with this firm. You will ... have the confidence to know that things are being built to last. "
+                "We couldn't be happier with the results. I wouldn't hesitate to partner with this firm. You will have the confidence to know that things are being built to last. "
               }
-              speaker={"MOLLY & PAUL"}
+              speaker={"Marc, Westfield"}
             />
           </div>
         </div>

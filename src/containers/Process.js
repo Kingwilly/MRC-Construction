@@ -22,9 +22,9 @@ class Process extends Component {
           <div className="quote-container">
             <Quote
               quote={
-                "We hired Michael Robert Construction for a complete home renovation and we could not be happier with the results! Mike and our project manager was extremely professional, collaborative, and very mindful of what we were looking for. "
+                "Absolutely professional from beginning to end the final product was outstanding, and the workmanship was excellent. "
               }
-              speaker={"MOLLY & PAUL"}
+              speaker={"Jodie, Westfield"}
             />
           </div>
           <div

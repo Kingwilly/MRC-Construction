@@ -173,9 +173,9 @@ class BlogHome extends Component {
             <div className="quote-container">
               <Quote
                 quote={
-                  "We hired Mike and his team to do a major renovation on our house. They were absolutely professional from beginning to end....The final product was outstanding, and the workmanship was excellent. I would highly recommend Michael Robert to anyone who was looking for a high-end contractor. "
+                  "We are beyond thrilled with our new master bedroom Michael and his team took our vision and made it into a stunning reality. "
                 }
-                speaker={"MOLLY & PAUL"}
+                speaker={"Lauren, Westfield"}
               />
             </div>
           </div>
