@@ -19,7 +19,7 @@ body {
     font-family: 'butlerlight';
     src: url('../fonts/butler_light-webfont.woff2') format('woff2'),
         url('../fonts/butler_light-webfont.woff') format('woff');
-    font-weight: 100;
+    font-weight: normal;
     font-style: normal;
 }
 
@@ -27,7 +27,7 @@ body {
     font-family: 'butlerregular';
     src: url('../fonts/butler_regular-webfont.woff2') format('woff2'),
         url('../fonts/butler_regular-webfont.woff') format('woff');
-    font-weight: 300;
+    font-weight: normal;
     font-style: normal;
 }
 
@@ -56,6 +56,15 @@ body {
     font-family: 'cooper_hewittmedium';
     src: url('../fonts/cooperhewitt-medium-webfont.woff2') format('woff2'),
         url('../fonts/cooperhewitt-medium-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'cooper_hewittsemibold';
+    src: url('../fonts/CooperHewitt-Semibold.woff2') format('woff2'),
+        url('../fonts/CooperHewitt-Semibold.woff') format('woff'),
+        url('../fonts/CooperHewitt-Semibold.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }

@@ -33,7 +33,6 @@ class Home extends Component {
               speaker={"Erica, Westfield"}
             />
           </div>
-          <HomeVideoGallery />
         </div>
       </DocumentTitle>
     );

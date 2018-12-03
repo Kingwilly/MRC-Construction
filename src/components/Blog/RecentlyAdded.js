@@ -9,9 +9,9 @@ class RecentlyAdded extends Component {
         <Link
           to={"/our-journal/" + post.sys.id + "/" + post.fields.slug}
           className="related-article"
+          style={{ marginBottom: "30px" }}
         >
           <p className="title">{post.fields.title}</p>
-          <p className="date">{post.fields.publishDate}</p>
         </Link>
       );
     });

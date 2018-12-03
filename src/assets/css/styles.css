@@ -8,6 +8,8 @@ h6 {
   color: #000;
 }
 
+
+
 .global-app-wrapper {
   overflow-x: hidden !important;
 }
@@ -2678,6 +2680,7 @@ h6 {
 
 .blog-detail-wrapper .blog-content-wrapper .related-articles-content .related-article .title {
   font-family: butlerregular;
+  margin-bottom: 30px;
   font-size: 15px;
 }
 
@@ -2951,9 +2954,21 @@ h6 {
   }
 
   .quote-block .quote-icon {
-    height: 30px;
-    width: 30px;
-    display: none;
+    height: 66px;
+    width: 66px;
+  }
+
+  .quote-block .start {
+    position: absolute;
+    top: -41px;
+    left: -26px;
+  }
+
+  .quote-block .end {
+    position: absolute;
+    bottom: -41px;
+    right: -26px;
+    transform: rotate(180deg);
   }
 
   .about-wrapper .our-team-section .title-section {
@@ -3407,4 +3422,9 @@ a.underline-dark {
 .subhead {
   font-family: unica_oneregular;
   text-transform: uppercase;
+}
+
+b,
+strong {
+  font-family: 'cooper_hewittsemibold';
 }
