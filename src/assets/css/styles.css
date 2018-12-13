@@ -3428,3 +3428,13 @@ b,
 strong {
   font-family: 'cooper_hewittsemibold';
 }
+
+.underline-white a:hover  {
+  text-decoration:none;
+  color: #fff;
+}
+
+.underline-dark a:hover {
+  text-decoration:none;
+  color: #a3a199;
+}
