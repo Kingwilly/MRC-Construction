@@ -23,7 +23,7 @@ class HomeProjects extends Component {
     this.client
       .getEntries({
         content_type: "portfolioItem",
-        order: "sys.createdAt"
+        order: "-sys.createdAt"
       })
       .then(function(entries) {
         that.setState({
