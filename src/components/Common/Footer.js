@@ -19,12 +19,6 @@ class Footer extends Component {
           allowtransparency="true"
           frameborder="0"
           scrolling="no"
-          style={{
-            border: "none",
-            overflow: "hidden",
-            width: "100%",
-            height: "160px"
-          }}
         />
         <div className="footer-logo-row">
           <a href="/">
