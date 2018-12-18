@@ -23,7 +23,7 @@ class PortfolioDetail extends Component {
     this.client
       .getEntries({
         content_type: "portfolioItem",
-        order: "-sys.createdAt"
+        order: "sys.createdAt"
       })
       .then(function(entries) {
         that.setState({ entries: entries.items });
@@ -38,7 +38,11 @@ class PortfolioDetail extends Component {
   }
   render() {
     return (
-      <DocumentTitle title={"Our Portfolio | MRC"}>
+      <DocumentTitle
+        title={
+          "Portfolio - Michael Robert Construction, General Contractor, Home Remodeling, Design Build, Home Renovations, Construction"
+        }
+      >
         <div className="about-wrapper portfolio-home-wrapper">
           <div className="hero-title-wrapper">
             <h2>LATEST WORK</h2>

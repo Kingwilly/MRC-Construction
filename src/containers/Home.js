@@ -10,7 +10,11 @@ class Home extends Component {
   // Home Screen https://projects.invisionapp.com/d/main#/console/15461363/321299146/inspect
   render() {
     return (
-      <DocumentTitle title={"Home | MRC"}>
+      <DocumentTitle
+        title={
+          "Michael Robert Construction - Design Build, Major Renovations, Additions, High End Remodeling, General Contractor, Westfield, NJ"
+        }
+      >
         <div className="home-wrapper">
           <HeroGallery />
           <HomeTextBlock

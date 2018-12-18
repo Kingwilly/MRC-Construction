@@ -10,7 +10,11 @@ class Contact extends Component {
   // About Screen https://projects.invisionapp.com/d/main#/console/15461363/321299148/inspect
   render() {
     return (
-      <DocumentTitle title={"Find Us | MRC"}>
+      <DocumentTitle
+        title={
+          "Contact - Michael Robert Remodeling, Home Construction NJ, Home Remodeling NJ, General Contractor"
+        }
+      >
         <div className="about-wrapper contact-wrapper">
           <div className="hero-title-wrapper">
             <h2>FIND US</h2>

@@ -91,7 +91,11 @@ class BlogHome extends Component {
   render() {
     if (this.state.entries) {
       return (
-        <DocumentTitle title={"Our Journal | MRC"}>
+        <DocumentTitle
+          title={
+            "Jurnal - Michael Robert Construction, Award Winning Home Remodeler"
+          }
+        >
           <div className="blog-wrapper">
             <div
               className="header"
@@ -173,7 +177,7 @@ class BlogHome extends Component {
             <div className="quote-container">
               <Quote
                 quote={
-                  "We are beyond thrilled with our new master bedroom Michael and his team took our vision and made it into a stunning reality. "
+                  "We are beyond thrilled with our new master bedroom. Michael and his team took our vision and made it into a stunning reality. "
                 }
                 speaker={"Lauren, Westfield"}
               />

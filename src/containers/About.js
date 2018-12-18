@@ -12,7 +12,11 @@ class About extends Component {
   // About Screen https://projects.invisionapp.com/d/main#/console/15461363/321299148/inspect
   render() {
     return (
-      <DocumentTitle title={"About Us | MRC"}>
+      <DocumentTitle
+        title={
+          "About - Michael Robert Construction, Licensed NJ Remodeler, Certified Green Professional, Energy Star, General Contractor - Westfield, NJ"
+        }
+      >
         <div className="about-wrapper">
           <Hero />
           <OurPersonal />

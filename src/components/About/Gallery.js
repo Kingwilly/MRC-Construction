@@ -23,8 +23,12 @@ class Gallery extends Component {
     this.state = {
       imageGallery: [
         {
-          image: Image_002,
+          image: Image_012,
           active: true
+        },
+        {
+          image: Image_002,
+          active: false
         },
         {
           image: Image_004,
@@ -34,10 +38,7 @@ class Gallery extends Component {
           image: Image_007,
           active: false
         },
-        {
-          image: Image_012,
-          active: false
-        },
+
         {
           image: Image_013,
           active: false

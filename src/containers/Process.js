@@ -13,7 +13,11 @@ class Process extends Component {
   // About Screen https://projects.invisionapp.com/d/main#/console/15461363/321299148/inspect
   render() {
     return (
-      <DocumentTitle title={"Our Process | MRC"}>
+      <DocumentTitle
+        title={
+          "Design Build - Michael Robert Construction, Additions and Renovations, High End Remodeling, General Contractor"
+        }
+      >
         <div className="process-wrapper">
           <Hero />
           <CharThing />
@@ -22,7 +26,7 @@ class Process extends Component {
           <div className="quote-container">
             <Quote
               quote={
-                "Absolutely professional from beginning to end the final product was outstanding, and the workmanship was excellent. "
+                "Absolutely professional from beginning to end. The final product was outstanding, and the workmanship was excellent. "
               }
               speaker={"Jodie, Westfield"}
             />
