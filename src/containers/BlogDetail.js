@@ -59,7 +59,11 @@ class BlogDetail extends Component {
   render() {
     if (this.state.post) {
       return (
-        <DocumentTitle title={this.state.post.fields.title + " | MRC"}>
+        <DocumentTitle
+          title={
+            this.state.post.fields.title + " | Michael Robert Construction"
+          }
+        >
           <div className="blog-detail-wrapper">
             <div
               className="blog-header"

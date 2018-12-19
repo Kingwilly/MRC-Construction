@@ -79,7 +79,11 @@ class PortfolioDetail extends Component {
   render() {
     if (this.state.project && this.state.allProjects) {
       return (
-        <DocumentTitle title={this.state.project.fields.title + " | MRC"}>
+        <DocumentTitle
+          title={
+            this.state.project.fields.title + " | Michael Robert Construction"
+          }
+        >
           <div
             className="about-wrapper portfolio-detail-wrapper"
             style={{ minHeight: "100vh" }}
