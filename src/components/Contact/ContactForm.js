@@ -24,7 +24,7 @@ class ContactForm extends Component {
       <div className="contact-form-wrapper">
         <div className="contact-form-inner-wrapper">
           <form
-            action="https://formspree.io/zacharybedrosian@gmail.com"
+            action="https://formspree.io/info@michaelrobertconstruction.com"
             method="POST"
           >
             <div className="form-row">

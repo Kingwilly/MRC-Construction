@@ -93,7 +93,7 @@ class BlogHome extends Component {
       return (
         <DocumentTitle
           title={
-            "Jurnal - Michael Robert Construction, Award Winning Home Remodeler"
+            "Journal - Michael Robert Construction, Award Winning Home Remodeler"
           }
         >
           <div className="blog-wrapper">
