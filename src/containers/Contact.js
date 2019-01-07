@@ -12,7 +12,7 @@ class Contact extends Component {
     return (
       <DocumentTitle
         title={
-          "Contact - Michael Robert Remodeling, Home Construction NJ, Home Remodeling NJ, General Contractor"
+          "Contact - Michael Robert Construction, Remodeling, Home Construction NJ, Home Remodeling NJ, General Contractor"
         }
       >
         <div className="about-wrapper contact-wrapper">

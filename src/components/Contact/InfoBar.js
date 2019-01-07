@@ -31,7 +31,10 @@ class InfoBar extends Component {
           </div>
           <div className="info-item border-bottom" style={{ width: "23%" }}>
             <p className="label">EMAIL</p>
-            <a className="value" href="mailto:info@gmail.com">
+            <a
+              className="value"
+              href="mailto:info@michaelrobertconstruction.com"
+            >
               <img
                 src={ContactIcon}
                 alt="contact-icon"
