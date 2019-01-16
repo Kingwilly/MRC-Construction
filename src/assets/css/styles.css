@@ -61,6 +61,11 @@ h6 {
   }
 }
 
+.blog-content-wrapper .description img {
+  width: 100%;
+  height: auto;
+}
+
 .loading-screen-open {
   height: 100vh;
   width: 100%;
