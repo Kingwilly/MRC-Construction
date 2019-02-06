@@ -7,9 +7,11 @@ import Maintanence from "../components/About/Maintanence";
 import OurTeam from "../components/About/OurTeam";
 import MenAtWork from "../assets/images/About/menatwork.jpg";
 import OurDifferance from "../components/Process/OurDifferance";
+import ReactGA from "react-ga";
 
 class About extends Component {
   // About Screen https://projects.invisionapp.com/d/main#/console/15461363/321299148/inspect
+
   render() {
     return (
       <DocumentTitle

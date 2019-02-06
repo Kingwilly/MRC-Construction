@@ -1,3 +1,5 @@
+/* global gtag */
+
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import Logo_Square_Logo from "../../assets/images/Common/logo_square.png";
@@ -25,6 +27,12 @@ class Navigation extends Component {
       top: 850,
       left: 0,
       behavior: "smooth"
+    });
+  }
+
+  componentWillReceiveProps(nextProps) {
+    gtag("config", "UA-10563289-1", {
+      page_path: nextProps.location.pathname
     });
   }
   toggleModalStatus() {

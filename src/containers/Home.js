@@ -2,12 +2,11 @@ import React, { Component } from "react";
 import HeroGallery from "../components/Home/HeroGallery";
 import HomeTextBlock from "../components/Home/HomeTextBlock";
 import HomeProjects from "../components/Home/HomeProjects";
-import HomeVideoGallery from "../components/Home/HomeVideoGallery";
 import DocumentTitle from "react-document-title";
 import Quote from "../components/About/Quote";
-
 class Home extends Component {
   // Home Screen https://projects.invisionapp.com/d/main#/console/15461363/321299146/inspect
+
   render() {
     return (
       <DocumentTitle

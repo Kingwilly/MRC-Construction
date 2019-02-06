@@ -31,7 +31,7 @@ class Routes extends React.Component {
         <Route
           render={({ location }) => (
             <div>
-              <Navigation />
+              <Navigation location={location} />
               <TransitionGroup component="div">
                 <AnimatedSwitch key={location.key} location={location}>
                   <Route exact path="/" component={Home} />
