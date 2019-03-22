@@ -19,78 +19,96 @@ class ContactForm extends Component {
   updateFormState(field, value) {
     console.log(field, value);
   }
+
+  addCoConstructScript = () => {
+    const script = document.createElement("script");
+    script.src = "https://www.co-construct.com/app/api/LeadsIntakeForm/GetLeadsIntakeFormSubmissionJs?AuthKey=ZkhY0jMzK2WXARK03VSJjyedpILK4zMoVUe937VuyLM%3d";
+    script.async = true;
+    document.body.appendChild(script);
+  }
+
+  addCoConstructStylesheet = () => {
+    const sheet = document.createElement('link');
+    sheet.rel = 'stylesheet';
+    sheet.href = "https://www.co-construct.com/app/public/LeadIntake/LeadIntakeForm.css?289565009";
+    sheet.type = 'text/css';
+    document.head.appendChild(sheet);
+  }
+
+  componentDidMount() {
+    this.addCoConstructScript();
+    this.addCoConstructStylesheet();
+  }
+  
   render() {
     return (
-      <div className="contact-form-wrapper">
-        <div className="contact-form-inner-wrapper">
-          <form
-            action="https://formspree.io/info@michaelrobertconstruction.com"
-            method="POST"
-          >
-            <div className="form-row">
-              <div className="form-item">
-                <input
-                  type="text"
-                  name="first_name"
-                  placeholder="FIRST NAME *"
-                  required={true}
-                />
+        // <!-- COCONSTRUCT LEADS INTAKE FORM -->
+        // <!-- Do not modify the code below. This form will automatically inherit the styling of your website. -->
+        
+        // <!-- CSS - This provides styling for the layout of the fields, validation and the confirmation message -->
+        
+        <div>
+          <div id="divCoCoForm">
+            <div className="coco-form-wrapper">
+        
+              {/* <!-- NAME FIELDS --> */}
+              <div className="cocon-row">
+                <div><label className="coco-label">Name</label></div>
+                <div className="cocon-name-inputs">
+                  <input id="txtCoCoFirstName" name="txtFirstName" type="text" className="coco-text-input" placeholder="First Name" /> 
+                  <input id="txtCoCoLastName" name="txtLastName" type="text" className="coco-text-input" placeholder="Last Name" /> 
+                </div>
+                <div id="divNameErrorBanner" className="coco-error-banner" style={{display: 'none'}}><div>Please enter your name</div></div>
               </div>
-              <div className="form-item">
-                <input
-                  type="text"
-                  name="last_name"
-                  placeholder="LAST NAME *"
-                  required={true}
-                />
+              
+              {/* <!-- EMAIL FIELD --> */}
+              <div className="cocon-row">
+                <div><label className="coco-label">Email</label></div>
+                <div><input id="txtCoCoEmail" type="text" className="coco-text-input" /></div>
+                <div id="divEmailErrorBanner" className="coco-error-banner" style={{display: 'none'}}><div id="spnEmailError"></div></div>
               </div>
+              
+              {/* <!-- PHONE FIELD --> */}
+              <div className="cocon-row">
+                <div><label className="coco-label">Phone</label></div>
+                <div>
+                  <input type="text" id="txtCoCoPhone" className="coco-text-input" />
+                </div>
+              </div>
+              
+              {/* <!-- MESSAGE FIELD --> */}
+              <div className="cocon-row">
+                <div><label className="coco-label">Message</label></div>
+                <div>
+                  <textarea id="txtCoCoMessage" type="text" className="coco-text-input" maxlength="1000"></textarea>
+                </div>
+              </div>
+              
+              {/* <!-- This input is used to prevent spam, however it is not visible in the form. Do not remove it. --> */}
+              <div className="cocon-row">
+                <input id="txtHPData" type="text" className="coco-h-p" autocomplete="off" />
+              </div>
+              
+              {/* <!-- SUBMIT BUTTON --> */}
+              <div className="cocon-row">
+                <input type="button" id="btnLeadIntakeSubmit" className="cocon-button" value="Submit" />
+                <div id="divGenericErrorBanner" className="coco-error-banner" style={{display: 'none'}}><span>This form can't be submitted. Try again later.</span></div>
+              </div>
+            
+             </div>
             </div>
-            <div className="form-row">
-              <div className="form-item">
-                <input
-                  type="email"
-                  name="email"
-                  placeholder="YOUR EMAIL *"
-                  required={true}
-                />
+          
+            {/* <!-- CONFIRMATION MESSAGE --> */}
+            <div id="divCoCoConfirmation" style={{display: 'none'}}>
+              <div className="coco-confirmation-icon">
+                <svg width="132" height="132" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M66 132A66 66 0 1 1 66 0a66 66 0 0 1 0 132zm0-2A64 64 0 1 0 66 2a64 64 0 0 0 0 128zm-9.9-45.5l39-38.9 1.3 1.5-40.3 40.3-19.5-19.6 1.4-1.4L56 84.5z" fill="currentColor" fill-rule="nonzero" />
+                </svg>
               </div>
-              <div className="form-item">
-                <input
-                  type="text"
-                  name="phone"
-                  placeholder="YOUR PHONE *"
-                  required={true}
-                />
-              </div>
-            </div>
-            <div className="form-row">
-              <div className="form-item">
-                <input
-                  type="text"
-                  name="town"
-                  placeholder="town *"
-                  required={true}
-                />
-              </div>
-            </div>
-            <div className="form-row">
-              <div className="form-item" style={{ width: "100%" }}>
-                <textarea
-                  cols="30"
-                  name="message"
-                  rows="5"
-                  placeholder="MESSAGE"
-                />
-              </div>
-            </div>
-            <div>
-              <button type="submit" className="submit-button">
-                SEND MESSAGE →
-              </button>
-            </div>
-          </form>
+              <span>Your message has been sent.</span>
+          </div>
         </div>
-      </div>
+        
     );
   }
 }
