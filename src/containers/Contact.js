@@ -22,9 +22,12 @@ class Contact extends Component {
           </div>
           <div className="gallery-wrapper">
             <Gallery />
-            <InfoBar />
           </div>
           <ContactForm />
+          <div className="gallery-wrapper">
+
+          <InfoBar />
+          </div>
           <div className="quote-container">
             <Quote
               quote={
