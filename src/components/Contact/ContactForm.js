@@ -47,7 +47,7 @@ class ContactForm extends Component {
 
         // <!-- CSS - This provides styling for the layout of the fields, validation and the confirmation message -->
 
-        <div>
+        <div style={{padding: "20px"}}>
           <div id="divCoCoForm">
             <div className="coco-form-wrapper">
         
