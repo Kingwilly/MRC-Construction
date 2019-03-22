@@ -20,8 +20,33 @@ class ContactForm extends Component {
     console.log(field, value);
   }
 
+  // addCoConstructScript = () => {
+  //   const script = document.createElement("script");
+  //   script.src = "https://www.co-construct.com/app/api/LeadsIntakeForm/GetLeadsIntakeFormSubmissionJs?AuthKey=ZkhY0jMzK2WXARK03VSJjyedpILK4zMoVUe937VuyLM%3d";
+  //   script.async = true;
+  //   document.body.appendChild(script);
+  // }
+  //
+  // addCoConstructStylesheet = () => {
+  //   const sheet = document.createElement('link');
+  //   sheet.rel = 'stylesheet';
+  //   sheet.href = "https://www.co-construct.com/app/public/LeadIntake/LeadIntakeForm.css?289565009";
+  //   sheet.type = 'text/css';
+  //   document.head.appendChild(sheet);
+  // }
+  //
+  // componentDidMount() {
+  //   this.addCoConstructScript();
+  //   this.addCoConstructStylesheet();
+  // }
+
   render() {
     return (
+        // <!-- COCONSTRUCT LEADS INTAKE FORM -->
+        // <!-- Do not modify the code below. This form will automatically inherit the styling of your website. -->
+
+        // <!-- CSS - This provides styling for the layout of the fields, validation and the confirmation message -->
+
         <div>
           <div id="divCoCoForm">
             <div className="coco-form-wrapper">
