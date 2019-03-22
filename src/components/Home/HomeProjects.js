@@ -40,8 +40,7 @@ class HomeProjects extends Component {
           post: entries.items[0].fields.coverPhoto.fields.file.url
         });
       });
-    console.log("STATE");
-    console.log(this.state);
+    console.log("------------");
   }
   render() {
     return (
