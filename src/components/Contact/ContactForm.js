@@ -58,7 +58,7 @@ class ContactForm extends Component {
   }
 
   render() {
-    this.runJqueryDependency();
+    // this.runJqueryDependency();
 
     return (
         // <!-- COCONSTRUCT LEADS INTAKE FORM -->
