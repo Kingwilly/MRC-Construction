@@ -58,6 +58,8 @@ class ContactForm extends Component {
   }
 
   render() {
+    this.runJqueryDependency();
+
     return (
         // <!-- COCONSTRUCT LEADS INTAKE FORM -->
         // <!-- Do not modify the code below. This form will automatically inherit the styling of your website. -->
