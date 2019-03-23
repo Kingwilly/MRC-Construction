@@ -23,7 +23,7 @@ class ContactForm extends Component {
   addCoConstructScript = () => {
     const script = document.createElement("script");
     script.src = "https://www.co-construct.com/app/api/LeadsIntakeForm/GetLeadsIntakeFormSubmissionJs?AuthKey=ZkhY0jMzK2WXARK03VSJjyedpILK4zMoVUe937VuyLM%3d";
-    script.async = true;
+   // script.async = true;
     document.body.appendChild(script);
   }
 
