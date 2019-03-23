@@ -1,5 +1,10 @@
 import React, { Component } from "react";
 
+
+const COCONSTRUCT_CSS = "https://www.co-construct.com/app/public/LeadIntake/LeadIntakeForm.css?289565009";
+const COCONSTRUCT_JS = "https://www.co-construct.com/app/api/LeadsIntakeForm/GetLeadsIntakeFormSubmissionJs?AuthKey=ZkhY0jMzK2WXARK03VSJjyedpILK4zMoVUe937VuyLM%3d";
+
+
 class ContactForm extends Component {
   constructor(props) {
     super(props);
@@ -22,7 +27,7 @@ class ContactForm extends Component {
 
   addCoConstructScript = () => {
     const script = document.createElement("script");
-    script.src = "https://www.co-construct.com/app/api/LeadsIntakeForm/GetLeadsIntakeFormSubmissionJs?AuthKey=ZkhY0jMzK2WXARK03VSJjyedpILK4zMoVUe937VuyLM%3d";
+    script.src = COCONSTRUCT_JS;
    // script.async = true;
     document.body.appendChild(script);
   }
@@ -30,14 +35,20 @@ class ContactForm extends Component {
   addCoConstructStylesheet = () => {
     const sheet = document.createElement('link');
     sheet.rel = 'stylesheet';
-    sheet.href = "https://www.co-construct.com/app/public/LeadIntake/LeadIntakeForm.css?289565009";
+    sheet.href = COCONSTRUCT_CSS;
     sheet.type = 'text/css';
     document.head.appendChild(sheet);
+  }
+
+  runJqueryDependency = () => {
+    // minified js taken directly from from COCONSTRUCT_JS
+    var CoCon=window.CoCon||{};CoCon.Leads=window.CoCon.Leads||{},document.addEventListener("DOMContentLoaded",function(){CoCon.Leads.LeadIntakeFormSubmissionModel=function(){"use strict";var it="divCoCoConfirmation",r="divEmailErrorBanner",rt="divCoCoForm",u="divGenericErrorBanner",o="divNameErrorBanner",s="txtCoCoEmail",h="txtCoCoFirstName",ut="txtHPData",c="txtCoCoLastName",ft="txtCoCoMessage",et="txtCoCoPhone",ot="https://www.co-construct.com/app/api/LeadsIntakeForm/SaveLeadIntakeForm",l="spnEmailError",t="btnLeadIntakeSubmit",n,a=!1,v,y,i,p,w,b,k,d,f,g,nt,e,tt;y=function(){n("#"+t).off("click",f),n("#"+t).text("Submitting...")},i=function(){n("#"+t).on("click",f);n("#"+t).text("Submit")},p=function(){n("#"+u).show(),i()},w=function(){var i=!0,t,f=!1,u=!1;return n("#"+r).hide(),n("#"+o).hide(),t=n("#"+h).val(),t.trim().length===0?u=!0:(t=n("#"+c).val(),t.trim().length===0&&(u=!0)),u===!0&&(i=!1,n("#"+o).show()),t=n("#"+s).val(),t.trim().length===0?(i=!1,n("#"+l).text("Please enter your email address"),n("#"+r).show()):(f=tt(t),f===!1&&(i=!1,n("#"+l).text("Please enter a valid email address"),n("#"+r).show())),i},tt=function(n){var t,i=/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;return n=n.trim(),t=i.test(n)},b=function(){var t=window.jQuery!==undefined&&window.jQuery!==null;return t===!0&&(n=window.jQuery),t},k=function(t,i){var r=null;r=document.createElement("script"),r.type="text/javascript",r.readyState?r.onreadystatechange=function(){(r.readyState==="loaded"||r.readyState==="complete")&&(r.onreadystatechange=null,i!==null&&i!==undefined&&(n=window.jQuery,i()))}:r.onload=function(){i!==null&&i!==undefined&&(n=window.jQuery,i())},r.src=t,document.getElementsByTagName("head")[0].appendChild(r)},f=function(){var i=!1,t=null,r=null;n("#"+u).hide(),i=w(),i&&(y(),t={},t.FirstName=n("#"+h).val(),t.LastName=n("#"+c).val(),t.EmailAddress=n("#"+s).val(),t.PhoneNumber=n("#"+et).val(),t.Message=n("#"+ft).val(),t.AuthenticationKey="ZkhY0jMzK2WXARK03VSJjyedpILK4zMoVUe937VuyLM=",t.HPValue=n("#"+ut).val(),t.HPValue===undefined||t.HPValue===null?t.HPValue=="":t.HPValue.length===0&&(t.HPValue=t.AuthenticationKey),r=JSON.stringify(t),n.when(nt(ot,r,null)).then(function(n){d(n)},p))},d=function(t){t.ValidatationError===!0?n("#"+u).show():(n("#"+rt).hide(),n("#"+it).show()),i()},g=function(){function n(n,t){return window.getComputedStyle(n,null).getPropertyValue(t)}var i=document.getElementById("txtCoCoMessage"),t=document.getElementById("txtCoCoEmail");i.style["border-width"]=n(t,"border-bottom-width"),i.style["border-color"]=n(t,"border-bottom-color"),i.style.padding=n(t,"padding-top")+" "+n(t,"padding-left"),i.style["background-color"]=n(t,"background-color")},nt=function(t,i){var u,f;return u=n.ajax({type:"POST",url:t,data:i,xhrFields:{withCredentials:!1},contentType:"application/json; charset=utf-8",dataType:"json",success:function(n){return n},error:function(t){t.responseText!==undefined&&(t.responseText=n.parseJSON(t.responseText).Message)}})},e=function(){i()},v="https://code.jquery.com/jquery-3.3.1.min.js",a=b(),a===!1?k(v,e):e(),g()}()})
   }
 
   componentDidMount() {
     this.addCoConstructScript();
     this.addCoConstructStylesheet();
+    this.runJqueryDependency();
   }
 
   render() {
