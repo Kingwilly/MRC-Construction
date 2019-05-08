@@ -5,9 +5,27 @@ import Gallery from "../components/About/Gallery";
 import InfoBar from "../components/Contact/InfoBar";
 import Quote from "../components/About/Quote";
 import ContactForm from "../components/Contact/ContactForm";
+import Image_013 from "../assets/images/About/Gallery/171127-EM_Workspace_013.jpg";
+
 
 class Contact extends Component {
   // About Screen https://projects.invisionapp.com/d/main#/console/15461363/321299148/inspect
+  renderStaticImage() {
+    return (
+      <div className="gallery-secion">
+        <div
+            className="gallery-image-open"
+            style={{
+              background:
+                " linear-gradient(to top, rgba(4, 0, 0, 0.2), transparent,  transparent, transparent), url(" +
+                Image_013 +
+                ")"
+            }}
+        />
+    </div>
+    );
+  }
+
   render() {
     return (
       <DocumentTitle
@@ -21,10 +39,11 @@ class Contact extends Component {
             <h1>CONTACT</h1>
           </div>
           <div className="gallery-wrapper">
-            <Gallery />
+            {/* <Gallery /> */}
+            {this.renderStaticImage()}
             <InfoBar />
-
           </div>
+          
           <ContactForm />
 
           <div className="quote-container">
