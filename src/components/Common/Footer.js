@@ -47,7 +47,7 @@ class Footer extends Component {
                 <p className="footer-title">AREAS SERVED</p>
                 <div className="footer-inner-block">
                   <p>
-                    Westfield, Scotch Plains, Fanwood Cranford, Millburn, Short
+                    Westfield, Scotch Plains, Fanwood, Cranford, Millburn, Short
                     Hills, and Mountainside.
                   </p>
                 </div>
