@@ -14,7 +14,7 @@ class Footer extends Component {
         <br />
         <br />
         <iframe
-          src="https://snapwidget.com/embed/628129"
+          src="https://snapwidget.com/embed/691145"
           class="snapwidget-widget"
           allowtransparency="true"
           frameborder="0"
