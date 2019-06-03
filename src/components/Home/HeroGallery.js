@@ -6,6 +6,7 @@ import Other_House_Image from "../../assets/images/Home/Gallery/Other_House.jpg"
 import Other_Kitchen_Image from "../../assets/images/Home/Gallery/Other_Kitchen.jpg";
 import Stairs_Image from "../../assets/images/Home/Gallery/Stairs.jpg";
 import Patio from "../../assets/images/Home/Gallery/Patio.jpg";
+import Kitchen_Image_3 from "../../assets/images/Home/Gallery/kitchen_3.jpg"
 import Swipe from "react-easy-swipe";
 import { clearTimeout } from "timers";
 var contentful = require("contentful");
@@ -46,7 +47,8 @@ class HeroGallery extends Component {
             "https://images.ctfassets.net/490ezzr1f96l/5cANpm9oD6wCsoa4wyOgkg/0d0c43667bd7b4b51faa7515568576de/Stairs.jpg?w=1920&fm=jpg&q=90&fit=fill&fl=progressive",
           id: "Stairs_Image",
           active: false
-        }
+        },
+        { src: Kitchen_Image_3, id: "Kitchen Image 3", active: false }
       ]
     };
     this.goToNextActiveImage = this.goToNextActiveImage.bind(this);

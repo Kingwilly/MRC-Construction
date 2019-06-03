@@ -31,7 +31,7 @@ class Home extends Component {
           <div className="quote-container">
             <Quote
               quote={
-                " Not only is there team very organized and collaborative, but they are responsive, timely, clean and professional- not to mention they do an incredible job."
+                " Not only is their team very organized and collaborative, but they are responsive, timely, clean and professional- not to mention they do an incredible job."
               }
               speaker={"Erica, Westfield"}
             />
